@@ -35,6 +35,7 @@ function Footer() {
  <div>
  
  <span>Spotless Guru Cleaners </span>
+ <span> Copyright &copy; ${new Date().getFullYear()} Spotless Guru Cleaners</span>
 
  
  

@@ -1,5 +1,5 @@
 import React from 'react'
-import ItemsContainer
+import ItemsContainer from './ItemsContainer'
 function Footer() {
   return (
     <footer className="bg-gray-900 text-white">
@@ -27,10 +27,19 @@ function Footer() {
            <h1>You Smile</h1>
            <p>we make you smile with Satisfaction</p>
           </div>
-          <ItemsContainer />
+         
         </div>
 
-  </footer>>
+ <ItemsContainer />  
+ 
+ <div>
+ 
+ <span>Spotless Guru Cleaners </span>
+
+ 
+ 
+ </div>
+  </footer>
   )
 }
 

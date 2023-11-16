@@ -10,6 +10,7 @@ function Footer() {
             <h1>So How Does It Work</h1>
             <p>Just follow this simple steps</p>
         </div>
+        <div className="bg-custom-navy">
         <div>
             <div>
              <h1>You Order</h1>
@@ -35,14 +36,13 @@ function Footer() {
 
         <ItemsContainer />
  
- <div>
- <SocialIcons Icons={Icons} />
- <span>Spotless Guru Cleaners </span>
- <span> Copyright &copy; {new Date().getFullYear()} Spotless Guru Cleaners</span>
-
- 
- 
- </div>
+        <div className="mx-auto p-8 mt-16 bg-custom-navy text-white text-center relative">
+        <div className="border-t border-gray-400 absolute left-1/2 transform -translate-x-1/2 w-4/5"></div>
+        <SocialIcons Icons={Icons} />
+        <span>Spotless Guru Cleaners</span>
+        <div className="mt-4">Copyright &copy; {new Date().getFullYear()} Spotless Guru Cleaners</div>
+      </div>
+      </div>
   </footer>
   )
 }

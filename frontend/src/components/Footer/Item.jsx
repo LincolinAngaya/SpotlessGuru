@@ -1,5 +1,6 @@
 import React from "react";
 
+
 const Item = ({ Links, title }) => {
   return (
     <ul>
@@ -13,6 +14,7 @@ const Item = ({ Links, title }) => {
           >
             {link.name}
           </a>
+          <div>{link.icon}</div>
         </li>
       ))}
     </ul>

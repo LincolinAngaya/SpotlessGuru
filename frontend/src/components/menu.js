@@ -12,7 +12,7 @@
     
   ];
   export const CONTACT = [
-    { icon: "PhoneIcon", name: "+254796286466", link: "tel:+254796286466" },
+    { icon: "logo-facebook", name: "+254796286466", link: "tel:+254796286466" },
     { icon: "MailIcon", name: "spotlessguru@gmail.com", link: "#" },
     { icon:"GlobeIcon", name: "Nairobi, Kenya", link: "#" },
     

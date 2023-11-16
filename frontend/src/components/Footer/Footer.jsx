@@ -1,5 +1,8 @@
-import React from 'react'
-import ItemsContainer from './ItemsContainer'
+import React from "react";
+import ItemsContainer from "./ItemsContainer";
+import SocialIcons from "./SocialIcons";
+import { Icons } from "../menu";
+
 function Footer() {
   return (
     <footer className="bg-gray-900 text-white">
@@ -30,10 +33,10 @@ function Footer() {
          
         </div>
 
- <ItemsContainer />  
+        <ItemsContainer />
  
  <div>
- 
+ <SocialIcons Icons={Icons} />
  <span>Spotless Guru Cleaners </span>
  <span> Copyright &copy; {new Date().getFullYear()} Spotless Guru Cleaners</span>
 

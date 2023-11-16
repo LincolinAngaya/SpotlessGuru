@@ -10,6 +10,7 @@ const ItemsContainer = () => {
       <Item Links={CONTACT} title="CONTACT" />
 
     </div>
+  
   );
 };
 

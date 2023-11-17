@@ -1,5 +1,5 @@
 import Item from "./Item"; // Assuming the Item component is in the same directory
-
+import logo from './'
 import { CONTACT, RESOURCES, COMPANY } from "../menu";
 const ItemsContainer = () => {
   return (

@@ -1,10 +1,10 @@
 import "./App.css";
 import "./index.css";
-import Footer from "./components/Footer/Footer";
+import Home from "./components/Home";
 function App() {
   return (
-    <div className="h-screen">
-    <Footer />
+    <div>
+  <Home />
     </div>
   )
 }

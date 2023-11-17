@@ -1,12 +1,13 @@
-import React from 'react';
-
-
-
+import React from 'react'
+import Footer from './Footer/Footer'
 function Home() {
   return (
-    <div className='text-cyan-800 text-center'>
-      My name is Nobert
+    <>
+    <div>
+    <Footer />
+
     </div>
+   </>
   )
 }
 

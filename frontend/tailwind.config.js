@@ -8,10 +8,15 @@ export default {
     extend: {
           backgroundColor: {
         navy: '#002748',
-        white: '#fffff',
+        white: '#FFFFF',
         sky: '#55E2E9'
 
       },
+      text: {
+        sky: '#55E2E9',
+        navy: '#002748',
+        white: '#FFFFF',
+      }
     },
   },
   plugins: [],

@@ -8,17 +8,19 @@ import happy from '../assets/happy.png'
 function BookingSteps() {
   return (
     <div>
-        <div>
-        
-         <h1>So How Does It Work</h1>
-          <p>Just follow this simple steps</p>
-         </div>
-
+  <div>
+    <h1>So How Does It Work</h1>
+    <p>Just follow these simple steps</p>
+  </div>
 
 <div>
     <div>
-    <img src={order} alt="order now" />
-     <h1>You Order</h1>
+    <img src={order} alt="order now" className="border border-sky-400 rounded-full p-5 ring-2 ring-sky-400"
+    style={{ maxWidth: '120px' }} />
+    <h1 className="font-bold font-sans text-customBlue text-2xl md:text-3xl lg:text-2xl xl:text-3xl">
+    You Order
+  </h1>
+
      <p>Create your account or log in and place order</p>
     </div>
 

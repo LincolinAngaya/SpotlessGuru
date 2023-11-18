@@ -16,7 +16,10 @@ export default {
         sky: '#55E2E9',
         navy: '#002748',
         white: '#FFFFF',
-      }
+      },
+       colors: {
+        customBlue: '#002748', // Replace with your actual color code
+      },
     },
   },
   plugins: [],

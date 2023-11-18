@@ -12,9 +12,10 @@ const Item = ({ Links, title }) => {
           text-sm cursor-pointer leading-6 ml-4 capitalize"
   href={link.link}
 >
-            {link.name}
+{link.icon} <span className="mr-2"></span> {link.name}
+          
           </a>
-          <div>{link.icon}</div>
+          <div></div>
         </li>
       ))}
     </ul>

@@ -10,9 +10,9 @@ const Item = ({ Links, title }) => {
               <li key={link.name}>
   
         <a className="text-white hover:text-sky duration-300 font-sans text-lg cursor-pointer  ml-4" href={link.link}> 
-            <div className="flex items-center" ><ion-icon >name={link.namee}</ion-icon>
-            <h3 className="text-xl font-bold italic font-roboto ml-2">{link.contacts}</h3>
-            </div>
+          <div className="flex items-center"><ion-icon  name={link.namee}></ion-icon>
+          <h3 className="text-xl font-bold italic font-roboto ml-2">{link.contacts}</h3>
+        </div>
         <h1>{link.name}</h1>
         
 </a>

@@ -19,28 +19,30 @@ function BookingSteps() {
         style={{ maxWidth: '120px' }} />
         <h1 className="font-bold font-sans text-customBlue text-2xl md:text-3xl lg:text-2xl xl:text-3xl">
         You Order</h1>
-      <p className='mb-4 font-serif whitespace-normal sm:whitespace-pre md:whitespace-nowrap lg:whitespace-pre-line xl:whitespace-pre-wrap'>Create your account or log in and place order  </p>
+        <p className="mb-4 font-light text-center sm:text-lg md:text-xl lg:text-lg xl:text-xl">
+        Create your account or log in and place order
+      </p>
     </div>
 
     <div className="flex flex-col items-center justify-center bg-white border border-sky-400 rounded-md p-6 shadow-lg">
         <img src={come} alt="come now" className="border border-sky-400 rounded-full p-5 ring-2 ring-sky-400"
         style={{ maxWidth: '120px' }} />
         <h1 className="font-bold font-sans text-customBlue text-2xl md:text-3xl lg:text-2xl xl:text-3xl">We Come</h1>
-        <p className='mb-4 font-serif whitespace-normal sm:whitespace-pre md:whitespace-nowrap lg:whitespace-pre-line xl:whitespace-pre-wrap'>we send cleaner based on your location and service</p>
+        <p className="mb-4 font-light text-center sm:text-lg md:text-xl lg:text-lg xl:text-xl">we send cleaner based on your location and service</p>
    </div>
 
    <div className="flex flex-col items-center justify-center bg-white border border-sky-400 rounded-md p-6 shadow-lg">
       <img src={clean} alt="clean now" className="border border-sky-400 rounded-full p-1 ring-2 ring-sky-400"
       style={{ maxWidth: '120px' }} />
       <h1 className="font-bold font-sans text-customBlue text-2xl md:text-3xl lg:text-2xl xl:text-3xl">We Clean</h1>
-      <p className='mb-4 font-serif whitespace-normal sm:whitespace-pre md:whitespace-nowrap lg:whitespace-pre-line xl:whitespace-pre-wrap'>We proffessionally clean you space based on your preference</p>
+      <p className="mb-4 font-light text-center sm:text-lg md:text-xl lg:text-lg xl:text-xl">We proffessionally clean you space based on your preference</p>
   </div>
    
   <div className="flex flex-col items-center justify-center bg-white border border-sky-400 rounded-md p-6 shadow-lg">
       <img src={happy} alt="happy now" className="border border-sky-400 rounded-full p-5 ring-2 ring-sky-400 bg-white "
       style={{ maxWidth: '120px' }}/>
       <h1 className="font-bold font-sans text-customBlue text-2xl md:text-3xl lg:text-2xl xl:text-3xl">You Smile</h1>
-      <p className='mb-4 font-serif whitespace-normal sm:whitespace-pre md:whitespace-nowrap lg:whitespace-pre-line xl:whitespace-pre-wrap'>we make you smile with Satisfaction and give us feedback</p>
+      <p className="mb-4 font-light text-center sm:text-lg md:text-xl lg:text-lg xl:text-xl">we make you smile with Satisfaction and give us feedback</p>
   </div>
  
 </div>

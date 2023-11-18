@@ -1,9 +1,11 @@
 import React from 'react'
+import { FaShoppingCart } from "react-icons/fa";
 
 function BookingSteps() {
   return (
     <div>
         <div>
+        <FaShoppingCart size={30} />
          <h1>So How Does It Work</h1>
           <p>Just follow this simple steps</p>
          </div>

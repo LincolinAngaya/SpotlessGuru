@@ -11,9 +11,9 @@ function Footer() {
       <footer className="bg-navy text-white text-center relative">
         <div className="container mx-auto">
           {/* Add padding to the container for better responsiveness */}
-          <div className="py-8">
+          
             <ItemsContainer />
-          </div>
+         
           <div className="w-3/4 mx-auto border-t border-white opacity-50 mt-[-1.5rem]"></div>
           <div className="py-8">
             <SocialIcons Icons={Icons} />

@@ -8,7 +8,7 @@ import happy from '../assets/happy.png'
 function BookingSteps() {
   return (
     <div>
-    <div className="flex flex-col items-center justify-center py-6">
+    <div className="flex flex-col items-center justify-center py-1">
     <h1 className="font-bold font-sans text-customBlue text-2xl md:text-3xl lg:text-2xl xl:text-3xl">So How Does It Work ?</h1>
     <p className="font-bold font-sans text-sky text-2xl md:text-1xl xl:text-1xl">Just follow these simple steps</p>
   </div>
@@ -44,7 +44,7 @@ function BookingSteps() {
       <img src={happy} alt="happy now" className="border border-sky-400 rounded-full p-5 ring-2 ring-sky-400 bg-white "
       style={{ maxWidth: '120px' }}/>
       <h1 className="font-bold font-sans text-customBlue text-2xl md:text-3xl lg:text-2xl xl:text-3xl">You Smile</h1>
-      <p className="mb-4 font-light text-center sm:text-lg md:text-xl lg:text-lg xl:text-xl">we make you smile with Satisfaction and give us feedback</p>
+      <p className="mb-4 font-light text-center sm:text-lg md:text-xl lg:text-lg xl:text-xl">we make you smile with Satisfaction and give us feedback !</p>
   </div>
  
 </div>

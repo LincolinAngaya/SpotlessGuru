@@ -1,11 +1,13 @@
 import React from 'react'
-import { FaShoppingCart } from "react-icons/fa";
+import { MdShoppingCart } from "react-icons/md";
+import { AiOutlineCheckCircle } from "react-icons/ai";
+
 
 function BookingSteps() {
   return (
     <div>
         <div>
-        <FaShoppingCart size={30} />
+        
          <h1>So How Does It Work</h1>
           <p>Just follow this simple steps</p>
          </div>
@@ -13,11 +15,13 @@ function BookingSteps() {
 
 <div>
     <div>
+    <MdShoppingCart size={30} /> <AiOutlineCheckCircle  />
      <h1>You Order</h1>
      <p>Create your account or log in and place order</p>
     </div>
 
     <div>
+    
     <h1>We Come</h1>
     <p>we send clreaner based on your location and service</p>
    </div>

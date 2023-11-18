@@ -9,8 +9,8 @@ function BookingSteps() {
   return (
     <div>
   <div>
-    <h1>So How Does It Work</h1>
-    <p>Just follow these simple steps</p>
+    <h1 className="font-bold font-sans text-customBlue text-2xl md:text-3xl lg:text-2xl xl:text-3xl">So How Does It Work ?</h1>
+    <p className="font-bold font-sans text-sky text-2xl md:text-3xl lg:text-2xl xl:text-3xl">Just follow these simple steps</p>
   </div>
 
 <div>

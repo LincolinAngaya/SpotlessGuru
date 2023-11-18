@@ -18,7 +18,8 @@ export default {
         white: '#FFFFF',
       },
        colors: {
-        customBlue: '#002748', // Replace with your actual color code
+        customBlue: '#002748',
+        sky: '#55E2E9',
       },
     },
   },

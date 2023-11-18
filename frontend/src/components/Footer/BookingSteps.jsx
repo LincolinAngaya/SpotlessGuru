@@ -13,7 +13,7 @@ function BookingSteps() {
     <p className="font-bold font-sans text-sky text-2xl md:text-1xl xl:text-1xl">Just follow these simple steps</p>
   </div>
 
-  <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-6 sm:px-8 px-5 py-4  justify-center items-center">
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 sm:px-8 px-5 py-4 sm:py-4 md:py-6 lg:py-8 xl:py-10 justify-center items-center">
   <div className="flex flex-col items-center justify-center bg-white border border-sky-400 rounded-md p-6 shadow-lg">
         <img src={order} alt="order now" className="border border-sky-400 rounded-full p-5 ring-2 ring-sky-400 "
         style={{ maxWidth: '120px' }} />

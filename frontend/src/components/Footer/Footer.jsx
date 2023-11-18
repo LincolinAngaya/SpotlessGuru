@@ -9,16 +9,19 @@ function Footer() {
   return (
     <>
        <BookingSteps />
-       <footer className="bg-navy text-white text-center relative h-70">
+       <footer className="bg-navy text-white text-center relative">
          <ItemsContainer />
-{/* <div className="border-t-2 border-white absolute left-1/2 transform -translate-x-1/2 w-3/4"></div> */}
-<div className="mt-[-3rem]">
+         <div className="w-3/4 mx-auto border-t border-white opacity-50 mt-[-5.5rem]"></div>
+<div>
     <SocialIcons Icons={Icons} />
 </div>
 
     
     <span>Spotless Guru Cleaners</span>
-    <div className="mt-4">Copyright &copy; {new Date().getFullYear()} Spotless Guru Cleaners</div>
+    <div className="mt-4  bg-navy text-white text-center p-4">
+    Copyright &copy; {new Date().getFullYear()} Spotless Guru Cleaners
+  </div>
+  
   
     </footer>
     

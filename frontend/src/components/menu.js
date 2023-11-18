@@ -12,9 +12,10 @@
     
   ];
   export const CONTACT = [
-    { icon: "logo-facebook", name: "+254796286466", link: "tel:+254796286466" },
-    { icon: "MailIcon", name: "spotlessguru@gmail.com", link: "#" },
-    { icon:"GlobeIcon", name: "Nairobi, Kenya", link: "#" },
+    { name: "Call:  +254796286466", link: "tel:+254796286466" },
+    { name: "Email Us: spotlessguru@gmail.com ", link: "mailto:spotlessguru@gmail.com " },
+    { name:"Location: Nairobi, Kenya",link: "#" },
+    { name :"Working Hours: 7:00 am - 6:00 pm" , link: "#" }
     
   ];
   

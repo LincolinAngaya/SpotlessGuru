@@ -19,7 +19,7 @@ function Footer() {
             <SocialIcons Icons={Icons} />
           </div>
         </div>
-        <span className="block mb-4 text-lg">Spotless Guru Cleaners</span>
+        <span className="block text-lg">Spotless Guru Cleaners</span>
         <div className="mt-4 bg-navy text-white text-center p-4">
           Copyright &copy; {new Date().getFullYear()} Spotless Guru Cleaners
         </div>

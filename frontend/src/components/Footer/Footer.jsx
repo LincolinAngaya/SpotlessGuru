@@ -4,30 +4,28 @@ import BookingSteps from "./BookingSteps";
 import SocialIcons from "./SocialIcons";
 import { Icons } from "../menu";
 
-
 function Footer() {
   return (
     <>
-       <BookingSteps />
-       <footer className="bg-navy text-white text-center relative">
-         <ItemsContainer />
-         <div className="w-3/4 mx-auto border-t border-white opacity-50 mt-[-5.5rem]"></div>
-<div>
-    <SocialIcons Icons={Icons} />
-</div>
-
-    
-    <span>Spotless Guru Cleaners</span>
-    <div className="mt-4  bg-navy text-white text-center p-4">
-    Copyright &copy; {new Date().getFullYear()} Spotless Guru Cleaners
-  </div>
-  
-  
-    </footer>
-    
+      <BookingSteps />
+      <footer className="bg-navy text-white text-center relative">
+        <div className="container mx-auto">
+          {/* Add padding to the container for better responsiveness */}
+          <div className="py-8">
+            <ItemsContainer />
+          </div>
+          <div className="w-3/4 mx-auto border-t border-white opacity-50 mt-[-2rem]"></div>
+          <div className="py-8">
+            <SocialIcons Icons={Icons} />
+          </div>
+        </div>
+        <span className="block mb-4">Spotless Guru Cleaners</span>
+        <div className="mt-4 bg-navy text-white text-center p-4">
+          Copyright &copy; {new Date().getFullYear()} Spotless Guru Cleaners
+        </div>
+      </footer>
     </>
-   
-  )
+  );
 }
 
-export default Footer
+export default Footer;

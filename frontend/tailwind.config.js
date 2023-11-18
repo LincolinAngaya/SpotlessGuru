@@ -21,6 +21,9 @@ export default {
         customBlue: '#002748',
         sky: '#55E2E9',
       },
+      border: {
+        sky:  '#55E2E9'
+      }
     },
   },
   plugins: [],

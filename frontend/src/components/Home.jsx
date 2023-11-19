@@ -4,13 +4,15 @@ import Slider from './Slider.jsx'
 function Home() {
   return (
     <>
+
     <section>
       <Slider/>
      </section>
-     {/* <section>
+     
       <Footer/>
-     </section> */}
+   
     
+
    </>
   )
 }

@@ -1,13 +1,14 @@
 import React from "react";
 import ItemsContainer from "./ItemsContainer";
-import BookingSteps from "./BookingSteps";
+// import BookingSteps from "./BookingSteps";
 import SocialIcons from "./SocialIcons";
 import { Icons } from "../menu";
+import Slider from "../Hero/Slider";
 
 function Footer() {
   return (
-    <>
-      <BookingSteps />
+    // <>
+      // <BookingSteps />
       <footer className="bg-navy text-white text-center relative">
         <div className="container mx-auto">
           {/* Add padding to the container for better responsiveness */}
@@ -24,7 +25,7 @@ function Footer() {
           Copyright &copy; {new Date().getFullYear()} Spotless Guru Cleaners
         </div>
       </footer>
-    </>
+    // </>
   );
 }
 

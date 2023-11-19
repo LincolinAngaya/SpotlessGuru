@@ -17,7 +17,7 @@ function BookingSteps() {
 
 
   <div className="flex flex-col items-center justify-center bg-white border border-sky-400 rounded-md p-6 shadow-lg transition-transform transform hover:bg-sky cursor-pointer">
-        <img src={order} alt="order now" className="border border-sky rounded-full p-5 ring-2  ring-sky  "
+        <img src={order} alt="order now" className="border border-sky rounded-full p-5 ring-2 ring-sky "
         style={{ maxWidth: '120px' }} />
         <h1 className="font-bold font-sans text-customBlue text-2xl md:text-3xl lg:text-2xl xl:text-3xl ">
         You Order</h1>

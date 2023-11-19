@@ -4,12 +4,13 @@ import Slider from './Slider.jsx'
 function Home() {
   return (
     <>
-    <div>
+    <section>
       <Slider/>
-     </div>
-     {/* <div>
-     <Footer />
-     </div> */}
+     </section>
+     {/* <section>
+      <Footer/>
+     </section> */}
+    
    </>
   )
 }

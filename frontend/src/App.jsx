@@ -1,10 +1,10 @@
 import "./App.css";
 import "./index.css";
-import Home from './components/Home'
+import Slider from './components/Slider'
 function App() {
   return (
     <div>
-    < Home />
+    < Slider />
     </div>
   )
 }

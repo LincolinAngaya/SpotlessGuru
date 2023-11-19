@@ -1,14 +1,3 @@
-import React from 'react'
-import Footer from './Footer/Footer'
-function Home() {
-  return (
-    <>
-    <div>
-    <Footer />
+import React from 'react';
 
-    </div>
-   </>
-  )
-}
 
-export default Home

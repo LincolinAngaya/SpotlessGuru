@@ -1,12 +1,7 @@
-import "./App.css";
-import "./index.css";
-import Home from "./components/Home";
-function App() {
-  return (
-    <div>
-  <Home />
-    </div>
-  )
+import React from "react";
+import Navbar from "./components/NavBar/Navbar";
+const App = () => {
+  return <Navbar />
 }
 
-export default App
+export default App;

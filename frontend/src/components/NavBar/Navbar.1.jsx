@@ -1,13 +1,11 @@
-import "../NavBar/styles.css"
-import logo from "../assets/guru.png";
 export default function Navbar() {
     return <>
-        <div className="nav_1"> {/*Call: 0796286466*/}</div>
+        <div className="nav_1"> Call: 0796286466</div>
 
         <nav className="nav">
-            <div className="logo">
-                <img src={logo} alt="Logo" width="100" height="25" />
-            </div>
+            <a href="#" class="header-logo">
+                <img src="../assets/guru.png" alt="logo" width="300" height="100">
+                </></a>
             <ul>
                 <li className="active">
                     <a href="/home">Home</a>
@@ -24,8 +22,10 @@ export default function Navbar() {
                 <li>
                     <a href="/contact">Contact Us</a>
                 </li>
-
+                <li>
+                    <a href="/cart">Cart</a>
+                </li>
             </ul>
         </nav>
-    </>
+    </>;
 }

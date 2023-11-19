@@ -1,18 +1,12 @@
 import React from 'react'
 import Footer from './Footer/Footer'
-import Slider from './Slider.jsx'
 function Home() {
   return (
     <>
+    <div>
+    <Footer />
 
-    <section>
-      <Slider/>
-     </section>
-     
-      <Footer/>
-   
-    
-
+    </div>
    </>
   )
 }

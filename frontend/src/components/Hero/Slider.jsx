@@ -2,8 +2,8 @@
 
 import React, { useState, useEffect } from 'react';
 import './Slider.css';
-import Houseclean from './assets/Houseclean.jpg'
-import Dishwash from './assets/Dishwash.jpg'
+import Houseclean from '../assets/Houseclean.jpg'
+import Dishwash from '../assets/Dishwash.jpg'
 
 
 const imageUrls = [Houseclean, Dishwash];

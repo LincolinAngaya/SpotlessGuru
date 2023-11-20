@@ -1,91 +1,43 @@
 import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { FaBars, FaTimes } from 'react-icons/fa';
+import logo from '../assets/Spotless guru black.svg'
 
 const Navbar = () => {
-  const [open, setOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setOpen(!open);
-  };
-
-  const closeMenu = () => {
-    setOpen(false);
-  };
-
   return (
     <div>
-      <div className="bg-slate-400 relative">
-        <div className="nav flex justify-around">
-          <div className="logo ml-7 p-3">
-            <p className="text-4xl font-bold font-signature">Phinic</p>
-          </div>
-          <div className={`max-[1300px]:hidden`}>
-            <ul className="flex list-none no-underline gap-5">
-              <li className="ml-7 p-3">
-                <Link to="/" className="text-white" onClick={closeMenu}>
-                  Home
-                </Link>
-              </li>
-              <li className="ml-7 p-3">
-                <Link to="/about" className="text-white" onClick={closeMenu}>
-                  About Me
-                </Link>
-              </li>
-              <li className="ml-7 p-3">
-                <Link to="/projects" className="text-white" onClick={closeMenu}>
-                  Projects
-                </Link>
-              </li>
-              <li className="ml-7 p-3">
-                <Link to="/experience" className="text-white" onClick={closeMenu}>
-                  Experience
-                </Link>
-              </li>
-              <li className="ml-7 p-3">
-                <Link to="/contact" className="text-white" onClick={closeMenu}>
-                  Contact
-                </Link>
-              </li>
-            </ul>
-          </div>
+    <div className="bg-customBlue text-right text-white font-signature h-10vh pr-4 md:text-right md:h-auto">
+         <a href="tel:0796286466" className="inline-block">Call: 0796286466</a>
+     </div>
 
-          <div onClick={toggleMenu} className="pr-4 z-10 cursor-pointer md:hidden">
-            {open ? <FaTimes size={30} /> : <FaBars size={30} />}
-          </div>
-        </div>
+     
+     <div className="container mx-auto flex justify-between items-center">
+       <Link to="/" className="text-customBlue text-lg font-signature font-bold">
+         <img src={logo} alt="Logo" className="h-16" />
+         
+       </Link>
 
-        {open && (
-          <ul className="flex flex-col justify-center items-center absolute top-0 right-0 bg-gradient-to-b from-black to-gray-800 text-gray-500">
-            <li className="ml-7 p-3">
-              <Link to="/" className="text-white" onClick={closeMenu}>
-                Home
-              </Link>
-            </li>
-            <li className="ml-7 p-3">
-              <Link to="/about" className="text-white" onClick={closeMenu}>
-                About Me
-              </Link>
-            </li>
-            <li className="ml-7 p-3">
-              <Link to="/projects" className="text-white" onClick={closeMenu}>
-                Projects
-              </Link>
-            </li>
-            <li className="ml-7 p-3">
-              <Link to="/experience" className="text-white" onClick={closeMenu}>
-                Experience
-              </Link>
-            </li>
-            <li className="ml-7 p-3">
-              <Link to="/contact" className="text-white" onClick={closeMenu}>
-                Contact
-              </Link>
-            </li>
-          </ul>
-        )}
-      </div>
-    </div>
+       <ul className="flex space-x-9  mx-auto">
+         <li>
+           <Link to="/" className="text-customBlue hover:underline text-lg font-signature font-bold">Home</Link>
+         </li>
+         <li>
+           <Link to="/about" className="text-customBlue hover:underline text-lg font-signature font-bold">About Us</Link>
+         </li>
+         <li>
+           <Link to="/services" className="text-customBlue hover:underline text-lg font-signature font-bold">Services</Link>
+         </li>
+         <li>
+         <Link to="/services" className="text-customBlue hover:underline text-lg font-signature font-bold">Testimonials</Link>
+       </li>
+         <li>
+           <Link to="/contact" className="text-customBlue hover:underline text-lg font-signature font-bold">Contact Us</Link>
+         </li>
+       </ul>
+     </div>
+   
+     </div>
+
   );
 };
 

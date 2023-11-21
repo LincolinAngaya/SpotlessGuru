@@ -26,12 +26,12 @@ const Slider2 = () => {
         {imageUrls.map((imageUrl, i) => (
           <div key={i} className="relative">
             <img src={imageUrl} className='object-cover object-center w-full h-full' alt={`slide-${i}`} />
-            <div className="absolute top-1/2 left-4 transform -translate-y-1/2 text-white z-50 p-4 w-full sm:w-2/3 md:w-2/3 lg:w-1/2 xl:w-1/3">
-              <h1 className="font-signature font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
-                Looking for Affordable<br /> Cleaning Assistance?
+            <div className="absolute top-1/2 left-4 transform -translate-y-1/2 text-white text-center sm:text-left lg:top-1/3">
+              <h1 className="font-signature font-bold text-3xl sm:text-4xl md:text-5xl lg:text-5xl">
+                Looking for Affordable Cleaning Assistance?
               </h1>
-              <p className="font-signature text-base sm:text-lg md:text-xl lg:text-2xl text-white mt-4 sm:mt-6 lg:mt-8">
-                Look no further!  <br /> Spotless Guru Cleaners offers convenient and affordable <br />services, ensuring fresh and clean spaces without a hassle
+              <p className="font-signature text-base sm:text-lg md:text-xl lg:text-2xl text-white mt-4 sm:mt-6 lg:mt-8 sm:whitespace-pre-line md:whitespace-normal">
+                Look no further! <br /> Spotless Guru Cleaners offers convenient and affordable services, ensuring fresh and clean spaces without a hassle
               </p>
               <h2 className="mt-2 sm:mt-4 text-base sm:text-lg md:text-xl lg:text-2xl text-sky font-signature font-bold">
                 Explore our services today!

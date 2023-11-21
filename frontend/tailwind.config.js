@@ -22,7 +22,11 @@ export default {
         sky: '#55E2E9',
       },
       border: {
-        sky:  '#55E2E9'
+        sky:  '#55E2E9',
+        navy: '#002748',
+      } ,
+      fontFamily:{
+        signature:['Poppins'],
       }
     },
   },

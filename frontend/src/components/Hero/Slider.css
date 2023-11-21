@@ -1,0 +1,23 @@
+/* Slider.css */
+
+.slide {
+    /* ;
+    transition: opacity 0.5s ease-in-out;
+    background-size: cover;
+    background-position: center;
+   
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;  */
+  
+    background-color: tomato;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+     /* bottom: 0; */
+  }
+  
+  .slide.active {
+    opacity: 1;
+  }
+ 

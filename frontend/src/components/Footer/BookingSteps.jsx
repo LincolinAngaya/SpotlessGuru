@@ -1,7 +1,7 @@
 import React from 'react'
 import order from '../assets/order.png'
 import come from '../assets/come.png'
-import clean from '../assets/Clean.png'
+import clean from '../assets/clean.png'
 import happy from '../assets/happy.png'
 
 

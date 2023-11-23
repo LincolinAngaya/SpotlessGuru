@@ -61,7 +61,7 @@ const Navbar = () => {
               <li className="ml-0 md:ml-7 p-3">
                 <Link
                   onClick={closeMenu}
-                  to="/handwashing"
+                  to="/services"
                   className={`text-lg font-signature font-bold ${
                     isMenuOpen ? 'text-customBlue' : 'text-customBlue hover:text-sky'
                   }`}

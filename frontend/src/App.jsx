@@ -21,9 +21,9 @@ function App() {
              <Navbar/>
              <Routes>
              <Route exact path='/' element={<Home />}></Route>
-              <Route exact path='/housecleaning' element={<HouseCleaning />}></Route>
-              <Route exact path='/dishwashing' element={<DishWashing/>}></Route>
-              <Route exact path='/handwashing' element={<HandWashing />}></Route>
+              <Route exact path='services/housecleaning' element={<HouseCleaning />}></Route>
+              <Route exact path='services/dishwashing' element={<DishWashing/>}></Route>
+              <Route exact path='/serviceshandwashing' element={<HandWashing />}></Route>
              </Routes>
              
              </div>

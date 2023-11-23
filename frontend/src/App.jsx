@@ -3,6 +3,7 @@ import Navbar from './components/Navbar/Navbar'
 import HouseCleaning from './components/Service/HouseCleaning'
 import DishWashing from './components/Service/DishWashing';
 import HandWashing from './components/Service/HandWashing';
+import Testimonial from './components/Testimonial/Testimonial';
 import Home from './Home'
 import {
     BrowserRouter as Router,
@@ -10,6 +11,7 @@ import {
     Route,
     
   } from 'react-router-dom';
+
 
 
 function App() {
@@ -23,7 +25,8 @@ function App() {
              <Route exact path='/' element={<Home />}></Route>
               <Route exact path='services/housecleaning' element={<HouseCleaning />}></Route>
               <Route exact path='services/dishwashing' element={<DishWashing/>}></Route>
-              <Route exact path='/serviceshandwashing' element={<HandWashing />}></Route>
+              <Route exact path='services/handwashing' element={<HandWashing />}></Route>
+              <Route exact path='testimonials' element={<Testimonial />}></Route>
              </Routes>
              
              </div>

@@ -24,12 +24,10 @@ const Navbar = () => {
       <header className={`bg-white ${isMenuOpen ? 'md:min-h-fit min-h-[60vh]' : ''}`}>
         <nav className="nav flex justify-between items-center">
           <div className="ml-4 p-3">
-            {/* Hide logo on smaller screens */}
-            {!isMenuOpen && (
-              <Link to="/" className="text-customBlue text-lg font-signature font-bold">
-                <img src={logo} alt="Logo" className="w-16 cursor-pointer" />
-              </Link>
-            )}
+            {/* Display the logo regardless of screen size */}
+            <Link to="/" className="text-customBlue text-lg font-signature font-bold">
+              <img src={logo} alt="Logo" className="w-16 cursor-pointer" />
+            </Link>
           </div>
 
           <div
@@ -71,7 +69,7 @@ const Navbar = () => {
                   Services
                 </Link>
               </li>
-              <li className="ml-0 md:ml-7 p-3">
+              <li className="ml-0 md:ml-7 p-2">
                 <Link
                   onClick={closeMenu}
                   to="/testimonials"

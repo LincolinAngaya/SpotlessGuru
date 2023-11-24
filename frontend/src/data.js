@@ -2,34 +2,34 @@ const people = [
   {
     id: 1,
     image: "/images/Person1.jpeg",
-    name: "Haryy Stamper",
-    title: "manager",
+    name: "Dan Baraka",
+    title: "Qejani Residence-Karen",
     quote:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ",
+      "Spotless Guru, you're my savior! I was broke, but with just a coin in my pocket, I could afford your amazing dish washing services. Quality that fits any budget—thank you for making cleanliness accessible!",
   },
   {
     id: 2,
     image: "/images/Person2.png",
-    name: "James Gun",
-    title: "Project Manager",
+    name: "Rachael Njoroge",
+    title: "Elite Hostel-Karen",
     quote:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ",
+      "Spotless Guru transformed our hostel kitchen! With efficient dish washing services, they lifted the post-move-in mess, ensuring a spotless and stress-free communal kitchen. Spotless Guru, our hostel's cleaning superhero!",
   },
   {
     id: 3,
     image: "/images/Person3.jpg",
-    name: "Michael Mosely",
-    title: "Product Manager",
+    name: "Chiku Adebayo",
+    title: "Qwetu Residences-Karen",
     quote:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+      "Spotless Guru cleaners is a lifesaver for hostel living! Their house cleaning services turned my chaotic space into a haven. I can focus on studies, not mess. Plus, they're affordable and respond immediately. Thank you, Spotless Guru!",
   },
   {
     id: 4,
     image: "/images/Person4.jpg",
-    name: "James Van",
-    title: "Vice President",
+    name: "Eve Nyaboke",
+    title: "Cooperative University-Karen",
     quote:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+      "Spotless Guru's hand washing service is a game-changer! No more laundry stress in the hostel. Affordable, efficient, and my clothes have never looked better. After trying others that were expensive, I found a gem with Spotless Guru – cheaper and better than the rest!",
   },
 ];
 

@@ -1,64 +1,89 @@
-import React from 'react'
-import Footer from '../Footer/Footer'
+import React, { useState, useEffect } from "react";
+import "./Testimonial.css";
+import data from "../../data";
+import Footer from "../Footer/Footer";
 
-function Testimonial() {
+const Testimonial = () => {
+  const [people] = useState(data);
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const lastIndex = people.length - 1;
+    if (index < 0) {
+      setIndex(lastIndex);
+    }
+    if (index > lastIndex) {
+      setIndex(0);
+    }
+  }, [index, people]);
+
+  useEffect(() => {
+    let slider = setInterval(() => {
+      setIndex(index + 1);
+    }, 5000);
+    return () => {
+      clearInterval(slider);
+    };
+  }, [index]);
+
   return (
     <div>
-    
-      <div>
-        <h2 className='bg-gradient-to-b from-customBlue to-sky text-white p-6 text-center font-signature text-3xl'>Testimonials</h2>
-      </div>
+    <div className='bg-gradient-to-b from-customBlue to-sky text-white p-6 text-center font-signature text-3xl'>
+      Testimonials
+    </div>
 
-      <div className='mt-4 text-center text-customBlue font-poppins lg:font-sans text-lg lg:text-xl'>
-  <h1>
-    At Spotless Guru Cleaners, our stellar ratings and reviews are earned through consistent
-    delivery on promises. If we miss the mark, we make it right, always. Our skilled cleaning
-    technicians bring shine and care, complemented by a friendly, customer-focused office staff.
-    Your satisfaction is our priority!
-  </h1>
-  <div className="mt-6 lg:mt-10">
-    <hr className="border-t-2 w-1/2 mx-auto border-gray-300"></hr>
-  </div>
+    <div className='mt-4 text-center text-customBlue font-poppins lg:font-sans text-lg lg:text-xl'>
+
+  At Spotless Guru Cleaners, our stellar ratings and reviews are earned through consistent
+  delivery on promises. If we miss the mark, we make it right, always. Our skilled cleaning
+  technicians bring shine and care, complemented by a friendly, customer-focused office staff.
+  <br />Your satisfaction is our priority!
+
+<div className="mt-6 lg:mt-10">
+  <hr className="border-t-2 w-1/2 mx-auto border-gray-300"></hr>
+</div>
 </div>
 
-    
 
 
 
-      
-      <div>
-      <div>
-      <h2>Dan Baraka</h2>
-      <p>Qejani Residence-Karen</p>
-      <img src='' alt='image' />
-      <div>Spotless Guru, you're my savior! I was broke, but with just a coin in my pocket, I could afford your amazing dish washing services. Quality that fits any budget—thank you for making cleanliness accessible!</div>
+    <section className="section">
+      <div className="title">
+        <h2>top leader</h2>
       </div>
-
-      <div>
-      <h2>Rachael Njoroge</h2>
-      <p>Elite Hostel-Karen</p>
-      <img src='' alt='image' />
-      <div>Spotless Guru transformed our hostel kitchen! With efficient dish washing services, they lifted the post-move-in mess, ensuring a spotless and stress-free communal kitchen. Spotless Guru, our hostel's cleaning superhero!</div>
+      <div className="section-center">
+        {people.map((item, indexPeople) => {
+          const { id, image, name, title, quote } = item;
+          let position = "nextSlide";
+          if (indexPeople === index) {
+            position = "activeSlide";
+          }
+          if (
+            indexPeople === index - 1 ||
+            (index === 0 && indexPeople === people.length - 1)
+          ) {
+            position = "lastSlide";
+          }
+          return (
+            <article className={position} key={id}>
+              <img src={image} alt={name} className="person-img" />
+              <h4>{name}</h4>
+              <p className="title">{title}</p>
+              <p className="text">{quote}</p>
+            </article>
+          );
+        })}
+        <button className="prev" onClick={() => setIndex(index - 1)}>
+          <i className="fas fa-arrow-left" />
+        </button>
+        <button className="next" onClick={() => setIndex(index + 1)}>
+          <i className="fas fa-arrow-right" />
+        </button>
       </div>
-
-      <div>
-      <h2>Dan Kinyanjui</h2>
-      <p>SKL hostels-Gataka</p>
-      <img src='' alt='image' />
-      <div>Spotless Guru cleaners  is a lifesaver for hostel living! Their house cleaning services turned my chaotic space into a haven. I can focus on studies, not mess. Plus, they're affordable and respond immediately. Thank you, Spotless Guru!</div>
-      </div>
-
-      <div>
-      <h2>Eve Nyaboke</h2>
-      <p>Cooperative University-Karen</p>
-      <img src='' alt='image' />
-      <div>Spotless Guru's hand washing service is a game-changer! No more laundry stress in the hostel. Affordable, efficient, and my clothes have never looked better. After trying others that were expensive, I found a gem with Spotless Guru – cheaper and better than the rest!</div>
-      </div>
-      </div>
-      <Footer />
-
+    </section>
+    <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default Testimonial
+export default Testimonial;

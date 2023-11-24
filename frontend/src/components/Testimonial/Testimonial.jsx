@@ -9,10 +9,20 @@ function Testimonial() {
         <h2 className='bg-gradient-to-b from-customBlue to-sky text-white p-6 text-center font-signature text-3xl'>Testimonials</h2>
       </div>
 
-      <div>
-      <h1>At Spotless Guru Cleaners, our stellar ratings and reviews are earned through consistent delivery on promises. If we miss the mark, we make it right, always. Our skilled cleaning technicians bring shine and care, complemented by a friendly, customer-focused office staff. Your satisfaction is our priority!</h1>
-      
-      </div>
+      <div className='mt-4 text-center text-customBlue font-poppins lg:font-sans text-lg lg:text-xl'>
+  <h1>
+    At Spotless Guru Cleaners, our stellar ratings and reviews are earned through consistent
+    delivery on promises. If we miss the mark, we make it right, always. Our skilled cleaning
+    technicians bring shine and care, complemented by a friendly, customer-focused office staff.
+    Your satisfaction is our priority!
+  </h1>
+  <div className="mt-6 lg:mt-10">
+    <hr className="border-t-2 w-1/2 mx-auto border-gray-300"></hr>
+  </div>
+</div>
+
+    
+
 
 
       

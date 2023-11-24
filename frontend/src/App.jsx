@@ -11,6 +11,7 @@ import {
     Route,
     
   } from 'react-router-dom';
+import Contact from './components/Contact/Contact';
 
 
 
@@ -27,6 +28,7 @@ function App() {
               <Route exact path='services/dishwashing' element={<DishWashing/>}></Route>
               <Route exact path='services/handwashing' element={<HandWashing />}></Route>
               <Route exact path='testimonials' element={<Testimonial />}></Route>
+              <Route exact path='contact' element={<Contact/>}></Route>
              </Routes>
              
              </div>

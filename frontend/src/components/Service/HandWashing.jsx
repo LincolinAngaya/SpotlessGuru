@@ -4,7 +4,9 @@ import Footer from '../Footer/Footer'
 function HandWashing() {
   return (
     <div>
-      <div>Clothes Hand Washing</div>
+    <div>
+    <h2 className='bg-gradient-to-b from-customBlue to-sky text-white p-6 text-center font-signature text-3xl'>Clothes Hand Washing</h2>
+  </div>
 
       <div>
       <h1>Ready for affordable, hassle-free clothes hand washing services?</h1>

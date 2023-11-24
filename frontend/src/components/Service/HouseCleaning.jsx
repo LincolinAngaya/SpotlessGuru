@@ -4,7 +4,9 @@ import Footer from '../Footer/Footer'
 function HouseCleaning() {
   return (
     <div>
-      <div>House Cleaning</div>
+    <div>
+    <h2 className='bg-gradient-to-b from-customBlue to-sky text-white p-6 text-center font-signature text-3xl'>House Cleaning</h2>
+  </div>
 
       <div>
       <h1>Is your home in need of a little extra attention?</h1>

@@ -4,7 +4,10 @@ import Footer from '../Footer/Footer'
 function Testimonial() {
   return (
     <div>
-      <div>Testimonials</div>
+    
+      <div>
+        <h2 className='bg-gradient-to-b from-customBlue to-sky text-white p-6 text-center font-signature text-3xl'>Testimonials</h2>
+      </div>
 
       <div>
       <h1>At Spotless Guru Cleaners, our stellar ratings and reviews are earned through consistent delivery on promises. If we miss the mark, we make it right, always. Our skilled cleaning technicians bring shine and care, complemented by a friendly, customer-focused office staff. Your satisfaction is our priority!</h1>

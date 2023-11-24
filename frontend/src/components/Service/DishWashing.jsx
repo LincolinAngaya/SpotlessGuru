@@ -4,7 +4,9 @@ import Footer from '../Footer/Footer'
 function DishWashing() {
   return (
     <div>
-      <div>Dish Washing</div>
+    <div>
+        <h2 className='bg-gradient-to-b from-customBlue to-sky text-white p-6 text-center font-signature text-3xl'>Dish Washing</h2>
+    </div>
 
       <div>
             <h1>Are your dishes piling up?</h1>

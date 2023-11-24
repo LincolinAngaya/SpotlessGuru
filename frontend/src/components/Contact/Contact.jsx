@@ -1,5 +1,6 @@
 import React from 'react';
 import { AiOutlineMail, AiOutlinePhone, AiOutlineEnvironment } from 'react-icons/ai';
+import Footer from '../Footer/Footer';
 
 const Contact = () => {
   return (
@@ -8,6 +9,7 @@ const Contact = () => {
         <h2 className='bg-gradient-to-b from-customBlue to-sky text-white p-6 text-center font-signature text-3xl'>Contact us</h2>
       </div>
       <div className='relative'>
+
         <div className='container mx-auto mt-10 p-4 md:ml-16'>
           <div className='wrapper relative'>
             {/* Additional Container on Top */}
@@ -20,7 +22,7 @@ const Contact = () => {
 
             {/* Form Container */}
             <div>
-              <h2 className='text-3xl font-bold mb-4'>Contact Us</h2>
+              <h2 className='text-3xl text-customBlue font-bold mb-4'>Contact Us</h2>
               <form className='max-w-md'>
                 <div className='mb-4'>
                   <input
@@ -56,7 +58,7 @@ const Contact = () => {
 
                 <button
                   type='submit'
-                  className='bg-navy text-white px-2 py-2 rounded-md hover:bg-sky w-full'
+                  className='bg-navy text-white px-2 py-2 rounded-md hover:bg-sky hover:text-customBlue w-full'
                 >
                   Send
                 </button>
@@ -65,6 +67,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 };

@@ -49,7 +49,7 @@ const Testimonial = () => {
 
     <section className="section">
       <div className="title">
-        <h2>top leader</h2>
+        <h2 className="text-sky txt-3x1">What Our Client Say</h2>
       </div>
       <div className="section-center">
         {people.map((item, indexPeople) => {

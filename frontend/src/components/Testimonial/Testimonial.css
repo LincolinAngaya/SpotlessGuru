@@ -64,8 +64,9 @@ article.nextSlide {
   width: 150px;
   height: 150px;
   object-fit: cover;
-  border: 4px solid hsl(210, 31%, 80%);
+  border: 3px solid skyblue;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  
 }
 
 article h4 {

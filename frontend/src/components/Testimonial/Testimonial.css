@@ -71,13 +71,14 @@ article.nextSlide {
 
 article h4 {
   text-transform: uppercase;
-  color: hsl(21, 62%, 45%);
+  color: #002748;
   margin-bottom: 0.25rem;
 }
 .title {
   text-transform: capitalize;
   margin-bottom: 0.75rem;
   font-weight: bold;
+  color: #002748;
 }
 
 .title {

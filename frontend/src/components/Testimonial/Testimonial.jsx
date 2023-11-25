@@ -81,6 +81,12 @@ const Testimonial = () => {
           <i className="fas fa-arrow-right" />
         </button>
       </div>
+      <div className="flex items-center justify-center h-full text-customBlue font-signature text-2xl sm:text-2xl md:text-2xl lg:text-3xl xl:text-4xl">
+  Transforming Spaces, Delighting Lives!
+</div>
+
+    
+
     </section>
     <Footer />
     </div>

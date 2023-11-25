@@ -10,7 +10,7 @@ function DishWashing() {
     <div className='bg-gradient-to-b from-customBlue to-sky text-white font-bold p-6 text-center font-signature text-2xl sm:text-2xl md:text-2xl'>
     Dish Washing
   </div>
-  <div className='p-3'>
+  <div className='mx-10 mt-5'>
   <h1 className=' text-2xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-4xl text-customBlue mt-[-0.5rem]'>
     Are your dishes piling up?
   </h1>
@@ -24,7 +24,7 @@ function DishWashing() {
     
      
       
-      <div className='flex flex-col lg:flex-row mx-10 space-x-4 lg:space-x-8'>
+<div className='flex flex-col lg:flex-row mx-10 space-x-5 lg:space-x-8 py-8'>
     
       <img src={dishwashing} height="400" width="500" alt='dish washing' />
       <div>

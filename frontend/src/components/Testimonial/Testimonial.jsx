@@ -28,7 +28,7 @@ const Testimonial = () => {
 
   return (
     <div>
-    <div className='bg-gradient-to-b from-customBlue to-sky text-white font-bold p-6 text-center font-signature text-2xl sm:text-2xl md:text-2xl'>
+    <div className='bg-gradient-to-r from-customBlue to-sky text-white font-bold p-6 text-center font-signature text-2xl sm:text-2xl md:text-2xl'>
   Testimonials
 </div>
 

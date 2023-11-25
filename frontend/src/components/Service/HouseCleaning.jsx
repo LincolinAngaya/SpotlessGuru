@@ -17,13 +17,15 @@ function HouseCleaning() {
   <h1 className=' text-2xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-4xl text-customBlue mt-[-0.5rem]'>Is your home in need of extra attention?</h1>
   <p className='text-left text-gray-500 font-poppins lg:font-sans text-lg'>Spotless Guru house cleaning services are guaranteed to get your home gleaming clean! The best part is that you get to sit back and relax while we do the dirty work!</p>
    
-  <h1 className='font-bold font-signature text-4xl text-customBlue'>Our House Cleaning Includes</h1>
+  <h1 className='font-bold font-signature text-2xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-4xl text-customBlue'>
+  Our House Cleaning Includes
+</h1>
     </div>   
-    <div className='flex flex-col lg:flex-row mx-10 space-x-5 lg:space-x-8 py-8'>
+    <div className='flex flex-col lg:flex-row mx-10 space-x-5 lg:space-x-9 py-8'>
       
     <img src={kitchen}  className='rounded-r-lg' height="400" width="500" alt='dish washing' />
       <div>
-      <h1 className='p-3 font-bold font-signature text-4xl text-customBlue'>Kitchen Cleaning</h1>
+      <h1 className='font-bold font-signature text-2xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-4xl mt-3 text-customBlue'>Kitchen Cleaning</h1>
       <ul className='p-3  text-gray-500 font-poppins lg:font-sans text-lg'>
       <li className='flex items-center'><span className='text-customBlue mr-2'> <FontAwesomeIcon icon={faCheckCircle} /> </span>Dust and spot clean cabinet exteriors</li>
       <li className='flex items-center'><span className='text-customBlue mr-2'> <FontAwesomeIcon icon={faCheckCircle} /> </span>Clean microwave, induction, and fridge (inside & out)</li>
@@ -40,7 +42,7 @@ function HouseCleaning() {
 
      <div className='flex flex-col lg:flex-row mx-10 space-x-5 lg:space-x-8 py-8'>
       <div>
-      <h1 className='p-3 font-bold font-signature text-4xl text-customBlue'>Bathroom Cleaning</h1>
+      <h1 className='font-bold font-signature text-2xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-4xl  text-customBlue'>Bathroom Cleaning</h1>
       
       <ul className='p-3  text-gray-500 font-poppins lg:font-sans text-lg'>
       <li className='flex items-center'><span className='text-customBlue mr-2'> <FontAwesomeIcon icon={faCheckCircle} /> </span>Shower scrubbed</li>
@@ -63,7 +65,7 @@ function HouseCleaning() {
      
 <img src={room}  className='rounded-r-lg' height="400" width="500" alt='dish washing' />
       <div>
-      <h1 className='p-3 font-bold font-signature text-4xl text-customBlue'>All Rooms</h1>
+      <h1 className='font-bold font-signature text-2xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-4xl mt-3 text-customBlue'>All Rooms</h1>
       <ul className='p-3  text-gray-500 font-poppins lg:font-sans text-lg'>
       <li className='flex items-center'><span className='text-customBlue mr-2'> <FontAwesomeIcon icon={faCheckCircle} /> </span>Dust all wall art, TVs, electronics etc.</li>
       <li className='flex items-center'><span className='text-customBlue mr-2'> <FontAwesomeIcon icon={faCheckCircle} /> </span>Dust all furniture</li>

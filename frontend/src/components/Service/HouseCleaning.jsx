@@ -24,15 +24,15 @@ function HouseCleaning() {
       <img src={kitchen} alt='kitchen cleaning' />
       <div>
       <h1 className='p-3 font-bold font-signature text-4xl text-customBlue'>Kitchen Cleaning</h2>
-      <ul>
-            <li>Dust and spot clean cabinet exteriors</li>
-            <li>Clean microwave, induction, and fridge (inside & out)</li>
-            <li>Wipe small appliances and items on countertops</li>
-            <li>Sanitize sink and polish faucet</li>
-            <li>Clean/polish all appliance exteriors</li>
-            <li>Dust light fixtures (using a 2-step stool)</li>
-            <li>Remove trash and replace the bag</li>
-            <li>Vacuum and mop kitchen floor</li>
+      <ul className='p-3  text-gray-500 font-poppins lg:font-sans text-lg'>
+      <li className='flex items-center'><span className='text-customBlue mr-2'> <FontAwesomeIcon icon={faCheckCircle} /> </span>Dust and spot clean cabinet exteriors</li>
+      <li className='flex items-center'><span className='text-customBlue mr-2'> <FontAwesomeIcon icon={faCheckCircle} /> </span>Clean microwave, induction, and fridge (inside & out)</li>
+      <li className='flex items-center'><span className='text-customBlue mr-2'> <FontAwesomeIcon icon={faCheckCircle} /> </span>Wipe small appliances and items on countertops</li>
+      <li className='flex items-center'><span className='text-customBlue mr-2'> <FontAwesomeIcon icon={faCheckCircle} /> </span>Sanitize sink and polish faucet</li>
+      <li className='flex items-center'><span className='text-customBlue mr-2'> <FontAwesomeIcon icon={faCheckCircle} /> </span>Clean/polish all appliance exteriors</li>
+      <li className='flex items-center'><span className='text-customBlue mr-2'> <FontAwesomeIcon icon={faCheckCircle} /> </span>Dust light fixtures (using a 2-step stool)</li>
+      <li className='flex items-center'><span className='text-customBlue mr-2'> <FontAwesomeIcon icon={faCheckCircle} /> </span>Remove trash and replace the bag</li>
+      <li className='flex items-center'><span className='text-customBlue mr-2'> <FontAwesomeIcon icon={faCheckCircle} /> </span>Vacuum and mop kitchen floor</li>
     </ul>
     <button type="button">Book Now</button>
 </div>

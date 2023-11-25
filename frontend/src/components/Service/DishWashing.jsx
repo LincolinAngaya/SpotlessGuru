@@ -1,24 +1,25 @@
 import React from 'react'
 import Footer from '../Footer/Footer'
-import dishwashing from '../assets/Dish wash 4.jfif'
+import dishwashing from '../assets/dish1.jpg'
 
 function DishWashing() {
   return (
+    <div>
     <div>
     <div className='bg-gradient-to-b from-customBlue to-sky text-white font-bold p-6 text-center font-signature text-2xl sm:text-2xl md:text-2xl'>
     Dish Washing
   </div>
       <div>
             <h1 className='p-3 text-3x1'>Are your dishes piling up?</h1>
-            <p>Spotless Guru dish washing services guarantee sparkling clean results. Relax while we handle the dirty work—affordable, efficient, and with just a coin, your dishes gleam!</p>
+            <p className='p-3 mt-3 text-left text-customBlue font-poppins lg:font-sans text-lg lg:text-xl'>Spotless Guru dish washing services guarantee sparkling clean results. Relax while we handle the dirty work—affordable, efficient, and with just a coin, your dishes gleam!</p>
       </div>
 
     
      
       
-      <div className='p-2 flex flex-col lg:flex-row'>
+      <div className='flex flex-col lg:flex-row mx-10 space-x-4 lg:space-x-8'>
     
-      <img src={dishwashing} height="300" width="400" alt='dish washing' />
+      <img src={dishwashing} height="400" width="500" alt='dish washing' />
       <div>
       <h1>Dish Washing Checklist</h1>
       <ul>
@@ -34,7 +35,7 @@ function DishWashing() {
     
          </div>
       </div>
-      
+      </div>
       <Footer />
 
     </div>

@@ -14,9 +14,9 @@ function HouseCleaning() {
   </div>
 
   <div className='mx-10 mt-5'>
-      <h1>Is your home in need of a little extra attention?</h1>
-      <p>Spotless Guru house cleaning services are guaranteed to get your home gleaming clean! The best part is that you get to sit back and relax while we do the dirty work!</p>
-      </div>
+  <h1 className=' text-2xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-4xl text-customBlue mt-[-0.5rem]'>Is your home in need of a little extra attention?</h1>
+  <p className='text-left text-gray-500 font-poppins lg:font-sans text-lg'>Spotless Guru house cleaning services are guaranteed to get your home gleaming clean! The best part is that you get to sit back and relax while we do the dirty work!</p>
+    </div>
 
       <div>
       <h1>Our House Cleaning Includes</h1>

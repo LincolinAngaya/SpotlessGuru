@@ -28,9 +28,10 @@ const Testimonial = () => {
 
   return (
     <div>
-    <div className='bg-gradient-to-b from-customBlue to-sky text-white p-6 text-center font-signature text-3xl'>
-      Testimonials
-    </div>
+    <div className='bg-gradient-to-b from-customBlue to-sky text-white font-bold p-6 text-center font-signature text-2xl sm:text-2xl md:text-2xl'>
+  Testimonials
+</div>
+
 
     <div className='mt-4 text-center text-customBlue font-poppins lg:font-sans text-lg lg:text-xl'>
 
@@ -49,7 +50,7 @@ const Testimonial = () => {
 
     <section className="section">
       <div className="title">
-        <h2 className="text-sky txt-3x1">What Our Client Say</h2>
+        <h2 className="text-sky txt-3x1">What Our Clients Say</h2>
       </div>
       <div className="section-center">
         {people.map((item, indexPeople) => {
@@ -67,7 +68,7 @@ const Testimonial = () => {
           return (
             <article className={position} key={id}>
               <img src={image} alt={name} className="person-img mx-auto my-auto "/>
-              <h4>{name}</h4>
+              <h4 className="mt-6">{name}</h4>
               <p className="title">{title}</p>
               <p className="text">{quote}</p>
             </article>

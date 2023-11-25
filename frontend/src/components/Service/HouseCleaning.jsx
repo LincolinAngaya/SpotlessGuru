@@ -23,7 +23,7 @@ function HouseCleaning() {
       
       <img src={kitchen} alt='kitchen cleaning' />
       <div>
-      <h1 className='p-3 font-bold font-signature text-4xl text-customBlue'>Kitchen Cleaning</h2>
+      <h1 className='p-3 font-bold font-signature text-4xl text-customBlue'>Kitchen Cleaning</h1>
       <ul className='p-3  text-gray-500 font-poppins lg:font-sans text-lg'>
       <li className='flex items-center'><span className='text-customBlue mr-2'> <FontAwesomeIcon icon={faCheckCircle} /> </span>Dust and spot clean cabinet exteriors</li>
       <li className='flex items-center'><span className='text-customBlue mr-2'> <FontAwesomeIcon icon={faCheckCircle} /> </span>Clean microwave, induction, and fridge (inside & out)</li>
@@ -59,26 +59,26 @@ function HouseCleaning() {
 </div>
 
 
+<div className='flex flex-col lg:flex-row mx-10 space-x-5 lg:space-x-8 py-8'>
+     
+      <img src={room} alt='All Rooms' />
       <div>
-      <h2>All Rooms</h2>
-      <img src='' alt='All Rooms' />
-      <ul>
-            <li>Dust all wall art, TVs, electronics etc.</li>
-            <li>Dust all furniture</li>
-            <li>Vacuum all floors & mop hard surface floors</li>
-            <li>Remove cobwebs</li>
-            <li>Dust ceiling fans</li>
-            <li>Dust light fixtures and wall art</li>
-            <li>Wash light switches and doorknobs</li>
-            <li>Dust and spot clean doors and door frames</li>
+      <h1 className='p-3 font-bold font-signature text-4xl text-customBlue'>All Rooms</h1>
+      <ul className='p-3  text-gray-500 font-poppins lg:font-sans text-lg'>
+      <li className='flex items-center'><span className='text-customBlue mr-2'> <FontAwesomeIcon icon={faCheckCircle} /> </span>Dust all wall art, TVs, electronics etc.</li>
+      <li className='flex items-center'><span className='text-customBlue mr-2'> <FontAwesomeIcon icon={faCheckCircle} /> </span>Dust all furniture</li>
+      <li className='flex items-center'><span className='text-customBlue mr-2'> <FontAwesomeIcon icon={faCheckCircle} /> </span>Vacuum all floors & mop hard surface floors</li>
+      <li className='flex items-center'><span className='text-customBlue mr-2'> <FontAwesomeIcon icon={faCheckCircle} /> </span>Remove cobwebs</li>
+      <li className='flex items-center'><span className='text-customBlue mr-2'> <FontAwesomeIcon icon={faCheckCircle} /> </span>Dust ceiling fans</li>
+      <li className='flex items-center'><span className='text-customBlue mr-2'> <FontAwesomeIcon icon={faCheckCircle} /> </span>Dust light fixtures and wall art</li>
+      <li className='flex items-center'><span className='text-customBlue mr-2'> <FontAwesomeIcon icon={faCheckCircle} /> </span>Wash light switches and doorknobs</li>
+      <li className='flex items-center'><span className='text-customBlue mr-2'> <FontAwesomeIcon icon={faCheckCircle} /> </span>Dust and spot clean doors and door frames</li>
       </ul>
-      <button type="button">Book Now</button>
-
+      <button  className='bg-customBlue text-white text-base px-6 py-2 rounded-md m-4  hover:bg-sky hover:text-customBlue cursor-pointer'type="button">Book Now</button>
+    
+         </div>
       </div>
-        
-      </div>
-      
-      </div>
+     
       <Footer />
 
     </div>

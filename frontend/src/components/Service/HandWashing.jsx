@@ -20,9 +20,6 @@ function HandWashing() {
 
 
       <div className='flex flex-col lg:flex-row mx-10 space-x-5 lg:space-x-8 py-8'>
-     
-      <div>
-      <img src={wash}  className='rounded-r-lg' height="400" width="500" alt='hand washing' />
       <div>
       <h1 className='p-3 font-bold font-signature text-4xl text-customBlue'>Our hand washing Includes</h1>
     
@@ -31,21 +28,23 @@ function HandWashing() {
             <strong>Bedding:</strong>
             Hand washing of bed linens, sheets, pillowcases, and duvet covers to ensure a fresh and clean sleeping environment.
         </li>
-        <li>
+        <li className='flex items-center'><span className='text-customBlue mr-2'> <FontAwesomeIcon icon={faCheckCircle} /> </span>
             <strong>Shoes:</strong>
             Gentle cleaning of shoes to remove dirt and stains. This can include various types of shoes, from casual sneakers to delicate dress shoes.
         </li>
-        <li>
-            <strong>Clothes:</strong>
+        <li className='flex items-center'><span className='text-customBlue mr-2'> <FontAwesomeIcon icon={faCheckCircle} /> </span>
+            <strong>Clothes:</strong><br />
             Handwashing services for a wide range of clothing items, including everyday wear, delicates, wool garments, activewear, and special fabrics.
         </li>
      </ul>
 
-    <button type="button">Book Now</button>
+     <button  className='bg-customBlue text-white text-base px-6 py-2 rounded-md m-4  hover:bg-sky hover:text-customBlue cursor-pointer'type="button">Book Now</button>
+    
 
       </div>
+      <img src={wash}  className='rounded-l-lg' height="400" width="500" alt='hand washing' />
       
-      </div>
+     
       
       </div>
       <Footer />

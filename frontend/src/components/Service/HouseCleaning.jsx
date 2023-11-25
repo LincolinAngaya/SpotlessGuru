@@ -17,13 +17,13 @@ function HouseCleaning() {
   <h1 className=' text-2xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-4xl text-customBlue mt-[-0.5rem]'>Is your home in need of a little extra attention?</h1>
   <p className='text-left text-gray-500 font-poppins lg:font-sans text-lg'>Spotless Guru house cleaning services are guaranteed to get your home gleaming clean! The best part is that you get to sit back and relax while we do the dirty work!</p>
     </div>
-
+    <h1 className=' text-2xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-4xl text-customBlue mt-[-0.5rem]'>Our House Cleaning Includes</h1>
+      
+    <div className='flex flex-col lg:flex-row mx-10 space-x-5 lg:space-x-8 py-8'>
+      
+      <img src={kitchen} alt='kitchen cleaning' />
       <div>
-      <h1>Our House Cleaning Includes</h1>
-      <div>
-      <div>
-      <h2>Kitchen Cleaning</h2>
-      <img src='' alt='kitchen cleaning' />
+      <h1 className='p-3 font-bold font-signature text-4xl text-customBlue'>Kitchen Cleaning</h2>
       <ul>
             <li>Dust and spot clean cabinet exteriors</li>
             <li>Clean microwave, induction, and fridge (inside & out)</li>
@@ -35,7 +35,7 @@ function HouseCleaning() {
             <li>Vacuum and mop kitchen floor</li>
     </ul>
     <button type="button">Book Now</button>
-
+</div>
       </div>
       <div>
       <h2>Bathroom Cleaning</h2>

@@ -1,14 +1,19 @@
 import React from 'react'
 import Footer from '../Footer/Footer'
+import kitchen from '../assets/kitchen.jfif'
+import bathroom from '../assets/toilet.jpg'
+import room from '../assets/room.jfif'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 
 function HouseCleaning() {
   return (
     <div>
-    <div>
-    <h2 className='bg-gradient-to-b from-customBlue to-sky text-white p-6 text-center font-signature text-3xl'>House Cleaning</h2>
+    <div className='bg-gradient-to-b from-customBlue to-sky text-white font-bold p-6 text-center font-signature text-2xl sm:text-2xl md:text-2xl'>
+   House Cleaning
   </div>
 
-      <div>
+  <div className='mx-10 mt-5'>
       <h1>Is your home in need of a little extra attention?</h1>
       <p>Spotless Guru house cleaning services are guaranteed to get your home gleaming clean! The best part is that you get to sit back and relax while we do the dirty work!</p>
       </div>

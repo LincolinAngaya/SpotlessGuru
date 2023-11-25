@@ -34,7 +34,7 @@ function HouseCleaning() {
       <li className='flex items-center'><span className='text-customBlue mr-2'> <FontAwesomeIcon icon={faCheckCircle} /> </span>Remove trash and replace the bag</li>
       <li className='flex items-center'><span className='text-customBlue mr-2'> <FontAwesomeIcon icon={faCheckCircle} /> </span>Vacuum and mop kitchen floor</li>
     </ul>
-    <button type="button">Book Now</button>
+    <button  className='bg-customBlue text-white text-base px-6 py-2 rounded-md m-4  hover:bg-sky hover:text-customBlue cursor-pointer'type="button">Book Now</button>
 </div>
       </div>
       <div>

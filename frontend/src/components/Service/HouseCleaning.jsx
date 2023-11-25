@@ -33,26 +33,31 @@ function HouseCleaning() {
       <li className='flex items-center'><span className='text-customBlue mr-2'> <FontAwesomeIcon icon={faCheckCircle} /> </span>Dust light fixtures (using a 2-step stool)</li>
       <li className='flex items-center'><span className='text-customBlue mr-2'> <FontAwesomeIcon icon={faCheckCircle} /> </span>Remove trash and replace the bag</li>
       <li className='flex items-center'><span className='text-customBlue mr-2'> <FontAwesomeIcon icon={faCheckCircle} /> </span>Vacuum and mop kitchen floor</li>
+      </ul>
+      <button  className='bg-customBlue text-white text-base px-6 py-2 rounded-md m-4  hover:bg-sky hover:text-customBlue cursor-pointer'type="button">Book Now</button>
+      </div>
+      </div>
+
+     <div className='flex flex-col lg:flex-row mx-10 space-x-5 lg:space-x-8 py-8'>
+      <div>
+      <h1 className='p-3 font-bold font-signature text-4xl text-customBlue'>Bathroom Cleaning</h1>
+      
+      <ul className='p-3  text-gray-500 font-poppins lg:font-sans text-lg'>
+      <li className='flex items-center'><span className='text-customBlue mr-2'> <FontAwesomeIcon icon={faCheckCircle} /> </span>Shower scrubbed</li>
+      <li className='flex items-center'><span className='text-customBlue mr-2'> <FontAwesomeIcon icon={faCheckCircle} /> </span>Clean shower door</li>
+      <li className='flex items-center'><span className='text-customBlue mr-2'> <FontAwesomeIcon icon={faCheckCircle} /> </span>Disinfect toilet and toilet area</li>
+      <li className='flex items-center'><span className='text-customBlue mr-2'> <FontAwesomeIcon icon={faCheckCircle} /> </span>Mirrors cleaned (streak-free)</li>
+      <li className='flex items-center'><span className='text-customBlue mr-2'> <FontAwesomeIcon icon={faCheckCircle} /> </span>Sink cleaned and faucet polished</li>
+      <li className='flex items-center'><span className='text-customBlue mr-2'> <FontAwesomeIcon icon={faCheckCircle} /> </span>Vacuum bathroom rugs or shake</li>
+      <li className='flex items-center'><span className='text-customBlue mr-2'> <FontAwesomeIcon icon={faCheckCircle} /> </span>Clean and disinfect bathroom floors</li>
     </ul>
     <button  className='bg-customBlue text-white text-base px-6 py-2 rounded-md m-4  hover:bg-sky hover:text-customBlue cursor-pointer'type="button">Book Now</button>
+    
+
+    </div>
+    <img src={bathroom}  className='rounded-l-lg' height="400" width="500" alt='hand washing' />
 </div>
-      </div>
-      <div>
-      <h2>Bathroom Cleaning</h2>
-      <img src='' alt='Bathroom Cleaning' />
-      <ul>
-        <li>Shower scrubbed</li>
-        <li>Clean shower door</li>
-        <li>Disinfect toilet and toilet area</li>
-        <li>Mirrors cleaned (streak-free)</li>
-        <li>Sink cleaned and faucet polished</li>
-        <li>Vacuum bathroom rugs or shake</li>
-        <li>Clean and disinfect bathroom floors</li>
-    </ul>
-    <button type="button">Book Now</button>
 
-
-      </div>
 
       <div>
       <h2>All Rooms</h2>

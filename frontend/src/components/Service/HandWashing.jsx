@@ -1,5 +1,8 @@
 import React from 'react'
 import Footer from '../Footer/Footer'
+import wash from '../assets/wash.jpg'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 
 function HandWashing() {
   return (
@@ -12,13 +15,19 @@ function HandWashing() {
       <p className='text-left text-gray-500 font-poppins lg:font-sans text-lg'>Enjoy sparkling clean clothes every week with our friendly-priced recurring hand washing services. Say goodbye to laundry worries without breaking the bank!</p>
       </div>
 
+
+
+
+
+      <div className='flex flex-col lg:flex-row mx-10 space-x-5 lg:space-x-8 py-8'>
+     
       <div>
-      <h1>Our hand washing Includes</h1>
+      <img src={wash}  className='rounded-r-lg' height="400" width="500" alt='hand washing' />
       <div>
-      <div>
-      <img src='' alt='Handwashing' />
-      <ul>
-        <li>
+      <h1 className='p-3 font-bold font-signature text-4xl text-customBlue'>Our hand washing Includes</h1>
+    
+      <ul className='p-3  text-gray-500 font-poppins lg:font-sans text-lg'>
+      <li className='flex items-center'><span className='text-customBlue mr-2'> <FontAwesomeIcon icon={faCheckCircle} /> </span>
             <strong>Bedding:</strong>
             Hand washing of bed linens, sheets, pillowcases, and duvet covers to ensure a fresh and clean sleeping environment.
         </li>

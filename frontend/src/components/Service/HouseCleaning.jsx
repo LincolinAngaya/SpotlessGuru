@@ -21,7 +21,7 @@ function HouseCleaning() {
       
     <div className='flex flex-col lg:flex-row mx-10 space-x-5 lg:space-x-8 py-8'>
       
-      <img src={kitchen} alt='kitchen cleaning' />
+    <img src={kitchen}  className='rounded-r-lg' height="400" width="500" alt='dish washing' />
       <div>
       <h1 className='p-3 font-bold font-signature text-4xl text-customBlue'>Kitchen Cleaning</h1>
       <ul className='p-3  text-gray-500 font-poppins lg:font-sans text-lg'>
@@ -61,7 +61,7 @@ function HouseCleaning() {
 
 <div className='flex flex-col lg:flex-row mx-10 space-x-5 lg:space-x-8 py-8'>
      
-      <img src={room} alt='All Rooms' />
+<img src={room}  className='rounded-r-lg' height="400" width="500" alt='dish washing' />
       <div>
       <h1 className='p-3 font-bold font-signature text-4xl text-customBlue'>All Rooms</h1>
       <ul className='p-3  text-gray-500 font-poppins lg:font-sans text-lg'>

@@ -9,19 +9,21 @@ function DishWashing() {
     Dish Washing
   </div>
       <div>
-            <h1>Are your dishes piling up?</h1>
+            <h1 className='p-3 text-3x1'>Are your dishes piling up?</h1>
             <p>Spotless Guru dish washing services guarantee sparkling clean results. Relax while we handle the dirty work—affordable, efficient, and with just a coin, your dishes gleam!</p>
       </div>
 
+    
+     
+      
+      <div className='p-2 flex flex-col lg:flex-row'>
+    
+      <img src={dishwashing} height="300" width="400" alt='dish washing' />
       <div>
       <h1>Dish Washing Checklist</h1>
-      
-      <div>
-    
-      <img src={dishwashing} alt='dish washing' />
       <ul>
         <li>Personal Plates and Bowls</li>
-        <li>Forks, knives, spoons, Cooking Spatulas & tongs</li>
+        <li>Forks,sieve, knives, spoons, Cooking Spatulas & tongs</li>
         <li>Mugs and Glasses</li>
         <li>Small pots, Frying Pans, sufurias, and Cutting Boards</li>
         <li>Food Storage Containers</li>
@@ -29,9 +31,10 @@ function DishWashing() {
        </ul>
     
          <button type="button">Book Now</button>
+    
+         </div>
       </div>
       
-      </div>
       <Footer />
 
     </div>

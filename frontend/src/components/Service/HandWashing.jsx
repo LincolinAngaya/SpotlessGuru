@@ -4,13 +4,12 @@ import Footer from '../Footer/Footer'
 function HandWashing() {
   return (
     <div>
-    <div>
-    <h2 className='bg-gradient-to-b from-customBlue to-sky text-white p-6 text-center font-signature text-3xl'>Clothes Hand Washing</h2>
+    <div className='bg-gradient-to-b from-customBlue to-sky text-white font-bold p-6 text-center font-signature text-2xl sm:text-2xl md:text-2xl'>
+    Clothes Hand Washing
   </div>
-
-      <div>
-      <h1>Ready for affordable, hassle-free clothes hand washing services?</h1>
-      <p>Enjoy sparkling clean clothes every week with our friendly-priced recurring hand washing services. Say goodbye to laundry worries without breaking the bank!</p>
+      <div className='mx-10 mt-5'>
+      <h1 className=' text-2xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-4xl text-customBlue mt-[-0.5rem]'>Ready for Affordable Clothes Handwashing Services?</h1>
+      <p className='text-left text-gray-500 font-poppins lg:font-sans text-lg'>Enjoy sparkling clean clothes every week with our friendly-priced recurring hand washing services. Say goodbye to laundry worries without breaking the bank!</p>
       </div>
 
       <div>

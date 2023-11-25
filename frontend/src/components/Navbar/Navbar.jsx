@@ -15,11 +15,11 @@ const Navbar = () => {
 
   return (
     <div>
-      <div className="bg-customBlue text-right text-white font-signature h-10vh pr-4 md:text-right md:h-auto">
-        <a href="tel:0796286466" className="inline-block">
-          Call: 0796286466
-        </a>
-      </div>
+       { /*<div className="bg-customBlue text-right text-white font-signature h-10vh pr-4 md:text-right md:h-auto">
+          <a href="tel:0796286466" className="inline-block">
+            Call: 0796286466
+          </a>
+  </div>*/}
 
       <header className={`bg-white ${isMenuOpen ? 'md:min-h-fit min-h-[60vh]' : ''}`}>
         <nav className="nav flex justify-between items-center">

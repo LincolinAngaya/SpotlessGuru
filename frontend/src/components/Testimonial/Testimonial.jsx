@@ -50,7 +50,7 @@ const Testimonial = () => {
 
     <section className="section">
       <div className="title">
-        <h2 className="text-sky txt-3x1">What Our Clients Say</h2>
+        <h2 className="text-customBlue txt-3x1">What Our Clients Say</h2>
       </div>
       <div className="section-center">
         {people.map((item, indexPeople) => {

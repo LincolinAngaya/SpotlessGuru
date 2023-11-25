@@ -1,8 +1,8 @@
 import React from 'react'
 import Footer from '../Footer/Footer'
 import dishwashing from '../assets/dish1.jpg'
-import { GoChecklist } from "react-icons/go";
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 function DishWashing() {
   return (
     <div>
@@ -29,13 +29,14 @@ function DishWashing() {
       <img src={dishwashing} height="400" width="500" alt='dish washing' />
       <div>
       <h1 className='p-3 font-bold font-signature text-4xl text-customBlue'>Dish Washing Checklist</h1>
-      <ul>
-      <li><GoChecklist />Personal Plates and Bowls</li>
-      <li><GoChecklist />Forks,sieve, knives, spoons, Cooking Spatulas & tongs</li>
-      <li><GoChecklist />Mugs and Glasses</li>
-      <li><GoChecklist />Small pots, Frying Pans, sufurias, and Cutting Boards</li>
-      <li><GoChecklist />Food Storage Containers</li>
-      <li><GoChecklist />Items like blender jars or toaster trays</li>
+      <ul className='p-3  text-gray-500 font-poppins lg:font-sans text-lg'>
+     <li className='flex items-center'><span className='text-customBlue mr-2'> <FontAwesomeIcon icon={faCheckCircle} /> </span>
+      Personal Plates and Bowls</li> 
+      <li className='flex items-center'><span className='text-customBlue mr-2'> <FontAwesomeIcon icon={faCheckCircle} /> </span>Forks, sieve, knives, spoons, Cooking Spatulas & tongs</li>
+      <li className='flex items-center'><span className='text-customBlue mr-2'> <FontAwesomeIcon icon={faCheckCircle} /> </span>Mugs and Glasses</li>
+      <li className='flex items-center'><span className='text-customBlue mr-2'> <FontAwesomeIcon icon={faCheckCircle} /> </span>Small pots, Frying Pans, sufurias, and Cutting Boards</li>
+      <li className='flex items-center'><span className='text-customBlue mr-2'> <FontAwesomeIcon icon={faCheckCircle} /> </span>Food Storage Containers</li>
+      <li className='flex items-center'><span className='text-customBlue mr-2'> <FontAwesomeIcon icon={faCheckCircle} /> </span>Items like blender jars or toaster trays</li>
        </ul>
     
          <button  className='bg-customBlue text-white text-base px-6 py-2 rounded-md m-4  hover:bg-sky hover:text-customBlue cursor-pointer'type="button">Book Now</button>

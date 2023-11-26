@@ -1,0 +1,76 @@
+import React from 'react';
+import house from '../assets/house.jfif';
+import Footer from '../Footer/Footer';
+
+function About() {
+  return (
+    <>
+      <div>
+        <h2 className='bg-gradient-to-r from-customBlue to-sky text-white p-6 text-center font-signature text-3xl mb-4'>About  us</h2>
+      </div>
+      <div className='image flex flex-col sm:flex-row gap-8 items-center'>
+  <div className='ml-10 mb-4 sm:mb-0'>
+    <img
+      src={house}
+      alt='House cleaning'
+      className='rounded-lg shadow-md object-cover'
+    />
+  </div>
+  <div className="flex-1">
+    <p className="block text-customBlue text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl">
+      Welcome to Spotless Guru Cleaners, your trusted partner for professional cleaning services. We are a dedicated team of cleaning experts with a passion for providing clean and healthy environments for homes and rooms. With years of experience and a commitment to excellence, we take pride in making your spaces shine.
+    </p>
+  </div>
+</div>
+
+
+
+
+      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 sm:px-8 px-5 py-4 sm:py-4 md:py-6 lg:py-8 xl:py-10 justify-center items-center'>
+        {/* Card 1 */}
+        <div className='flex flex-col items-center justify-center bg-gradient-to-b from-customBlue to-sky text-white border border-sky-400 rounded-md p-6 shadow-lg h-full transition-transform transform hover:bg-sky cursor-pointer'>
+          <h2 className='text-2xl font-bold font-signature mb-2'>Our Mission</h2>
+          <p className='break-words '>
+            We aim to make your life better by taking care of the cleaning tasks
+            that can be time-consuming and strenuous. We believe that a clean space
+            is the foundation for a happier and healthier life.
+          </p>
+        </div>
+
+        {/* Card 2 */}
+        <div className='flex flex-col items-center justify-center bg-gradient-to-b from-customBlue to-sky text-white  border border-sky-400 rounded-md p-6 shadow-lg h-full transition-transform transform hover:bg-sky cursor-pointer'>
+          <h2 className='text-2xl font-bold font-signature mb-2'>Our Vision</h2>
+          <p className=''>To create a cleaner and healthier world, one space at a time, where individuals thrive in environments that promote well-being and happiness. We envision a future where cleanliness is not just a service but a lifestyle, contributing to a sustainable and harmonious planet for generations to come</p>
+        </div>
+
+        {/* Card 3 */}
+        <div className='flex flex-col items-center justify-center bg-gradient-to-b from-customBlue to-sky text-white  border border-sky-400 rounded-md p-6 shadow-lg h-full transition-transform transform hover:bg-sky cursor-pointer'>
+          <h2 className='text-2xl font-bold font-signature mb-2'>Our Values</h2>
+          <ul className='list-disc list-inside text-white p-4 rounded-md'>
+            <li>Quality</li>
+            <li>Reliability</li>
+            <li>Safety</li>
+            <li>Professionalism</li>
+          </ul>
+        </div>
+        <div className='flex flex-col items-center justify-center bg-gradient-to-b from-customBlue to-sky text-white  border border-sky-400 rounded-md p-6 shadow-lg h-full transition-transform transform hover:bg-sky cursor-pointer'>
+          <h2 className='text-2xl font-bold font-signature mb-2'>Why Us?</h2>
+          <ul className='list-disc list-inside text-white p-4 rounded-md'>
+  <li>Customized services</li>
+  <li>Experienced Team</li>
+  <li>Eco-friendly Approach</li>
+  <li>Satisfaction Guarantee</li>
+</ul>
+
+        </div>
+      </div>
+      <div>
+        <p className='bg-navy text-white p-6 text-center font-signature text-3xl mb-4'>Join us in our journey</p>
+      </div>
+      <Footer/>
+     
+    </>
+  );
+}
+
+export default About;

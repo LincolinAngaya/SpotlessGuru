@@ -28,7 +28,7 @@ const Testimonial = () => {
 
   return (
     <div>
-    <div className='bg-gradient-to-r from-customBlue to-sky text-white font-bold p-6 text-center font-signature text-2xl sm:text-2xl md:text-2xl'>
+    <div className='bg-gradient-to-r from-customBlue to-sky text-white p-6 text-center font-signature text-3xl mb-4'>
   Testimonials
 </div>
 
@@ -50,7 +50,7 @@ const Testimonial = () => {
 
     <section className="section">
       <div className="title">
-        <h2 className="text-customBlue txt-3x1">What Our Clients Say</h2>
+        <h2 className="text-customBlue txt-4x1">What Our Clients Say</h2>
       </div>
       <div className="section-center">
         {people.map((item, indexPeople) => {

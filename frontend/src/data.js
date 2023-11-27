@@ -17,7 +17,7 @@ const people = [
   },
   {
     id: 3,
-    image: "/images/person3.jpeg",
+    image: "/images/person3.webp",
     name: "Chiku Adebayo",
     title: "Tangaza-Karen",
     quote:
@@ -25,7 +25,7 @@ const people = [
   },
   {
     id: 4,
-    image: "/images/person4.jpg",
+    image: "/images/person4.webp",
     name: "Eve Nyaboke",
     title: "Cooperative University-Karen",
     quote:

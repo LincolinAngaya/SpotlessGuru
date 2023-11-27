@@ -12,6 +12,7 @@ import {
     
   } from 'react-router-dom';
 import Contact from './components/Contact/Contact';
+import About from './components/About/About';
 
 
 
@@ -29,6 +30,8 @@ function App() {
               <Route exact path='services/handwashing' element={<HandWashing />}></Route>
               <Route exact path='testimonials' element={<Testimonial />}></Route>
               <Route exact path='contact' element={<Contact/>}></Route>
+              <Route exact path='about' element={<About/>}></Route>
+
              </Routes>
              
              </div>

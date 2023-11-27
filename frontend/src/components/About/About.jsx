@@ -1,6 +1,8 @@
 import React from 'react';
 import house from '../assets/house.jfif';
 import Footer from '../Footer/Footer';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 
 function About() {
   return (
@@ -9,11 +11,11 @@ function About() {
         <h2 className='bg-gradient-to-r from-customBlue to-sky text-white p-6 text-center font-signature text-3xl mb-4'>About  us</h2>
       </div>
       <div className='image flex flex-col sm:flex-row gap-8 items-center'>
-  <div className='ml-10 mb-4 sm:mb-0'>
+  <div className='ml-10 mb-4 sm:mb-0 max-w-md'>
     <img
       src={house}
       alt='House cleaning'
-      className='rounded-lg shadow-md object-cover'
+      className='rounded-lg shadow-md object-cover w-full'
     />
   </div>
   <div className="flex-1">
@@ -22,6 +24,9 @@ function About() {
     </p>
   </div>
 </div>
+
+
+
 
 
 
@@ -49,10 +54,10 @@ function About() {
   <div className='flex flex-col items-center justify-start bg-gradient-to-b from-customBlue to-sky text-white border border-sky-400 rounded-md p-6 shadow-lg h-full transition-transform transform hover:bg-sky cursor-pointer'>
     <h2 className='text-2xl font-bold font-signature mb-2 text-center'>Our Values</h2>
     <ul className='list-disc list-inside text-white p-4 rounded-md'>
-      <li>Quality</li>
-      <li>Reliability</li>
-      <li>Safety</li>
-      <li>Professionalism</li>
+      <li className='flex items-center'><span className='text-customBlue mr-2'> <FontAwesomeIcon icon={faCheckCircle} /> </span>Quality</li>
+      <li className='flex items-center'> <span className='text-customBlue mr-2'> <FontAwesomeIcon icon={faCheckCircle} /> </span>Reliability</li>
+      <li className='flex items-center'><span className='text-customBlue mr-2'> <FontAwesomeIcon icon={faCheckCircle} /> </span>Safety</li>
+      <li className='flex items-center'><span className='text-customBlue mr-2'> <FontAwesomeIcon icon={faCheckCircle} /> </span>Professionalism</li>
     </ul>
   </div>
 
@@ -60,10 +65,10 @@ function About() {
   <div className='flex flex-col items-center justify-start bg-gradient-to-b from-customBlue to-sky text-white border border-sky-400 rounded-md p-6 shadow-lg h-full transition-transform transform hover:bg-sky cursor-pointer'>
     <h2 className='text-2xl font-bold font-signature mb-2 text-center'>Why Us?</h2>
     <ul className='list-disc list-inside text-white p-4 rounded-md'>
-      <li>Customized services</li>
-      <li>Experienced Team</li>
-      <li>Eco-friendly Approach</li>
-      <li>Satisfaction Guarantee</li>
+      <li className='flex items-center'><span className='text-customBlue mr-2'> <FontAwesomeIcon icon={faCheckCircle} /> </span>Customized services</li>
+      <li className='flex items-center'><span className='text-customBlue mr-2'> <FontAwesomeIcon icon={faCheckCircle} /> </span>Experienced Team</li>
+      <li className='flex items-center'><span className='text-customBlue mr-2'> <FontAwesomeIcon icon={faCheckCircle} /> </span>Eco-friendly Approach</li>
+      <li className='flex items-center'><span className='text-customBlue mr-2'> <FontAwesomeIcon icon={faCheckCircle} /> </span>Satisfaction Guarantee</li>
     </ul>
   </div>
 </div>

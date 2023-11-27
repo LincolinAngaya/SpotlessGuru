@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import { AiOutlineMail, AiOutlinePhone, AiOutlineEnvironment, AiOutlineClockCircle } from 'react-icons/ai';
-
+import Footer from '../Footer/Footer';
 const Contact = () => {
   return (
     <>
@@ -11,7 +11,7 @@ const Contact = () => {
           <div className='flex flex-col md:flex-row gap-8 items-center'>
              {/* Form Container */}
             <div className='md:flex-1 mb-4 md:mb-0'>
-              <h2 className='text-2xl font-bold mb-4'>Contact Us</h2>
+              <h2 className='text-2xl font-bold text-customBlue mb-4'>Contact Us</h2>
               <form className='max-w-md'>
               <div className='mb-4'>
               <input
@@ -56,15 +56,18 @@ const Contact = () => {
             </div>
             <div className='bg-navy text-white flex-1 p-4 mt-4 rounded-md'>
   <p className='text-center text-2xl font-bold mb-2'>Info</p>
-  <p className='flex items-center justify-center text-xl'>
+  <a href='mailto:spotlessGuru@gmail.com' className='flex items-center justify-center text-xl mb-2'>
     <AiOutlineMail className='mr-2' /> spotlessGuru@gmail.com
-  </p>
-  <p className='flex items-center justify-center text-xl'>
+  </a>
+
+  <a href='tel:+25496286466' className='flex items-center justify-center text-xl mb-2'>
     <AiOutlinePhone className='mr-2' /> +25496286466
-  </p>
-  <p className='flex items-center justify-center text-xl'>
+  </a>
+
+  <a href='https://maps.google.com/?q=Karen,Nairobi' target='_blank' rel='noopener noreferrer' className='flex items-center justify-center text-xl mb-2'>
     <AiOutlineEnvironment className='mr-2'/> Karen, Nairobi
-  </p>
+  </a>
+
   <p className='flex items-center justify-center text-xl'>
     <AiOutlineClockCircle className='mr-2'/> 7:00 a.m - 6:00 p.m
   </p>
@@ -98,6 +101,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
+      <Footer/>
     </>
   );
 };

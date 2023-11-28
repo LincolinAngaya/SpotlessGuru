@@ -2,7 +2,9 @@ import React, { useState } from 'react';
 import signin from '../assets/siginin.jpg';
 import google from '../assets/google.svg';
 
-function SignIn() {
+function SignUp() {
+  const [name, setName] = useState('');
+  const [phone, setPhone] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -28,10 +30,24 @@ function SignIn() {
       <div className='w-full  flex flex-col  max-w-[500px]'>
       <div className='w-full flex flex-col mb-2 '>
          <h3 className='text-3xl text-sky font-semibold mb-2'>Login</h3>
-         <p className='text-base mb-2'>Welcome Back! Enter your Details</p>
+         <p className='text-base mb-2'>Welcome To Spotless Guru</p>
       </div>
 
       <div className='w-full flex-col'>
+      <input
+      type="name"
+      value={name}
+      onChange={(e) => setName(e.target.value)}
+      className='w-full text-customBlue my-2 py-2 bg-transparent border-b border-customBlue focus:outline-none'
+      required
+    />
+    <input
+    type="phone"
+    value={phone}
+    onChange={(e) => setPhone(e.target.value)}
+    className='w-full text-customBlue my-2 py-2 bg-transparent border-b border-customBlue focus:outline-none'
+    required
+  />
       <input
       type="email"
       value={email}
@@ -51,18 +67,10 @@ function SignIn() {
       
       </div>
 
-      <div className='w-full flex items-center justify-between'>
-      <div className='w-full flex items-center'>
-      <input  type='checkbox' className='w-4 h-4 mr-2' />
-      <p className='text-sm'>Remember Me</p>
-
-       </div>
-       <p className='text-sm font-medium whitespace-nowrap cursor-pointer underline underline-offset-2'>Forgot Password</p>
-
-      </div>
+     
       </div>
       <div className='w-full flex items-center justify-center'>
-        <p className='text-sm font-normal text-customBlue'>Dont have an Account?<span className='font-semibold underline underline-offset-2 cursor-pointer'>Sign Up</span> </p>
+        <p className='text-sm font-normal text-customBlue'>Already have an Account?<span className='font-semibold underline underline-offset-2 cursor-pointer'>Sign In</span> </p>
       </div>
 
 
@@ -72,28 +80,14 @@ function SignIn() {
       onClick={handleLogin}
       className='bg-navy text-white my-2 font-semibold text-center flex items-center  justify-center rounded-md hover:bg-sky w-full cursor-pointer'
     >
-      Login
+      Sign Up
     </button>
 
-    <button
-      type="button"
-      onClick={handleLogin}
-      className='bg-navy text-white my-2 font-semibold  border-2 border-sky text-center flex items-center  justify-center rounded-md hover:bg-sky w-full cursor-pointer'
-    >
-      Register
-    </button>
+ 
       </div>
-      <div className='w-full flex items-center justify-center relative py-2'>
-      <div className='w-full h-[1px] bg-customBlue'></div>
-      <p className='text-lg absolute text-customBlue/80 bg-white'>OR</p>
-      </div>
-
-      <div
       
-      className='bg-navy text-white my-2 font-semibold  border-2 border-sky/40 text-center flex items-center  justify-center rounded-md hover:bg-sky w-full cursor-pointer'
-    ><img src={google} alt='google' className='h-6 mr-2'/>
-      Sign In With Google
-    </div>
+
+     
      
 
 
@@ -105,4 +99,4 @@ function SignIn() {
   );
 }
 
-export default SignIn;
+export default SignUp;

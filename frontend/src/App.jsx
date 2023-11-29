@@ -13,6 +13,8 @@ import {
   } from 'react-router-dom';
 import Contact from './components/Contact/Contact';
 import About from './components/About/About';
+import SignIn from './components/SignIn/SignIn';
+import SignUp from './components/SignIn/SignUp';
 
 
 
@@ -31,6 +33,9 @@ function App() {
               <Route exact path='testimonials' element={<Testimonial />}></Route>
               <Route exact path='contact' element={<Contact/>}></Route>
               <Route exact path='about' element={<About/>}></Route>
+              <Route exact path='signin' element={<SignIn/>}></Route>
+              <Route exact path='signup' element={<SignUp/>}></Route>
+            
 
              </Routes>
              

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import signin from '../assets/siginin.jpg';
 import google from '../assets/google.svg';
+import { Link } from 'react-router-dom';
 
 function SignIn() {
   const [email, setEmail] = useState('');
@@ -62,26 +63,31 @@ function SignIn() {
       </div>
       </div>
       <div className='w-full flex items-center justify-center'>
-        <p className='text-sm font-normal text-customBlue'>Dont have an Account?<span className='font-semibold underline underline-offset-2 cursor-pointer'>Sign Up</span> </p>
+        <p className='text-sm font-normal text-customBlue'>Dont have an Account?
+        <Link to='/signup'>
+        <span className='font-semibold underline underline-offset-2 cursor-pointer' >Sign Up</span></Link> </p>
       </div>
 
 
       <div className='w-full flex flex-col my-4'>
       <button
+      
       type="button"
       onClick={handleLogin}
       className='bg-navy text-white my-2 font-semibold text-center flex items-center  justify-center rounded-md hover:bg-sky w-full cursor-pointer'
     >
       Login
     </button>
-
+<Link to='/signup'>
     <button
+    
       type="button"
       onClick={handleLogin}
       className='bg-navy text-white my-2 font-semibold  border-2 border-sky text-center flex items-center  justify-center rounded-md hover:bg-sky w-full cursor-pointer'
     >
       Register
     </button>
+    </Link>
       </div>
       <div className='w-full flex items-center justify-center relative py-2'>
       <div className='w-full h-[1px] bg-customBlue'></div>

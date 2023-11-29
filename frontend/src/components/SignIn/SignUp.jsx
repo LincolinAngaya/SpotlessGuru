@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import signin from '../assets/siginin.jpg';
 import google from '../assets/google.svg';
 
@@ -29,12 +30,13 @@ function SignUp() {
 
       <div className='w-full  flex flex-col  max-w-[500px]'>
       <div className='w-full flex flex-col mb-2 '>
-         <h3 className='text-3xl text-sky font-semibold mb-2'>Login</h3>
+         <h3 className='text-3xl text-sky font-semibold mb-2'>SignUp</h3>
          <p className='text-base mb-2'>Welcome To Spotless Guru</p>
       </div>
 
       <div className='w-full flex-col'>
       <input
+      placeholder='Enter your Name'
       type="name"
       value={name}
       onChange={(e) => setName(e.target.value)}
@@ -42,6 +44,7 @@ function SignUp() {
       required
     />
     <input
+     placeholder='Enter your Phone Number'
     type="phone"
     value={phone}
     onChange={(e) => setPhone(e.target.value)}
@@ -49,6 +52,7 @@ function SignUp() {
     required
   />
       <input
+       placeholder='Enter your Email'
       type="email"
       value={email}
       onChange={(e) => setEmail(e.target.value)}
@@ -57,6 +61,7 @@ function SignUp() {
     />
 
     <input
+     placeholder='Enter your Password'
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
@@ -70,7 +75,10 @@ function SignUp() {
      
       </div>
       <div className='w-full flex items-center justify-center'>
-        <p className='text-sm font-normal text-customBlue'>Already have an Account?<span className='font-semibold underline underline-offset-2 cursor-pointer'>Sign In</span> </p>
+        <p className='text-sm font-normal text-customBlue'>Already have an Account?
+        <Link to="/signin" className='font-semibold underline underline-offset-2 cursor-pointer'>
+    Sign In
+  </Link> </p>
       </div>
 
 

@@ -24,17 +24,18 @@ function SignIn() {
       </div>
 
       <div className='w-full h-full flex flex-col p-20 justify-between items-center'>
-      <h1 className='font-semibold text-xl text-customBlue mr-auto'>SpotlessGuru</h1>
+    
 
       <div className='w-full  flex flex-col  max-w-[500px]'>
       <div className='w-full flex flex-col mb-2 '>
-         <h3 className='text-3xl text-sky font-semibold mb-2'>Login</h3>
+         <h3 className='text-3xl text-sky text-center font-semibold mb-2'>Login</h3>
          <p className='text-base mb-2'>Welcome Back! Enter your Details</p>
       </div>
 
       <div className='w-full flex-col'>
       <input
       type="email"
+      placeholder='Enter Your Email'
       value={email}
       onChange={(e) => setEmail(e.target.value)}
       className='w-full text-customBlue my-2 py-2 bg-transparent border-b border-customBlue focus:outline-none'
@@ -43,6 +44,7 @@ function SignIn() {
 
     <input
                 type="password"
+                placeholder='Enter your Password'
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 className='w-full text-customBlue my-2 py-2 bg-transparent border-b border-customBlue focus:outline-none'

@@ -16,6 +16,7 @@ import About from './components/About/About';
 // import SignInSignUp from './components/Login/SignInSignUp'; 
 import SignIn from './components/SignIn/SignIn';
 import SignUp from './components/SignIn/SignUp';
+import BookingForm from './components/Booking/BookingForm';
 
 
 
@@ -36,6 +37,7 @@ function App() {
               <Route exact path='about' element={<About/>}></Route>
               <Route exact path='signup' element={<SignUp/>}></Route>
               <Route exact path='signin' element={<SignIn/>}></Route>
+              <Route exact path='booking' element={<BookingForm/>}></Route>
 
              </Routes>
              

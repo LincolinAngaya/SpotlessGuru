@@ -17,20 +17,21 @@ const BookingForm = () => {
       setSelectedService(service);
       setSelectedItems((prevSelectedItems) => ({
         ...prevSelectedItems,
-        [service]: prevSelectedItems[service] || null,
+        [service]: prevSelectedItems[service] || '',
       }));
     };
   
     const handleItemChange = (service, item) => {
+      // Ensure only one item is selected at a time
+      setAllSelectedItems((prevAllSelectedItems) => [
+        ...prevAllSelectedItems.filter((selected) => selected.service !== service),
+        { service, item },
+      ]);
+  
       setSelectedItems((prevSelectedItems) => ({
         ...prevSelectedItems,
         [service]: item,
       }));
-  
-      setAllSelectedItems((prevAllSelectedItems) => [
-        ...prevAllSelectedItems,
-        { service, item },
-      ]);
     };
   
     const calculateTotalPrice = () => {

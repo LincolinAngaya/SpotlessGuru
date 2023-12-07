@@ -1,55 +1,77 @@
 import React, { useState } from 'react';
-import ServiceForm1 from './ServiceForm1';
-import ServiceForm2 from './ServiceForm2';
+import ServiceForm from './ServiceForm1';
 
 const BookingForm = () => {
-  const [selectedService, setSelectedService] = useState(null);
-  const [totalPrice, setTotalPrice] = useState(0);
-
-  const handleServiceChange = (service) => {
-    setSelectedService(service);
-  };
-
-  const handleTotalPriceChange = (servicePrice) => {
-    // Accumulate the total price in the BookingForm
-    setTotalPrice((prevTotal) => prevTotal + servicePrice);
-  };
-
-  return (
-    <div style={{ display: 'flex' }}>
-      <div style={{ flex: 1 }}>
-        <label>Select a Service:</label>
-        <select onChange={(e) => handleServiceChange(e.target.value)} value={selectedService || ''}>
-          <option value="">Select...</option>
+    const [selectedService, setSelectedService] = React.useState(null);
+    const [selectedItems, setSelectedItems] = React.useState({});
+    const [allSelectedItems, setAllSelectedItems] = React.useState([]);
+    const prices = {
+      item1: 10,
+      item2: 20,
+      item3: 30,
+    };
+  
+    const availableItems = ['item1', 'item2', 'item3', 'item4']; // Add your new item options
+  
+    const handleServiceChange = (service) => {
+      setSelectedService(service);
+      setSelectedItems((prevSelectedItems) => ({
+        ...prevSelectedItems,
+        [service]: prevSelectedItems[service] || null,
+      }));
+    };
+  
+    const handleItemChange = (service, item) => {
+      setSelectedItems((prevSelectedItems) => ({
+        ...prevSelectedItems,
+        [service]: item,
+      }));
+  
+      setAllSelectedItems((prevAllSelectedItems) => [
+        ...prevAllSelectedItems,
+        { service, item },
+      ]);
+    };
+  
+    const calculateTotalPrice = () => {
+      return allSelectedItems.reduce((total, { item }) => total + prices[item], 0);
+    };
+  
+    return (
+      <div>
+        <h2>Booking Form</h2>
+        <label>Select Service:</label>
+        <select onChange={(e) => handleServiceChange(e.target.value)}>
+          <option value="">Select a service</option>
           <option value="service1">Service 1</option>
           <option value="service2">Service 2</option>
-          {/* Add more service options as needed */}
+          <option value="service3">Service 3</option>
         </select>
-
-        <div>
-          {selectedService === 'service1' && (
-            <ServiceForm1 onTotalPriceChange={handleTotalPriceChange} />
-          )}
-          {selectedService === 'service2' && (
-            <ServiceForm2 onTotalPriceChange={handleTotalPriceChange} />
-          )}
-          {/* Add a default case or error handling here */}
-        </div>
-      </div>
-
-      <div style={{ flex: 1 }}>
-        <h2>Selected Service:</h2>
+  
         {selectedService && (
-          <p>
-            {selectedService.name} - ${selectedService.price}
-          </p>
+          <div>
+            <h3>Selected Items:</h3>
+            <ServiceForm
+              service={selectedService}
+              selectedItems={selectedItems}
+              handleItemChange={handleItemChange}
+              availableItems={availableItems}
+              label="Select Item"
+            />
+            {/* Add more ServiceForms with different labels as needed */}
+          </div>
         )}
-
-        <h2>Total Price:</h2>
-        <p>${totalPrice}</p>
+  
+        <h3>All Selected Items:</h3>
+        <ul>
+          {allSelectedItems.map(({ service, item }, index) => (
+            <li key={index}>{`${service}: ${item} - $${prices[item]}`}</li>
+          ))}
+        </ul>
+  
+        <p>Total Price: ${calculateTotalPrice()}</p>
       </div>
-    </div>
-  );
-};
-
-export default BookingForm;
+    );
+  };
+  
+  export default BookingForm;

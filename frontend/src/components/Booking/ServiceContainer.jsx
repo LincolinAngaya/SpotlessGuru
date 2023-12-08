@@ -13,7 +13,7 @@ const ServiceContainer = ({ selectedServices, onCancelService }) => {
           {service.room && (
             <div>
               <h3 className="text-lg font-bold">Selected Room:</h3>
-              <p>{`Room: ${service.room.roomType} - Price: $${service.room.price}`}</p>
+              <p>{`Room: ${service.room.roomType} - Price: Ksh ${service.room.price}`}</p>
               <button
                 onClick={() => onCancelService(index)}
                 className="bg-red-500 text-white p-2 rounded cursor-pointer mt-2"
@@ -26,7 +26,7 @@ const ServiceContainer = ({ selectedServices, onCancelService }) => {
       ))}
       <div className="mt-4">
         <h3 className="text-lg font-bold">Total Price:</h3>
-        <span>${calculateTotalPrice()}</span>
+        <span>Ksh {calculateTotalPrice()}</span>
       </div>
     </div>
   );

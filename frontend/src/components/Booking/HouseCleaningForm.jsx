@@ -1,39 +1,54 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
-const HouseCleaningForm = ({ onServiceSelect }) => {
-  const availableRooms = ['Premium', 'studio', 'cluster', 'twin', 'Bed_sitter', 'single'];
+const HouseCleaningForm = ({ updateShoppingCart }) => {
+  const [selectedRoomType, setSelectedRoomType] = useState('');
+
+  const roomTypes = ['Premium', 'Studio', 'Cluster', 'Twin', 'Bed_sitter', 'Single'];
   const prices = {
     Premium: 900,
-    studio: 800,
-    cluster: 700,
-    twin: 600,
+    Studio: 800,
+    Cluster: 700,
+    Twin: 600,
     Bed_sitter: 500,
-    single: 400,
+    Single: 400,
   };
 
-  const [selectedRoom, setSelectedRoom] = useState('');
 
-  const handleRoomChange = (e) => {
-    const room = e.target.value;
-    setSelectedRoom(room);
-    onServiceSelect({ category: 'housecleaning', room: { roomType: room, price: prices[room] } });
-  };
+  useEffect(() => {
+    const calculateTotalPrice = () => {
+      let totalPrice = 0;
+
+      if (selectedRoomType) {
+        totalPrice += prices[selectedRoomType];
+      }
+
+      return totalPrice;
+    };
+
+    updateShoppingCart({
+      service: 'house cleaning',
+      HouseCleaning: selectedRoomType,
+      totalPrice: calculateTotalPrice(),
+    });
+  }, [selectedRoomType]);
 
   return (
     <div>
-      <label className="block mb-2 font-bold">Select Room:</label>
-      <select
-        value={selectedRoom}
-        onChange={handleRoomChange}
-        className="w-full p-2 border rounded"
-      >
-        <option value="">Select Room</option>
-        {availableRooms.map((roomType) => (
-          <option key={roomType} value={roomType}>
-            {roomType}
-          </option>
-        ))}
-      </select>
+      <div className="mb-4">
+        <label className="mr-2">Select Room Type:</label>
+        <select
+          className="p-2 text-lg border rounded-md"
+          value={selectedRoomType}
+          onChange={(e) => setSelectedRoomType(e.target.value)}
+        >
+          <option value="">Select a room type</option>
+          {roomTypes.map((type) => (
+            <option key={type} value={type}>
+              {type}
+            </option>
+          ))}
+        </select>
+      </div>
     </div>
   );
 };

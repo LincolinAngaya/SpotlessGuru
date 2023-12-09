@@ -1,50 +1,99 @@
-import React, { useState } from 'react';
+// ClothesHandWashingForm.js
+import React, { useState, useEffect } from 'react';
 
-const ClothesHandWashingForm = () => {
-  const [clothesSize, setClothesSize] = useState('');
-  const [duvetSize, setDuvetSize] = useState('');
 
-  const handleClothesSizeChange = (e) => {
-    setClothesSize(e.target.value);
+const ClothesHandWashingForm = ({ updateShoppingCart }) => {
+  const [selectedClothesService, setSelectedClothesService] = useState('');
+  const [selectedBeddingService, setSelectedBeddingService] = useState('');
+  const [shoeQuantity, setShoeQuantity] = useState(0);
+
+  const clothesServices = {
+    small: 5,
+    medium: 10,
+    large: 15,
   };
 
-  const handleDuvetSizeChange = (e) => {
-    setDuvetSize(e.target.value);
+  const beddingServices = {
+    twin: 20,
+    full: 25,
+    queen: 30,
+    king: 35,
   };
 
-  // Add pricing logic based on the selected sizes
-  const calculatePrice = () => {
-    // Your pricing logic here
-    return 20; // Placeholder pricing logic
-  };
+  const shoePricePerPair = 25;
+
+  useEffect(() => {
+    const calculateTotalPrice = () => {
+      let totalPrice = 0;
+
+      if (selectedClothesService) {
+        totalPrice += clothesServices[selectedClothesService];
+      }
+
+      if (selectedBeddingService) {
+        totalPrice += beddingServices[selectedBeddingService];
+      }
+
+      if (shoeQuantity > 0) {
+        totalPrice += shoeQuantity * shoePricePerPair;
+      }
+
+      return totalPrice;
+    };
+
+    updateShoppingCart({
+      service: 'Clothes Handwashing',
+      clothesService: selectedClothesService,
+      clothesPrice: clothesServices[selectedClothesService] || 0,
+      beddingService: selectedBeddingService,
+      beddingPrice: beddingServices[selectedBeddingService] || 0,
+      shoeQuantity: shoeQuantity,
+      shoePrice: shoeQuantity * shoePricePerPair,
+      totalPrice: calculateTotalPrice(),
+    });
+  }, [selectedClothesService, selectedBeddingService, shoeQuantity]);
 
   return (
     <div>
-      <label className="block mb-2 font-bold">Select Clothes Size:</label>
-      <select
-        value={clothesSize}
-        onChange={handleClothesSizeChange}
-        className="w-full p-2 border rounded"
-      >
-        <option value="">Select Size</option>
-        <option value="small">Small</option>
-        <option value="medium">Medium</option>
-        <option value="large">Large</option>
-      </select>
+      <div className="mb-4">
+        <label className="mr-2">Select Clothes Service:</label>
+        <select
+          className="p-2 text-lg border rounded-md"
+          value={selectedClothesService}
+          onChange={(e) => setSelectedClothesService(e.target.value)}
+        >
+          <option value="">Select a service</option>
+          <option value="small">Small - $5 per cloth</option>
+          <option value="medium">Medium - $10 per cloth</option>
+          <option value="large">Large - $15 per cloth</option>
+        </select>
+      </div>
 
-      <label className="block mt-4 mb-2 font-bold">Select Duvet Size:</label>
-      <select
-        value={duvetSize}
-        onChange={handleDuvetSizeChange}
-        className="w-full p-2 border rounded"
-      >
-        <option value="">Select Size</option>
-        <option value="single">Single</option>
-        <option value="double">Double</option>
-        <option value="queen">Queen</option>
-      </select>
+      <div className="mb-4">
+        <label className="mr-2">Select Bedding Service:</label>
+        <select
+          className="p-2 text-lg border rounded-md"
+          value={selectedBeddingService}
+          onChange={(e) => setSelectedBeddingService(e.target.value)}
+        >
+          <option value="">Select a duvet size</option>
+          <option value="twin">Twin - $20 per duvet</option>
+          <option value="full">Full - $25 per duvet</option>
+          <option value="queen">Queen - $30 per duvet</option>
+          <option value="king">King - $35 per duvet</option>
+        </select>
+      </div>
 
-      <p>Total Price: ${calculatePrice()}</p>
+      <div className="mb-4">
+        <label className="mr-2">Number of Shoes:</label>
+        <input
+          type="number"
+          className="p-2 text-lg border rounded-md"
+          value={shoeQuantity}
+          onChange={(e) => setShoeQuantity(parseInt(e.target.value, 10) || 0)}
+        />
+      </div>
+
     </div>
   );
 };

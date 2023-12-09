@@ -1,30 +1,58 @@
+// BookingForm.js
 import React, { useState } from 'react';
-import ServiceForm from './ServiceForm';
-import ServiceContainer from './ServiceContainer';
+import ClothesHandWashingForm from './ClothesHandWashingForm';
+import DishwashingForm from './DishwashingForm';
+import HouseCleaningForm from './HouseCleaningForm';
+import ShoppingCart from './ShoppingCart';
 
 function BookingForm() {
-  const [selectedServices, setSelectedServices] = useState([]);
+  const [selectedCategory, setSelectedCategory] = useState('');
+  const [cartItems, setCartItems] = useState([]);
 
-  const handleServiceSelection = (service) => {
-    setSelectedServices((prevServices) => [...prevServices, service]);
+  const handleCategoryChange = (e) => {
+    const value = e.target.value;
+    setSelectedCategory(value);
   };
 
-  const handleCancelService = (index) => {
-    setSelectedServices((prevServices) => {
-      const updatedServices = [...prevServices];
-      updatedServices.splice(index, 1);
-      return updatedServices;
-    });
+  const updateShoppingCart = (newCartItem) => {
+    setCartItems([newCartItem]);
   };
 
   return (
-    <div className="container mx-auto p-8">
-      <h1 className="text-2xl font-bold mb-4">Service Selection</h1>
-      <ServiceForm onServiceSelect={handleServiceSelection} />
-      <ServiceContainer
-        selectedServices={selectedServices}
-        onCancelService={handleCancelService}
-      />
+    <div className="flex items-center justify-center h-screen">
+      <form>
+        <label className="mr-2">Select a service category:</label>
+        <select
+          className="p-2 text-lg border rounded-md"
+          id="services"
+          name="services"
+          onChange={handleCategoryChange}
+        >
+          <option value="">Select a category</option>
+          <option value="clothes-handwashing">Clothes Handwashing</option>
+          <option value="dishwashing">Dishwashing</option>
+          <option value="house-cleaning">House Cleaning</option>
+        </select>
+      </form>
+      <div className="flex flex-col items-center justify-center h-screen">
+        {selectedCategory === 'clothes-handwashing' && (
+          <form>
+            <ClothesHandWashingForm updateShoppingCart={updateShoppingCart} />
+          </form>
+        )}
+        {selectedCategory === 'dishwashing' && (
+          <form>
+            <DishwashingForm updateShoppingCart={updateShoppingCart} />
+          </form>
+        )}
+        {selectedCategory === 'house-cleaning' && (
+          <form>
+            <HouseCleaningForm updateShoppingCart={updateShoppingCart} />
+          </form>
+        )}
+        <ShoppingCart cartItems={cartItems} />
+        
+      </div>
     </div>
   );
 }

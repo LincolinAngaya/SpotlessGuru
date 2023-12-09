@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import ServiceForm from './ServiceForm1';
 
 const BookingForm = () => {
-    const [selectedService, setSelectedService] = React.useState(null);
-    const [selectedItems, setSelectedItems] = React.useState({});
+    const [selectedServices, setSelectedServices] = React.useState([]);
     const [allSelectedItems, setAllSelectedItems] = React.useState([]);
     const prices = {
       item1: 10,
@@ -11,27 +10,32 @@ const BookingForm = () => {
       item3: 30,
     };
   
-    const availableItems = ['item1', 'item2', 'item3', 'item4']; // Add your new item options
+    const availableItems = {
+      dishwashing: ['item1', 'item2', 'item3', 'item4'], // Customize for Dishwashing
+      housecleaning: ['premium', 'studio', 'cluster', 'twin', 'bedsitter', 'single room'], // Customize for House Cleaning
+      handwashing: ['item1', 'item2', 'item3', 'item4'], // Customize for Hand Washing
+    };
   
     const handleServiceChange = (service) => {
-      setSelectedService(service);
-      setSelectedItems((prevSelectedItems) => ({
-        ...prevSelectedItems,
-        [service]: prevSelectedItems[service] || '',
-      }));
+      setSelectedServices((prevSelectedServices) => [...prevSelectedServices, service]);
     };
   
     const handleItemChange = (service, item) => {
-      // Ensure only one item is selected at a time
+      const newSelectedItem = { service, item };
+  
       setAllSelectedItems((prevAllSelectedItems) => [
         ...prevAllSelectedItems.filter((selected) => selected.service !== service),
-        { service, item },
+        newSelectedItem,
       ]);
   
-      setSelectedItems((prevSelectedItems) => ({
-        ...prevSelectedItems,
-        [service]: item,
-      }));
+      // Update the selected items for the specific service
+      setSelectedServices((prevSelectedServices) => {
+        const index = prevSelectedServices.indexOf(service);
+        const updatedSelectedServices = [...prevSelectedServices];
+        updatedSelectedServices[index] = newSelectedItem;
+  
+        return updatedSelectedServices;
+      });
     };
   
     const calculateTotalPrice = () => {
@@ -44,30 +48,32 @@ const BookingForm = () => {
         <label>Select Service:</label>
         <select onChange={(e) => handleServiceChange(e.target.value)}>
           <option value="">Select a service</option>
-          <option value="service1">Service 1</option>
-          <option value="service2">Service 2</option>
-          <option value="service3">Service 3</option>
+          <option value="dishwashing">Dishwashing</option>
+          <option value="housecleaning">House Cleaning</option>
+          <option value="handwashing">Hand Washing</option>
         </select>
   
-        {selectedService && (
-          <div>
+        {selectedServices.map((selectedService, index) => (
+          <div key={index}>
             <h3>Selected Items:</h3>
             <ServiceForm
               service={selectedService}
-              selectedItems={selectedItems}
+              selectedItems={selectedServices}
               handleItemChange={handleItemChange}
-              availableItems={availableItems}
-              label="Select Item"
+              availableItems={availableItems[selectedService]}
+              label={`Select Item for ${selectedService}`}
             />
             {/* Add more ServiceForms with different labels as needed */}
           </div>
-        )}
+        ))}
   
         <h3>All Selected Items:</h3>
         <ul>
-          {allSelectedItems.map(({ service, item }, index) => (
-            <li key={index}>{`${service}: ${item} - $${prices[item]}`}</li>
-          ))}
+
+{allSelectedItems.map(({ service, item }, index) => (
+  <li key={index}>{`${service}: ${item} - $${prices[item]}`}</li>
+))}
+
         </ul>
   
         <p>Total Price: ${calculateTotalPrice()}</p>

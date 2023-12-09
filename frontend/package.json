@@ -22,6 +22,7 @@
     "react-router-dom": "^6.19.0",
     "react-scripts": "4.0.3",
     "react-slick": "^0.29.0",
+    "react-time-picker": "^6.5.2",
     "slick-carousel": "^1.8.1",
     "web-vitals": "^1.1.2"
   },

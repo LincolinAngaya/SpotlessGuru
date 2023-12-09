@@ -13,6 +13,7 @@ import {
   } from 'react-router-dom';
 import Contact from './components/Contact/Contact';
 import About from './components/About/About';
+import ContactForm from './components/ContactForm/ContactForm';
 // import SignInSignUp from './components/Login/SignInSignUp'; 
 import SignIn from './components/SignIn/SignIn';
 import SignUp from './components/SignIn/SignUp';
@@ -38,6 +39,7 @@ function App() {
               <Route exact path='signup' element={<SignUp/>}></Route>
               <Route exact path='signin' element={<SignIn/>}></Route>
               <Route exact path='booking' element={<BookingForm/>}></Route>
+              <Route exact path='form' element={<ContactForm/>}></Route>
 
              </Routes>
              

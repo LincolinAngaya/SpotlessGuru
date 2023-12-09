@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-
+import React from 'react';
 
 const ServiceForm = ({ service, selectedItems, handleItemChange, availableItems, label }) => {
     const prices = {
@@ -19,11 +18,13 @@ const ServiceForm = ({ service, selectedItems, handleItemChange, availableItems,
           onChange={(e) => handleItemChange(service, e.target.value)}
         >
           <option value="">Select an item</option>
-          {availableItems.map((item) => (
-            <option key={item} value={item}>
-              {item}
-            </option>
-          ))}
+          {/* Check if availableItems is an array before calling map */}
+          {Array.isArray(availableItems) &&
+            availableItems.map((item) => (
+              <option key={item} value={item}>
+                {item}
+              </option>
+            ))}
         </select>
   
         {/* Display selected item */}
@@ -38,4 +39,5 @@ const ServiceForm = ({ service, selectedItems, handleItemChange, availableItems,
       </div>
     );
   };
+  
 export default ServiceForm;

@@ -1,38 +1,33 @@
 // DishwashingForm.js
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
-const DishwashingForm = () => {
+const DishwashingForm = ({ updateShoppingCart }) => {
   const [quantity, setQuantity] = useState(0);
   const [utensils, setUtensils] = useState(0);
   const [appliances, setAppliances] = useState(0);
   const [cookware, setCookware] = useState(0);
   const [containers, setContainers] = useState(0);
-  const [totalPrice, setTotalPrice] = useState(0);
 
-  const handleInputChange = (e, category) => {
-    const value = parseInt(e.target.value, 10) || 0;
-    if (category === 'quantity') {
-      setQuantity(value);
-    } else if (category === 'utensils') {
-      setUtensils(value);
-    } else if (category === 'appliances') {
-      setAppliances(value);
-    } else if (category === 'cookware') {
-      setCookware(value);
-    } else if (category === 'containers') {
-      setContainers(value);
-    }
-    updateTotalPrice();
-  };
+  useEffect(() => {
+    const calculateTotalPrice = () => {
+      const utensilsPrice = utensils * 0.5; // You can adjust pricing as needed
+      const appliancesPrice = appliances * 2; // You can adjust pricing as needed
+      const cookwarePrice = cookware * 1.25; // You can adjust pricing as needed
+      const containersPrice = containers * 1; // You can adjust pricing as needed
+      const total = (quantity + utensilsPrice + appliancesPrice + cookwarePrice + containersPrice) * 1.5; // Adjust pricing as needed
+      return total;
+    };
 
-  const updateTotalPrice = () => {
-    const utensilsPrice = utensils * 0.5; // You can adjust pricing as needed
-    const appliancesPrice = appliances * 2; // You can adjust pricing as needed
-    const cookwarePrice = cookware * 1.25; // You can adjust pricing as needed
-    const containersPrice = containers * 1; // You can adjust pricing as needed
-    const total = (quantity + utensilsPrice + appliancesPrice + cookwarePrice + containersPrice) * 1.5; // Adjust pricing as needed
-    setTotalPrice(total);
-  };
+    updateShoppingCart({
+      service: 'Dishwashing',
+      quantity: quantity,
+      utensils: utensils,
+      appliances: appliances,
+      cookware: cookware,
+      containers: containers,
+      totalPrice: calculateTotalPrice(),
+    });
+  }, [quantity, utensils, appliances, cookware, containers]);
 
   return (
     <div>
@@ -42,7 +37,7 @@ const DishwashingForm = () => {
           type="number"
           className="p-2 text-lg border rounded-md"
           value={quantity}
-          onChange={(e) => handleInputChange(e, 'quantity')}
+          onChange={(e) => setQuantity(parseInt(e.target.value, 10) || 0)}
         />
       </div>
       <div className="mb-4">
@@ -51,7 +46,7 @@ const DishwashingForm = () => {
           type="number"
           className="p-2 text-lg border rounded-md"
           value={utensils}
-          onChange={(e) => handleInputChange(e, 'utensils')}
+          onChange={(e) => setUtensils(parseInt(e.target.value, 10) || 0)}
         />
       </div>
       <div className="mb-4">
@@ -60,7 +55,7 @@ const DishwashingForm = () => {
           type="number"
           className="p-2 text-lg border rounded-md"
           value={appliances}
-          onChange={(e) => handleInputChange(e, 'appliances')}
+          onChange={(e) => setAppliances(parseInt(e.target.value, 10) || 0)}
         />
       </div>
       <div className="mb-4">
@@ -69,7 +64,7 @@ const DishwashingForm = () => {
           type="number"
           className="p-2 text-lg border rounded-md"
           value={cookware}
-          onChange={(e) => handleInputChange(e, 'cookware')}
+          onChange={(e) => setCookware(parseInt(e.target.value, 10) || 0)}
         />
       </div>
       <div className="mb-4">
@@ -78,12 +73,9 @@ const DishwashingForm = () => {
           type="number"
           className="p-2 text-lg border rounded-md"
           value={containers}
-          onChange={(e) => handleInputChange(e, 'containers')}
+          onChange={(e) => setContainers(parseInt(e.target.value, 10) || 0)}
         />
       </div>
-      {/*<div>
-        <p>Total Price: ${totalPrice.toFixed(2)}</p>
-      </div> */}  
     </div>
   );
 };

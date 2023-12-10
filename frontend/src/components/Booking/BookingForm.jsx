@@ -1,4 +1,3 @@
-// BookingForm.js
 import React, { useState } from 'react';
 import ClothesHandWashingForm from './ClothesHandWashingForm';
 import DishwashingForm from './DishwashingForm';
@@ -15,7 +14,21 @@ function BookingForm() {
   };
 
   const updateShoppingCart = (newCartItem) => {
-    setCartItems([newCartItem]);
+    setCartItems((prevItems) => {
+      const existingItemIndex = prevItems.findIndex(
+        (item) => item.service === newCartItem.service
+      );
+
+      if (existingItemIndex !== -1) {
+        // If the service already exists, update the existing item
+        const updatedCart = [...prevItems];
+        updatedCart[existingItemIndex] = newCartItem;
+        return updatedCart;
+      } else {
+        // If the service doesn't exist, add it to the cart
+        return [...prevItems, newCartItem];
+      }
+    });
   };
 
   return (
@@ -51,7 +64,6 @@ function BookingForm() {
           </form>
         )}
         <ShoppingCart cartItems={cartItems} />
-        
       </div>
     </div>
   );

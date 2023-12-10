@@ -13,24 +13,20 @@ const HouseCleaningForm = ({ updateShoppingCart }) => {
     Single: 400,
   };
 
-
   useEffect(() => {
     const calculateTotalPrice = () => {
-      let totalPrice = 0;
-
-      if (selectedRoomType) {
-        totalPrice += prices[selectedRoomType];
+      if (selectedRoomType && prices[selectedRoomType]) {
+        return prices[selectedRoomType];
       }
-
-      return totalPrice;
+      return 0;
     };
 
     updateShoppingCart({
-      service: 'house cleaning',
-      HouseCleaning: selectedRoomType,
+      service: 'House Cleaning',
+      roomType: selectedRoomType,
       totalPrice: calculateTotalPrice(),
     });
-  }, [selectedRoomType]);
+  }, [selectedRoomType, updateShoppingCart]);
 
   return (
     <div>

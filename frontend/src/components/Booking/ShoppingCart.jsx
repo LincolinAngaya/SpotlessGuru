@@ -23,7 +23,7 @@ const ShoppingCart = ({ cartItems }) => {
 
                 {item.service === 'House Cleaning' && (
                   <>
-                    {item.roomType && <p>Room Type: {item.roomType}</p>}
+                    {item.roomType && <p>Room Type: {item.roomType} </p>}
                   </>
                 )}
 

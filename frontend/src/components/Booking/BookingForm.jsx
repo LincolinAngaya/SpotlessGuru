@@ -1,78 +1,72 @@
 import React, { useState } from 'react';
-import ServiceForm from './ServiceForm1';
+import ClothesHandWashingForm from './ClothesHandWashingForm';
+import DishwashingForm from './DishwashingForm';
+import HouseCleaningForm from './HouseCleaningForm';
+import ShoppingCart from './ShoppingCart';
 
-const BookingForm = () => {
-    const [selectedService, setSelectedService] = React.useState(null);
-    const [selectedItems, setSelectedItems] = React.useState({});
-    const [allSelectedItems, setAllSelectedItems] = React.useState([]);
-    const prices = {
-      item1: 10,
-      item2: 20,
-      item3: 30,
-    };
-  
-    const availableItems = ['item1', 'item2', 'item3', 'item4']; // Add your new item options
-  
-    const handleServiceChange = (service) => {
-      setSelectedService(service);
-      setSelectedItems((prevSelectedItems) => ({
-        ...prevSelectedItems,
-        [service]: prevSelectedItems[service] || '',
-      }));
-    };
-  
-    const handleItemChange = (service, item) => {
-      // Ensure only one item is selected at a time
-      setAllSelectedItems((prevAllSelectedItems) => [
-        ...prevAllSelectedItems.filter((selected) => selected.service !== service),
-        { service, item },
-      ]);
-  
-      setSelectedItems((prevSelectedItems) => ({
-        ...prevSelectedItems,
-        [service]: item,
-      }));
-    };
-  
-    const calculateTotalPrice = () => {
-      return allSelectedItems.reduce((total, { item }) => total + prices[item], 0);
-    };
-  
-    return (
-      <div>
-        <h2>Booking Form</h2>
-        <label>Select Service:</label>
-        <select onChange={(e) => handleServiceChange(e.target.value)}>
-          <option value="">Select a service</option>
-          <option value="service1">Service 1</option>
-          <option value="service2">Service 2</option>
-          <option value="service3">Service 3</option>
-        </select>
-  
-        {selectedService && (
-          <div>
-            <h3>Selected Items:</h3>
-            <ServiceForm
-              service={selectedService}
-              selectedItems={selectedItems}
-              handleItemChange={handleItemChange}
-              availableItems={availableItems}
-              label="Select Item"
-            />
-            {/* Add more ServiceForms with different labels as needed */}
-          </div>
-        )}
-  
-        <h3>All Selected Items:</h3>
-        <ul>
-          {allSelectedItems.map(({ service, item }, index) => (
-            <li key={index}>{`${service}: ${item} - $${prices[item]}`}</li>
-          ))}
-        </ul>
-  
-        <p>Total Price: ${calculateTotalPrice()}</p>
-      </div>
-    );
+function BookingForm() {
+  const [selectedCategory, setSelectedCategory] = useState('');
+  const [cartItems, setCartItems] = useState([]);
+
+  const handleCategoryChange = (e) => {
+    const value = e.target.value;
+    setSelectedCategory(value);
   };
-  
-  export default BookingForm;
+
+  const updateShoppingCart = (newCartItem) => {
+    setCartItems((prevItems) => {
+      const existingItemIndex = prevItems.findIndex(
+        (item) => item.service === newCartItem.service
+      );
+
+      if (existingItemIndex !== -1) {
+        // If the service already exists, update the existing item
+        const updatedCart = [...prevItems];
+        updatedCart[existingItemIndex] = newCartItem;
+        return updatedCart;
+      } else {
+        // If the service doesn't exist, add it to the cart
+        return [...prevItems, newCartItem];
+      }
+    });
+  };
+
+  return (
+    <div className="flex items-center justify-center h-screen">
+      <form>
+        <label className="mr-2">Select a service category:</label>
+        <select
+          className="p-2 text-lg border rounded-md"
+          id="services"
+          name="services"
+          onChange={handleCategoryChange}
+        >
+          <option value="">Select a category</option>
+          <option value="clothes-handwashing">Clothes Handwashing</option>
+          <option value="dishwashing">Dishwashing</option>
+          <option value="house-cleaning">House Cleaning</option>
+        </select>
+      </form>
+      <div className="flex flex-col items-center justify-center h-screen">
+        {selectedCategory === 'clothes-handwashing' && (
+          <form>
+            <ClothesHandWashingForm updateShoppingCart={updateShoppingCart} />
+          </form>
+        )}
+        {selectedCategory === 'dishwashing' && (
+          <form>
+            <DishwashingForm updateShoppingCart={updateShoppingCart} />
+          </form>
+        )}
+        {selectedCategory === 'house-cleaning' && (
+          <form>
+            <HouseCleaningForm updateShoppingCart={updateShoppingCart} />
+          </form>
+        )}
+        <ShoppingCart cartItems={cartItems} />
+      </div>
+    </div>
+  );
+}
+
+export default BookingForm;

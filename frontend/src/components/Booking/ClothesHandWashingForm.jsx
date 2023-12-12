@@ -55,13 +55,15 @@ const ClothesHandWashingForm = ({ updateShoppingCart }) => {
 
   return (
     <div>
-      <div className="mb-4">
+    <div className="flex flex-wrap -mx-2 mb-4">
+      <div className="w-1/2 px-2 mb-4">
         <label className="mr-2">Select Clothes Service:</label>
         <select
-          className="p-2 text-lg border rounded-md"
+          className="p-2 text-lg border rounded-md w-full"
           value={selectedClothesService}
           onChange={(e) => setSelectedClothesService(e.target.value)}
         >
+          {/* Options */}
           <option value="">Select a service</option>
           <option value="small">Small - $5 per cloth</option>
           <option value="medium">Medium - $10 per cloth</option>
@@ -69,13 +71,14 @@ const ClothesHandWashingForm = ({ updateShoppingCart }) => {
         </select>
       </div>
 
-      <div className="mb-4">
+      <div className="w-1/2 px-2 mb-4">
         <label className="mr-2">Select Bedding Service:</label>
         <select
-          className="p-2 text-lg border rounded-md"
+          className="p-2 text-lg border rounded-md w-full"
           value={selectedBeddingService}
           onChange={(e) => setSelectedBeddingService(e.target.value)}
         >
+          {/* Options */}
           <option value="">Select a duvet size</option>
           <option value="twin">Twin - $20 per duvet</option>
           <option value="full">Full - $25 per duvet</option>
@@ -84,17 +87,19 @@ const ClothesHandWashingForm = ({ updateShoppingCart }) => {
         </select>
       </div>
 
-      <div className="mb-4">
+      <div className="w-1/2 px-2 mb-4">
         <label className="mr-2">Number of Shoes:</label>
         <input
           type="number"
-          className="p-2 text-lg border rounded-md"
+          className="p-2 text-lg border rounded-md w-full"
           value={shoeQuantity}
           onChange={(e) => setShoeQuantity(parseInt(e.target.value, 10) || 0)}
         />
       </div>
 
+      {/* Add another div for the remaining input field */}
     </div>
+  </div>
   );
 };
 

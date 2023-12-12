@@ -7,7 +7,7 @@ const ShoppingCart = ({ cartItems }) => {
 
   return (
     <div className="mt-4">
-      <h2>Shopping Cart:</h2>
+      <h2 className='font-signature text-customBlue font-bold'>Shopping Cart</h2>
       {cartItems && cartItems.length > 0 ? (
         <div>
           {cartItems.map((item, index) => (

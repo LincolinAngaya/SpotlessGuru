@@ -32,22 +32,27 @@ function BookingForm() {
   };
 
   return (
-    <div className="flex items-center justify-center h-screen">
-      <form>
-        <label className="mr-2">Select a service category:</label>
-        <select
-          className="p-2 text-lg border rounded-md"
-          id="services"
-          name="services"
-          onChange={handleCategoryChange}
-        >
-          <option value="">Select a category</option>
-          <option value="clothes-handwashing">Clothes Handwashing</option>
-          <option value="dishwashing">Dishwashing</option>
-          <option value="house-cleaning">House Cleaning</option>
-        </select>
-      </form>
-      <div className="flex flex-col items-center justify-center h-screen">
+    <>
+      <div className='text-center mx-auto'>
+        <h1 className='text-xl font-bold mb-4 text-customBlue font-signature'>Choose your category</h1>
+        <p>Select your service category</p>
+      </div>
+
+      <div className="flex flex-col items-center justify-center h-screen w-full mb-20">
+        <form className="mb-36">
+          <select
+            className="p-2 text-lg border w-full rounded-md"
+            id="services"
+            name="services"
+            onChange={handleCategoryChange}
+          >
+            <option value="">Select a category</option>
+            <option value="clothes-handwashing">Clothes Handwashing</option>
+            <option value="dishwashing">Dishwashing</option>
+            <option value="house-cleaning">House Cleaning</option>
+          </select>
+        </form>
+
         {selectedCategory === 'clothes-handwashing' && (
           <form>
             <ClothesHandWashingForm updateShoppingCart={updateShoppingCart} />
@@ -65,7 +70,7 @@ function BookingForm() {
         )}
         <ShoppingCart cartItems={cartItems} />
       </div>
-    </div>
+    </>
   );
 }
 

@@ -49,7 +49,7 @@ const ContactForm = ({ value, onChange }) => {
   return (
     <>
     <div className="flex flex-col items-center">
-      <h2 className="text-2xl font-bold mb-4 text-customBlue">Contact Information</h2>
+      <h2 className="text-xl font-bold mb-4 text-customBlue font-signature">Contact Information</h2>
       <p className="text-center mb-4">
         The information will be used to contact you about your service
       </p>
@@ -111,7 +111,7 @@ const ContactForm = ({ value, onChange }) => {
       </form>
     </div>
     <div className="flex flex-col items-center mt-8">
-      <h2 className="text-2xl font-bold mb-4 text-customBlue">Service Address</h2>
+      <h2 className="text-xl font-bold mb-4 text-customBlue font-signature">Service Address</h2>
       <p className="text-center mb-4">Where would you like us to clean?</p>
       <form onSubmit={handleSubmit} className="w-full max-w-md">
         <div className="mb-4">
@@ -120,7 +120,7 @@ const ContactForm = ({ value, onChange }) => {
             name="address"
             value={formData.address}
             onChange={handleInputChange}
-            placeholder="Your Address"
+            placeholder="Street Address"
             className="w-full px-3 py-2 border rounded"
             required
           />
@@ -131,7 +131,7 @@ const ContactForm = ({ value, onChange }) => {
             name="city"
             value={formData.city}
             onChange={handleInputChange}
-            placeholder="City"
+            placeholder="Building name"
             className="w-full px-3 py-2 border rounded"
             required
           />
@@ -141,7 +141,7 @@ const ContactForm = ({ value, onChange }) => {
       </form>
     </div>
     <div className="flex flex-col items-center mt-8">
-      <h1 className="text-2xl font-bold mb-4 text-customBlue">When would you like us to come?</h1>
+      <h1 className="text-xl font-bold mb-4 text-customBlue font-signature">When would you like us to come?</h1>
       <form className="w-full max-w-md">
       {/* Date Input */}
       <div className="mb-4 relative">

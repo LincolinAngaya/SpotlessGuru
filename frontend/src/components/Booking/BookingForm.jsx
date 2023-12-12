@@ -32,14 +32,15 @@ function BookingForm() {
   };
 
   return (
-    <>
-      <div className='text-center mx-auto'>
-        <h1 className='text-xl font-bold mb-4 text-customBlue font-signature'>Choose your category</h1>
-        <p>Select your service category</p>
-      </div>
+    <div className="flex">
+      {/* Left side with category selection and forms */}
+      <div className="flex flex-col items-center w-2/3 p-4">
+        <div className='text-center mx-auto'>
+          <h1 className='text-xl font-bold mb-4 text-customBlue font-signature'>Choose your category</h1>
+          <p>Select your service category</p>
+        </div>
 
-      <div className="flex flex-col items-center justify-center h-screen w-full mb-20">
-        <form className="mb-36">
+        <form className="mb-8">
           <select
             className="p-2 text-lg border w-full rounded-md"
             id="services"
@@ -68,9 +69,13 @@ function BookingForm() {
             <HouseCleaningForm updateShoppingCart={updateShoppingCart} />
           </form>
         )}
+      </div>
+
+      {/* Right side with shopping cart */}
+      <div className="w-1/3 p-4">
         <ShoppingCart cartItems={cartItems} />
       </div>
-    </>
+    </div>
   );
 }
 

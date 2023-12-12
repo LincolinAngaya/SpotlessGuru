@@ -1,7 +1,6 @@
 // ClothesHandWashingForm.js
 import React, { useState, useEffect } from 'react';
 
-
 const ClothesHandWashingForm = ({ updateShoppingCart }) => {
   const [selectedClothesService, setSelectedClothesService] = useState('');
   const [selectedBeddingService, setSelectedBeddingService] = useState('');
@@ -54,16 +53,14 @@ const ClothesHandWashingForm = ({ updateShoppingCart }) => {
   }, [selectedClothesService, selectedBeddingService, shoeQuantity]);
 
   return (
-    <div>
-    <div className="flex flex-wrap -mx-2 mb-4">
-      <div className="w-1/2 px-2 mb-4">
+    <div className="grid grid-cols-2 gap-4">
+      <div className="mb-4">
         <label className="mr-2">Select Clothes Service:</label>
         <select
           className="p-2 text-lg border rounded-md w-full"
           value={selectedClothesService}
           onChange={(e) => setSelectedClothesService(e.target.value)}
         >
-          {/* Options */}
           <option value="">Select a service</option>
           <option value="small">Small - $5 per cloth</option>
           <option value="medium">Medium - $10 per cloth</option>
@@ -71,14 +68,13 @@ const ClothesHandWashingForm = ({ updateShoppingCart }) => {
         </select>
       </div>
 
-      <div className="w-1/2 px-2 mb-4">
+      <div className="mb-4">
         <label className="mr-2">Select Bedding Service:</label>
         <select
           className="p-2 text-lg border rounded-md w-full"
           value={selectedBeddingService}
           onChange={(e) => setSelectedBeddingService(e.target.value)}
         >
-          {/* Options */}
           <option value="">Select a duvet size</option>
           <option value="twin">Twin - $20 per duvet</option>
           <option value="full">Full - $25 per duvet</option>
@@ -87,7 +83,7 @@ const ClothesHandWashingForm = ({ updateShoppingCart }) => {
         </select>
       </div>
 
-      <div className="w-1/2 px-2 mb-4">
+      <div className="mb-4">
         <label className="mr-2">Number of Shoes:</label>
         <input
           type="number"
@@ -96,10 +92,7 @@ const ClothesHandWashingForm = ({ updateShoppingCart }) => {
           onChange={(e) => setShoeQuantity(parseInt(e.target.value, 10) || 0)}
         />
       </div>
-
-      {/* Add another div for the remaining input field */}
     </div>
-  </div>
   );
 };
 

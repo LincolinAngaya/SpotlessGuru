@@ -1,22 +1,25 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
+import DatePicker from 'react-datepicker';
 import TimePicker from 'react-time-picker';
+import 'react-datepicker/dist/react-datepicker.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCalendarAlt, faClock } from '@fortawesome/free-solid-svg-icons';
+import { faCalendarAlt,faClock } from '@fortawesome/free-solid-svg-icons';
+import 'react-time-picker/dist/TimePicker.css';
+import './Contact.css'
 
-
-const ContactForm = () => {
+const ContactForm = ({ value, onChange }) => {
   // State to store form data
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     message: '',
   });
-  const [dateTime, setDateTime] = useState({
-    date: '',
-    time: '',
-  });
-  const handleInputClick = (inputName) => {
-    document.getElementById(`hidden${inputName}Input`).click();
+  const [startDate, setStartDate] = useState(null);
+  const [isPickerOpen, setIsPickerOpen] = useState(false);
+  
+
+  const handleInputTimeChange = (newValue) => {
+    onChange(newValue);
   };
   const handleInputDateChange = (e) => {
     const { name, value } = e.target;
@@ -142,34 +145,48 @@ const ContactForm = () => {
       <form className="w-full max-w-md">
       {/* Date Input */}
       <div className="mb-4 relative">
-        <input
-          type="date"
-          name="date"
-          value={dateTime.date}
-          onChange={handleInputDateChange}
-          className="w-full px-3 py-2 border rounded pl-8 cursor-pointer"
-          required
-        />
-        <div className="absolute inset-y-0 left-0 flex items-center pl-2">
-          <FontAwesomeIcon icon={faCalendarAlt} />
-        </div>
-      </div>
+  <DatePicker
+    selected={startDate}
+    onChange={(date) => setStartDate(date)}
+    dateFormat="MMMM d, yyyy"
+    placeholderText="Pick a day"
+    className="custom-date-picker-style px-3 py-2 border rounded pl-8 cursor-pointer block appearance-none leading-5"
+  />
+  <div className="absolute inset-y-0 left-0 flex items-center pl-2">
+    <FontAwesomeIcon icon={faCalendarAlt} />
+  </div>
+</div>
+
 
       {/* Time Input */}
       <div className="mb-4 relative">
+      <div className="relative">
         <input
-          type="time"
-          name="time"
+          type="text"
           placeholder="Pick a time"
-          value={dateTime.time}
-          onChange={handleInputDateChange}
+          value={value}
+          readOnly
+          onFocus={() => setIsPickerOpen(true)}
+          onBlur={() => setIsPickerOpen(false)}
           className="w-full px-3 py-2 border rounded pl-8 cursor-pointer"
-          required
         />
-        <div className="absolute inset-y-0 left-0 flex items-center pl-2">
-          <FontAwesomeIcon icon={faClock} />
-        </div>
+        <div
+          className={`absolute inset-0 bg-white z-10 ${isPickerOpen ? 'hidden' : ''}`}
+          onClick={() => document.getElementById('hiddenTimeInput').focus()}
+        />
       </div>
+      <input
+        type="time"
+        id="hiddenTimeInput"
+        value={value}
+        onChange={(e) => handleInputTimeChange(e.target.value)}
+        className="absolute inset-0 opacity-0 cursor-pointer"
+        onBlur={() => setIsPickerOpen(false)}
+      />
+      <div className="absolute inset-y-0 left-0 flex items-center pl-2">
+        <FontAwesomeIcon icon={faClock} />
+      </div>
+    </div>
     </form>
     </div>
     </>

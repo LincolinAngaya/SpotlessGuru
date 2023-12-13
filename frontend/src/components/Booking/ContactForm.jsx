@@ -15,20 +15,13 @@ const ContactForm = ({ value, onChange }) => {
     message: '',
   });
   const [startDate, setStartDate] = useState(null);
-  const [isPickerOpen, setIsPickerOpen] = useState(false);
   
+  // Define the allowed time range
+  const allowedStartTime = new Date();
+  allowedStartTime.setHours(7, 0, 0); // 7:00 AM
 
-  const handleInputTimeChange = (newValue) => {
-    onChange(newValue);
-  };
-  const handleInputDateChange = (e) => {
-    const { name, value } = e.target;
-    setDateTime((prevDateTime) => ({
-      ...prevDateTime,
-      [name]: value,
-    }));
-  };
-
+  const allowedEndTime = new Date();
+  allowedEndTime.setHours(18, 0, 0); // 6:00 PM
 
   // Handle input changes
   const handleInputChange = (e) => {
@@ -145,48 +138,27 @@ const ContactForm = ({ value, onChange }) => {
       <form className="w-full max-w-md">
       {/* Date Input */}
       <div className="mb-4 relative">
-  <DatePicker
-    selected={startDate}
-    onChange={(date) => setStartDate(date)}
-    dateFormat="MMMM d, yyyy"
-    placeholderText="Pick a day"
-    className="custom-date-picker-style px-3 py-2 border rounded pl-8 cursor-pointer block appearance-none leading-5"
-  />
-  <div className="absolute inset-y-0 left-0 flex items-center pl-2">
-    <FontAwesomeIcon icon={faCalendarAlt} />
-  </div>
-</div>
-
-
-      {/* Time Input */}
-      <div className="mb-4 relative">
-      <div className="relative">
-        <input
-          type="text"
-          placeholder="Pick a time"
-          value={value}
-          readOnly
-          onFocus={() => setIsPickerOpen(true)}
-          onBlur={() => setIsPickerOpen(false)}
-          className="w-full px-3 py-2 border rounded pl-8 cursor-pointer"
-        />
-        <div
-          className={`absolute inset-0 bg-white z-10 ${isPickerOpen ? 'hidden' : ''}`}
-          onClick={() => document.getElementById('hiddenTimeInput').focus()}
-        />
-      </div>
-      <input
-        type="time"
-        id="hiddenTimeInput"
-        value={value}
-        onChange={(e) => handleInputTimeChange(e.target.value)}
-        className="absolute inset-0 opacity-0 cursor-pointer"
-        onBlur={() => setIsPickerOpen(false)}
+      <DatePicker
+        selected={startDate}
+        onChange={(date) => setStartDate(date)}
+        dateFormat="MMMM d, yyyy; hh:mm"
+        placeholderText="Pick a day"
+        showTimeSelect
+        timeIntervals={30}
+        timeFormat="hh:mm"
+        minDate={new Date()} // Allow picking today or later
+        minTime={allowedStartTime}
+        maxTime={allowedEndTime}
+        className="custom-date-picker-style px-3 py-2 border rounded pl-8 cursor-pointer block appearance-none leading-5"
       />
       <div className="absolute inset-y-0 left-0 flex items-center pl-2">
-        <FontAwesomeIcon icon={faClock} />
+        <FontAwesomeIcon icon={faCalendarAlt} />
       </div>
     </div>
+
+
+
+   
     </form>
     </div>
     </>

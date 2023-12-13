@@ -141,24 +141,21 @@ const ContactForm = ({ value, onChange }) => {
       <DatePicker
         selected={startDate}
         onChange={(date) => setStartDate(date)}
-        dateFormat="MMMM d, yyyy; hh:mm"
+        dateFormat="MMMM d, yyyy h:mm aa"
         placeholderText="Pick a day"
         showTimeSelect
         timeIntervals={30}
-        timeFormat="hh:mm"
-        minDate={new Date()} // Allow picking today or later
+        timeFormat="h:mm aa"
+        minDate={new Date()}
         minTime={allowedStartTime}
         maxTime={allowedEndTime}
+        timeInputLabel="Time"
         className="custom-date-picker-style px-3 py-2 border rounded pl-8 cursor-pointer block appearance-none leading-5"
       />
       <div className="absolute inset-y-0 left-0 flex items-center pl-2">
         <FontAwesomeIcon icon={faCalendarAlt} />
       </div>
     </div>
-
-
-
-   
     </form>
     </div>
     </>

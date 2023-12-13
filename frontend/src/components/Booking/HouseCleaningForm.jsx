@@ -30,10 +30,10 @@ const HouseCleaningForm = ({ updateShoppingCart }) => {
 
   return (
     <div>
-      <div className="mb-4">
-        <label className="mr-2">Select Room Type:</label>
+      <div className="mb-8 mx-auto items-left">
+        <label className="mt-4">Select Room Type:</label>
         <select
-          className="p-2 text-lg border rounded-md"
+          className="p-4 text-lg border rounded-md mt-8"
           value={selectedRoomType}
           onChange={(e) => setSelectedRoomType(e.target.value)}
         >

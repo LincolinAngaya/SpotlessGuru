@@ -30,7 +30,7 @@ const DishwashingForm = ({ updateShoppingCart }) => {
   }, [quantity, utensils, appliances, cookware, containers]);
 
   return (
-    <div className="max-w-md mx-auto">
+    <div className="item-keft mx-auto lg:w-2/3">
       <div className="flex flex-wrap -mx-2 mb-4">
         {/* First row of inputs */}
         <div className="w-full md:w-1/2 px-2 mb-4">

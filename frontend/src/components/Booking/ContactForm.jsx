@@ -58,9 +58,9 @@ const ContactForm = ({ value, onChange }) => {
   return (
     <>
       <div className='flex'>
-      <div className='mx-auto items-left'>
-        <BookingForm updateShoppingCart={updateShoppingCart} />
-        <div className="flex flex-col items-left">
+        <div className='mx-auto items-left'>
+          <BookingForm updateShoppingCart={updateShoppingCart} />
+          <div className="flex flex-col items-left">
           <h2 className="text-xl font-bold mb-4 text-customBlue font-signature">Contact Information</h2>
           <p className="text-left mb-4">
             The information will be used to contact you about your service
@@ -174,7 +174,7 @@ const ContactForm = ({ value, onChange }) => {
           </form>
         </div>
         </div>
-        <div className="w-1/3 p-4">
+        <div className="hidden lg:flex lg:w-1/3 p-4">
           <ShoppingCart cartItems={cartItems} />
         </div>
       </div>

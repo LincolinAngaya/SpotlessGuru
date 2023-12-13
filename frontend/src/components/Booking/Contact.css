@@ -4,3 +4,7 @@
     display: block;
     width: 100%;
 }
+.placeholder {
+    padding: 8px;
+    color: #777;
+  }

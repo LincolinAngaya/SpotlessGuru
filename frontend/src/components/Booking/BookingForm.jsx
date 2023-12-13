@@ -42,7 +42,7 @@ function BookingForm() {
 
         <form className="mb-8">
           <select
-            className="p-2 text-lg border w-full rounded-md"
+            className="w-full px-3 py-2 border rounded"
             id="services"
             name="services"
             onChange={handleCategoryChange}

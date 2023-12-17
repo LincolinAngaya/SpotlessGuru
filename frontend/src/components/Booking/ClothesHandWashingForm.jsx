@@ -53,7 +53,8 @@ const ClothesHandWashingForm = ({ updateShoppingCart }) => {
   }, [selectedClothesService, selectedBeddingService, shoeQuantity]);
 
   return (
-    <div className="grid grid-cols-2 gap-4">
+    <div className="grid grid-cols-2 gap-4 rounded-md border p-4 mb-8 mx-auto mt-4 items-left shadow-md">
+  
       <div className="mb-4">
         <label className="mr-2">Select Clothes Service:</label>
         <select

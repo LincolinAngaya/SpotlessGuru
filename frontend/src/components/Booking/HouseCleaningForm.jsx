@@ -30,7 +30,7 @@ const HouseCleaningForm = ({ updateShoppingCart }) => {
 
   return (
     <div>
-      <div className="mb-8 mx-auto items-left">
+    <div className="rounded-md border p-4 mb-8 mx-auto mt-4 items-left shadow-md">
         <label className="mt-4">Select Room Type:</label>
         <select
           className="p-4 text-lg border rounded-md mt-8"

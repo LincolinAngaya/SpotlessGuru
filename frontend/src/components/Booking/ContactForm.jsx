@@ -57,8 +57,9 @@ const ContactForm = ({ value, onChange }) => {
 
   return (
     <>
+    <h2 className='bg-gradient-to-r from-customBlue to-sky text-white p-6 text-center font-signature text-3xl mb-4'>Book Online</h2>
       <div className='flex'>
-        <div className='mx-auto items-left'>
+        <div className='mx-auto items-left '>
           <BookingForm updateShoppingCart={updateShoppingCart} />
           <div className="flex flex-col items-left">
           <h2 className="text-xl font-bold mb-4 text-customBlue font-signature">Contact Information</h2>

@@ -58,10 +58,10 @@ const ContactForm = ({ value, onChange }) => {
   return (
     <>
     <h2 className='bg-gradient-to-r from-customBlue to-sky text-white p-6 text-center font-signature text-3xl mb-4'>Book Online</h2>
-      <div className='flex'>
-        <div className='mx-auto items-left '>
+    <div className='lg:flex'>
+      <div className='mx-auto items-left '>
           <BookingForm updateShoppingCart={updateShoppingCart} />
-          <div className="flex flex-col items-left">
+          <div className="flex flex-col items-left  mx-auto p-4">
           <h2 className="text-xl font-bold mb-4 text-customBlue font-signature">Contact Information</h2>
           <p className="text-left mb-4">
             The information will be used to contact you about your service
@@ -121,7 +121,8 @@ const ContactForm = ({ value, onChange }) => {
             </div>
           </form>
         </div>
-        <div className="flex flex-col items-left mt-8">
+        
+        <div className="flex flex-col items-left  mx-auto p-4">
           <h2 className="text-xl font-bold mb-4 text-customBlue font-signature">Service Address</h2>
           <p className=" mb-4">Where would you like us to clean?</p>
           <form onSubmit={handleSubmit} className="w-full max-w-md">
@@ -149,7 +150,7 @@ const ContactForm = ({ value, onChange }) => {
             </div>
           </form>
         </div>
-        <div className="flex flex-col items-left mt-8">
+        <div className="flex flex-col items-left  mx-auto p-4">
           <h1 className="text-xl font-bold mb-4 text-customBlue font-signature">When would you like us to come?</h1>
           <form className="w-full max-w-md">
             {/* Date Input */}
@@ -175,7 +176,8 @@ const ContactForm = ({ value, onChange }) => {
           </form>
         </div>
         </div>
-        <div className="hidden lg:flex lg:w-1/3 p-4">
+        <div className="lg:flex lg:w-1/3 mx-auto p-4 ">
+     
           <ShoppingCart cartItems={cartItems} />
         </div>
       </div>

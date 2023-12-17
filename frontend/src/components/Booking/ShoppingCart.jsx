@@ -6,10 +6,10 @@ const ShoppingCart = ({ cartItems }) => {
   };
 
   return (
-    <div className="mt-4 rounded-md border">
+    <div className="items-left  mx-auto p-4">
       <h2 className='font-signature text-customBlue font-bold'>Shopping Cart</h2>
       {cartItems && cartItems.length > 0 ? (
-        <div>
+        <div className='rounded-md border items-left  mx-auto p-4'>
           {cartItems.map((item, index) => (
             <div key={index} className="flex justify-between items-center mb-2">
               <div>
@@ -41,7 +41,7 @@ const ShoppingCart = ({ cartItems }) => {
               </div>
             </div>
           ))}
-          <p>Total Price: ${calculateTotalPrice().toFixed(2)}</p>
+          <p className ='text-customBlue font-bold'>Total Price: Ksh {calculateTotalPrice().toFixed(2)}</p>
         </div>
       ) : (
         <p>Your shopping cart is empty.</p>

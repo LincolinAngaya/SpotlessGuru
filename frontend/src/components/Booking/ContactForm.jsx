@@ -179,9 +179,14 @@ const ContactForm = ({ value, onChange }) => {
         <div className="lg:flex lg:w-1/3 mx-auto p-4 ">
      
           <ShoppingCart cartItems={cartItems} />
+         
         </div>
+        
       </div>
-    </>
+      <div className="items-left mx-auto p-4">
+      <button  className='bg-customBlue text-white text-base px-6 py-2 rounded-md  hover:bg-sky hover:text-customBlue cursor-pointer'type="button">Book Now</button>
+      </div>
+      </>
   );
 };
 

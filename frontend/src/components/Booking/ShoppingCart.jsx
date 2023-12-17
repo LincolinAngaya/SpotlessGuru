@@ -16,9 +16,9 @@ const ShoppingCart = ({ cartItems }) => {
                 <div>
                   {item.service === 'Clothes Handwashing' && (
                     <>
-                      {item.clothesService && <p>Clothes category: {item.clothesService}</p>}
-                      {item.beddingService && <p>Duvet Size: {item.beddingService}</p>}
-                      {item.shoeQuantity > 0 && <p>Number of Shoes: {item.shoeQuantity}</p>}
+                      {item.clothesService && <p>Clothes Size - {item.clothesService}</p>}
+                      {item.beddingService && <p>Duvet Size - {item.beddingService}</p>}
+                      {item.shoeQuantity > 0 && <p>Number of Shoes - {item.shoeQuantity}</p>}
                     </>
                   )}
 
@@ -46,7 +46,7 @@ const ShoppingCart = ({ cartItems }) => {
           <p className='text-customBlue font-bold mt-4'>Total Price: Ksh {calculateTotalPrice().toFixed(2)}</p>
         </div>
       ) : (
-        <p>Your shopping cart is empty.</p>
+        <p className=' border-customBlue text-gray-500 font-signature'>Your shopping cart is empty.</p>
       )}
     </div>
   );

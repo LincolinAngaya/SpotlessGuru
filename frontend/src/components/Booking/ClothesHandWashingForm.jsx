@@ -53,9 +53,10 @@ const ClothesHandWashingForm = ({ updateShoppingCart }) => {
   }, [selectedClothesService, selectedBeddingService, shoeQuantity]);
 
   return (
-    <div className="grid grid-cols-2 gap-4 rounded-md border p-4 mb-8 mx-auto mt-4 items-left shadow-md">
-  
-      <div className="mb-4">
+    <div className="rounded-md border p-4 mb-8 mx-auto mt-4 items-left shadow-md">
+    <div className="flex flex-wrap -mx-2 mb-4">
+      {/* First row of inputs */}
+      <div className="w-full md:w-1/2 px-2 mb-4">
         <label className="mr-2 font-bold text-customBlue">Select Clothes Service:</label>
         <select
           className="p-2 text-lg border rounded-md w-full"
@@ -68,8 +69,7 @@ const ClothesHandWashingForm = ({ updateShoppingCart }) => {
           <option value="large">Large - $15 per cloth</option>
         </select>
       </div>
-
-      <div className="mb-4">
+      <div className="w-full md:w-1/2 px-2 mb-4">
         <label className="mr-2 font-bold text-customBlue">Select Bedding Service:</label>
         <select
           className="p-2 text-lg border rounded-md w-full"
@@ -84,7 +84,7 @@ const ClothesHandWashingForm = ({ updateShoppingCart }) => {
         </select>
       </div>
 
-      <div className="mb-4">
+      <div className="w-full md:w-1/2 px-2 mb-4">
         <label className="mr-2 font-bold text-customBlue">Number of Shoes:</label>
         <input
           type="number"
@@ -93,6 +93,7 @@ const ClothesHandWashingForm = ({ updateShoppingCart }) => {
           onChange={(e) => setShoeQuantity(parseInt(e.target.value, 10) || 0)}
         />
       </div>
+    </div>
     </div>
   );
 };

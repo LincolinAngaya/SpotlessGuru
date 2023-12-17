@@ -57,6 +57,7 @@ const ContactForm = ({ value, onChange }) => {
 
   return (
     <>
+   
     <h2 className='bg-gradient-to-r from-customBlue to-sky text-white p-6 text-center font-signature text-3xl mb-4'>Book Online</h2>
     <div className='lg:flex'>
       <div className='mx-auto items-left '>
@@ -175,17 +176,21 @@ const ContactForm = ({ value, onChange }) => {
             </div>
           </form>
         </div>
+       
         </div>
-        <div className="lg:flex lg:w-1/3 mx-auto p-4 ">
-     
-          <ShoppingCart cartItems={cartItems} />
-         
-        </div>
+        <div className="lg:flex lg:w-1/3 mx-auto p-4">
+        <ShoppingCart cartItems={cartItems} />
         
       </div>
-      <div className="items-left mx-auto p-4">
-      <button  className='bg-customBlue text-white text-base px-6 py-2 rounded-md  hover:bg-sky hover:text-customBlue cursor-pointer'type="button">Book Now</button>
+      
+        
       </div>
+      <div className=" items-left mx-auto p-4"> {/* Added lg:w-2/3 */}
+        <button className='bg-customBlue text-white text-base px-6 py-2 rounded-md hover:bg-sky hover:text-customBlue cursor-pointer' type="button">
+          Book Now
+        </button>
+      </div>
+      
       </>
   );
 };

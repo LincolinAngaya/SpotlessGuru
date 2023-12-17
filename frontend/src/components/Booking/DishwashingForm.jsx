@@ -10,11 +10,11 @@ const DishwashingForm = ({ updateShoppingCart }) => {
 
   useEffect(() => {
     const calculateTotalPrice = () => {
-      const utensilsPrice = utensils * 0.5;
-      const appliancesPrice = appliances * 2;
-      const cookwarePrice = cookware * 1.25;
-      const containersPrice = containers * 1;
-      const total = (quantity + utensilsPrice + appliancesPrice + cookwarePrice + containersPrice) * 1.5;
+      const utensilsPrice = utensils * 5.0;
+      const appliancesPrice = appliances * 10;
+      const cookwarePrice = cookware * 5;
+      const containersPrice = containers * 10;
+      const total = (quantity + utensilsPrice + appliancesPrice + cookwarePrice + containersPrice) * 1;
       return total;
     };
 
@@ -34,7 +34,7 @@ const DishwashingForm = ({ updateShoppingCart }) => {
       <div className="flex flex-wrap -mx-2 mb-4">
         {/* First row of inputs */}
         <div className="w-full md:w-1/2 px-2 mb-4">
-          <label className="mr-2 font-bold text-customBlue">Utensils-1 (Mugs, Plates, Glasses):</label>
+          <label className="mr-2 font-bold text-customBlue">(Mugs, Plates, Glasses):</label>
           <input
             type="number"
             className="p-2 text-lg border rounded-md w-full"
@@ -44,7 +44,7 @@ const DishwashingForm = ({ updateShoppingCart }) => {
         </div>
 
         <div className="w-full md:w-1/2 px-2 mb-4">
-          <label className="mr-2 font-bold text-customBlue">Utensils-2 (seive, spoons, knives, chopping boards, sticks):</label>
+          <label className="mr-2 font-bold text-customBlue">(Seive, Spoons, Knives, Chopping Board, Cooking Sticks):</label>
           <input
             type="number"
             className="p-2 text-lg border rounded-md w-full"
@@ -57,7 +57,7 @@ const DishwashingForm = ({ updateShoppingCart }) => {
       <div className="flex flex-wrap -mx-2 mb-4">
         {/* Second row of inputs */}
         <div className="w-full md:w-1/2 px-2 mb-4">
-          <label className="mr-2 font-bold text-customBlue">Appliances (blender, toaster, microwave, cooker, fridge, kettle):</label>
+          <label className="mr-2 font-bold text-customBlue">(Blender, Toaster, Microwave, Cooker, Fridge, Kettle):</label>
           <input
             type="number"
             className="p-2 text-lg border rounded-md w-full"
@@ -67,7 +67,7 @@ const DishwashingForm = ({ updateShoppingCart }) => {
         </div>
 
         <div className="w-full md:w-1/2 px-2 mb-4">
-          <label className="mr-2 font-bold text-customBlue">Cookware (pans, sufurias, cooking pots):</label>
+          <label className="mr-2 font-bold text-customBlue">(Pans, Sufurias, Cooking Pots):</label>
           <input
             type="number"
             className="p-2 text-lg border rounded-md w-full"

@@ -56,7 +56,7 @@ const ClothesHandWashingForm = ({ updateShoppingCart }) => {
     <div className="grid grid-cols-2 gap-4 rounded-md border p-4 mb-8 mx-auto mt-4 items-left shadow-md">
   
       <div className="mb-4">
-        <label className="mr-2">Select Clothes Service:</label>
+        <label className="mr-2 font-bold text-customBlue">Select Clothes Service:</label>
         <select
           className="p-2 text-lg border rounded-md w-full"
           value={selectedClothesService}
@@ -70,7 +70,7 @@ const ClothesHandWashingForm = ({ updateShoppingCart }) => {
       </div>
 
       <div className="mb-4">
-        <label className="mr-2">Select Bedding Service:</label>
+        <label className="mr-2 font-bold text-customBlue">Select Bedding Service:</label>
         <select
           className="p-2 text-lg border rounded-md w-full"
           value={selectedBeddingService}
@@ -85,7 +85,7 @@ const ClothesHandWashingForm = ({ updateShoppingCart }) => {
       </div>
 
       <div className="mb-4">
-        <label className="mr-2">Number of Shoes:</label>
+        <label className="mr-2 font-bold text-customBlue">Number of Shoes:</label>
         <input
           type="number"
           className="p-2 text-lg border rounded-md w-full"

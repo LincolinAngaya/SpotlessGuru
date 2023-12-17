@@ -6,7 +6,7 @@ const ShoppingCart = ({ cartItems }) => {
   };
 
   return (
-    <div className="mt-4">
+    <div className="mt-4 rounded-md border">
       <h2 className='font-signature text-customBlue font-bold'>Shopping Cart</h2>
       {cartItems && cartItems.length > 0 ? (
         <div>

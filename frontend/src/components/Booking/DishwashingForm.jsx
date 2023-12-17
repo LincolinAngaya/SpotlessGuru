@@ -34,7 +34,7 @@ const DishwashingForm = ({ updateShoppingCart }) => {
       <div className="flex flex-wrap -mx-2 mb-4">
         {/* First row of inputs */}
         <div className="w-full md:w-1/2 px-2 mb-4">
-          <label className="mr-2">Utensils (Mugs, Plates, Glasses):</label>
+          <label className="mr-2 font-bold text-customBlue">Utensils-1 (Mugs, Plates, Glasses):</label>
           <input
             type="number"
             className="p-2 text-lg border rounded-md w-full"
@@ -44,7 +44,7 @@ const DishwashingForm = ({ updateShoppingCart }) => {
         </div>
 
         <div className="w-full md:w-1/2 px-2 mb-4">
-          <label className="mr-2">Utensils (seive, spoons, knives, chopping boards, sticks):</label>
+          <label className="mr-2 font-bold text-customBlue">Utensils-2 (seive, spoons, knives, chopping boards, sticks):</label>
           <input
             type="number"
             className="p-2 text-lg border rounded-md w-full"
@@ -57,7 +57,7 @@ const DishwashingForm = ({ updateShoppingCart }) => {
       <div className="flex flex-wrap -mx-2 mb-4">
         {/* Second row of inputs */}
         <div className="w-full md:w-1/2 px-2 mb-4">
-          <label className="mr-2">Appliances (blender, toaster, microwave, cooker, fridge, kettle):</label>
+          <label className="mr-2 font-bold text-customBlue">Appliances (blender, toaster, microwave, cooker, fridge, kettle):</label>
           <input
             type="number"
             className="p-2 text-lg border rounded-md w-full"
@@ -67,7 +67,7 @@ const DishwashingForm = ({ updateShoppingCart }) => {
         </div>
 
         <div className="w-full md:w-1/2 px-2 mb-4">
-          <label className="mr-2">Cookware (pans, sufurias, cooking pots):</label>
+          <label className="mr-2 font-bold text-customBlue">Cookware (pans, sufurias, cooking pots):</label>
           <input
             type="number"
             className="p-2 text-lg border rounded-md w-full"
@@ -79,7 +79,7 @@ const DishwashingForm = ({ updateShoppingCart }) => {
 
       {/* Third input */}
       <div className="mb-4">
-        <label className="mr-2">Food Storage Containers:</label>
+        <label className="mr-2 font-bold text-customBlue">Food Storage Containers:</label>
         <input
           type="number"
           className="p-2 text-lg border rounded-md w-full"

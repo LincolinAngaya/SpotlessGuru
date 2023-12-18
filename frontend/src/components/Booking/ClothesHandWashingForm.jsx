@@ -7,9 +7,9 @@ const ClothesHandWashingForm = ({ updateShoppingCart }) => {
   const [shoeQuantity, setShoeQuantity] = useState(0);
 
   const clothesServices = {
-    small: 5,
-    medium: 10,
-    large: 15,
+    Small_Bucket: 5,
+    Medium_Bucket: 10,
+    Large_Bucket: 15,
   };
 
   const beddingServices = {
@@ -53,38 +53,39 @@ const ClothesHandWashingForm = ({ updateShoppingCart }) => {
   }, [selectedClothesService, selectedBeddingService, shoeQuantity]);
 
   return (
-    <div className="grid grid-cols-2 gap-4">
-      <div className="mb-4">
-        <label className="mr-2">Select Clothes Service:</label>
+    <div className="rounded-md border p-4 mb-8 mx-auto mt-4 items-left shadow-md">
+    <div className="flex flex-wrap -mx-2 mb-4">
+      {/* First row of inputs */}
+      <div className="w-full md:w-1/2 px-2 mb-4">
+        <label className="mr-2 font-bold text-customBlue">Select Clothes Service:</label>
         <select
           className="p-2 text-lg border rounded-md w-full"
           value={selectedClothesService}
           onChange={(e) => setSelectedClothesService(e.target.value)}
         >
           <option value="">Select a service</option>
-          <option value="small">Small - $5 per cloth</option>
-          <option value="medium">Medium - $10 per cloth</option>
-          <option value="large">Large - $15 per cloth</option>
+          <option value="small">Small Bucket ksh 500 per cloth</option>
+          <option value="medium">Medium Bucket Ksh 700 per cloth</option>
+          <option value="large">Large Bucket Ksh 900  per cloth</option>
         </select>
       </div>
-
-      <div className="mb-4">
-        <label className="mr-2">Select Bedding Service:</label>
+      <div className="w-full md:w-1/2 px-2 mb-4">
+        <label className="mr-2 font-bold text-customBlue">Select Bedding Service:</label>
         <select
           className="p-2 text-lg border rounded-md w-full"
           value={selectedBeddingService}
           onChange={(e) => setSelectedBeddingService(e.target.value)}
         >
           <option value="">Select a duvet size</option>
-          <option value="twin">Twin - $20 per duvet</option>
-          <option value="full">Full - $25 per duvet</option>
-          <option value="queen">Queen - $30 per duvet</option>
-          <option value="king">King - $35 per duvet</option>
+          <option value="twin">Twin ksh 400 per duvet</option>
+          <option value="full">Full ksh 400  duvet</option>
+          <option value="queen">Queen ksh 400  per duvet</option>
+          <option value="king">King ksh 400  per duvet</option>
         </select>
       </div>
 
-      <div className="mb-4">
-        <label className="mr-2">Number of Shoes:</label>
+      <div className="w-full md:w-1/2 px-2 mb-4">
+        <label className="mr-2 font-bold text-customBlue">Number of Shoes:</label>
         <input
           type="number"
           className="p-2 text-lg border rounded-md w-full"
@@ -92,6 +93,7 @@ const ClothesHandWashingForm = ({ updateShoppingCart }) => {
           onChange={(e) => setShoeQuantity(parseInt(e.target.value, 10) || 0)}
         />
       </div>
+    </div>
     </div>
   );
 };

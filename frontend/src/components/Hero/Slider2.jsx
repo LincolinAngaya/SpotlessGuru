@@ -3,10 +3,9 @@ import "slick-carousel/slick/slick-theme.css";
 import React from 'react';
 import './Slider.css';
 import Houseclean from '../assets/Houseclean.jpg';
-import Dishwash from '../assets/Dishwash.jpg';
 import Slider from "react-slick";
 
-const imageUrls = [Houseclean, Dishwash];
+const imageUrls = [Houseclean];
 
 const Slider2 = () => {
   const settings = {

@@ -27,14 +27,15 @@ const Navbar = () => {
           </a>
   </div>*/}
 
-      <header className={`bg-white ${isMenuOpen ? 'md:min-h-fit min-h-[60vh]' : ''}`}>
+<header className={`bg-white ${isMenuOpen ? 'md:min-h-fit min-h-[60vh]' : ''}`}>
         <nav className="nav flex justify-between items-center">
           <div className="ml-4 p-3">
-            {/* Display the logo regardless of screen size */}
             <Link to="/" className="text-customBlue text-lg font-signature font-bold">
               <img src={logo} alt="Logo" className="w-16 cursor-pointer" />
             </Link>
           </div>
+           
+           
 
           <div
             className={`nav-links duration-500 md:static absolute ${
@@ -73,38 +74,40 @@ const Navbar = () => {
   >
     <span>Services</span>
     <ion-icon
-      name={isServicesDropdownOpen ? 'chevron-up' : 'chevron-down'}
+      name={isServicesDropdownOpen ? 'caret-up' : 'caret-down'}
       className="ml-2 text-customBlue text-lg"
       style={{ fontSize: '24px', fontWeight: 'bold' }}
     ></ion-icon>
   </div>
   {/* Display the dropdown items when isServicesDropdownOpen is true */}
   {isServicesDropdownOpen && (
-    <div className="absolute left-0 mt-2 bg-white shadow-md border border-gray-200 ">
+    <div className="absolute left-0 mt-2 bg-navy shadow-md border border-gray-200 md:w-64 z-10">
       <Link
         onClick={closeMenu}
         to="services/housecleaning"
-        className="block px-4 py-2 text-lg text-bold text-customBlue hover:bg-gray-100"
+        className="block px-4 py-2 text-lg text-bold text-white hover:text-customBlue hover:bg-sky"
       >
         Housecleaning
       </Link>
       <Link
         onClick={closeMenu}
         to="services/dishwashing"
-        className="block px-4 py-2 text-lg text-bold text-customBlue hover:bg-gray-100"
+        className="block px-4 py-2 text-lg text-bold text-white hover:text-customBlue hover:bg-sky"
       >
         Dishwashing
       </Link>
       <Link
         onClick={closeMenu}
         to="/services/handwashing"
-        className="block px-4 py-2 text-lg text-bold text-customBlue hover:bg-gray-100"
+        className="block px-4 py-2 text-lg text-bold text-white hover:text-customBlue hover:bg-sky"
       >
         Clothes handwashing
       </Link>
     </div>
   )}
 </li>
+
+
 
 
               <li className="ml-0 md:ml-7 p-2">
@@ -131,12 +134,11 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
-
-          <div className="flex items-center gap-6">
+          <div className="md:hidden flex items-center gap-6">
             <ion-icon
               onClick={toggleMenu}
               name={isMenuOpen ? 'close' : 'menu'}
-              className="text-3xl cursor-pointer md:hidden"
+              className="text-3xl cursor-pointer"
             ></ion-icon>
           </div>
         </nav>

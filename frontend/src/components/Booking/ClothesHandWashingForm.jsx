@@ -7,9 +7,9 @@ const ClothesHandWashingForm = ({ updateShoppingCart }) => {
   const [shoeQuantity, setShoeQuantity] = useState(0);
 
   const clothesServices = {
-    Small_Bucket: 5,
-    Medium_Bucket: 10,
-    Large_Bucket: 15,
+    small: 5,
+    medium: 10,
+    large: 15,
   };
 
   const beddingServices = {

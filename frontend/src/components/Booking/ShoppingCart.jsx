@@ -21,12 +21,20 @@ const ShoppingCart = ({ cartItems }) => {
                       {item.shoeQuantity > 0 && <p>Number of Shoes - {item.shoeQuantity}</p>}
                     </>
                   )}
-
                   {item.service === 'House Cleaning' && (
                     <>
-                      {item.roomType && <p>Room Type: {item.roomType} </p>}
+                      {item.roomType && (
+                        <p>
+                         {item.roomType}
+                          {item.price !== undefined && (
+                            <> : Ksh {item.price.toFixed(2)}</>
+                          )}
+                        </p>
+                      )}
                     </>
                   )}
+          
+
 
                   {item.service === 'Dishwashing' && (
                     <>

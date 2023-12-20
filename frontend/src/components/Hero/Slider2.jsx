@@ -1,12 +1,12 @@
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { Link } from 'react-router-dom'; 
 import React from 'react';
 import './Slider.css';
 import Houseclean from '../assets/Houseclean.jpg';
-import Dishwash from '../assets/Dishwash.jpg';
 import Slider from "react-slick";
 
-const imageUrls = [Houseclean, Dishwash];
+const imageUrls = [Houseclean];
 
 const Slider2 = () => {
   const settings = {
@@ -36,9 +36,10 @@ const Slider2 = () => {
               <h2 className="mt-2 sm:mt-4 text-base sm:text-lg md:text-xl lg:text-2xl text-sky font-signature font-bold">
                 Explore our services today!
               </h2>
-              <button className="bg-navy hover:bg-sky hover:text-customBlue text-sm sm:text-md md:text-lg lg:text-xl mt-2 sm:mt-4 lg:mt-6 text-white font-bold py-2 px-4 md:py-3 md:px-6 rounded-md">
-                Sign In
-              </button>
+              <Link to='booking' className="bg-navy hover:bg-sky hover:text-customBlue text-sm sm:text-md md:text-lg lg:text-xl mt-2 sm:mt-4 lg:mt-6 text-white font-bold py-2 px-4 md:py-3 md:px-6 rounded-md">
+                Book Now
+              </Link>
+              
             </div>
           </div>
         ))}

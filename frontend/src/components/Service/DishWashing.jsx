@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'; 
 import Footer from '../Footer/Footer'
 import dishwashing from '../assets/dish1.jpg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -39,7 +40,9 @@ function DishWashing() {
       <li className='flex items-center'><span className='text-customBlue mr-2'> <FontAwesomeIcon icon={faCheckCircle} /> </span>Items like blender jars or toaster trays</li>
        </ul>
     
-         <button  className='bg-customBlue text-white text-base px-6 py-2 rounded-md m-4  hover:bg-sky hover:text-customBlue cursor-pointer'type="button">Book Now</button>
+       <Link to="/booking" className='bg-customBlue text-white text-base px-6 py-2 rounded-md m-4  hover:bg-sky hover:text-customBlue cursor-pointer' type="button">
+       Book Now
+     </Link>
     
          </div>
       </div>

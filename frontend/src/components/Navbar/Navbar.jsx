@@ -27,7 +27,7 @@ const Navbar = () => {
           </a>
   </div>*/}
 
-<header className={`bg-white ${isMenuOpen ? 'md:min-h-fit min-h-[60vh]' : ''}`}>
+<header className={`bg-white ${isMenuOpen ? 'md:min-h-fit min-h-[40vh]' : ''}`}>
         <nav className="nav flex justify-between items-center">
           <div className="ml-4 p-3">
             <Link to="/" className="text-customBlue text-lg font-signature font-bold">

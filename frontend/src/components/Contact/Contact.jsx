@@ -12,7 +12,7 @@ const Contact = () => {
              {/* Form Container */}
             <div className='md:flex-1 mb-4 md:mb-0'>
               <h2 className='text-2xl font-bold text-customBlue mb-4'>Contact Us</h2>
-              <form className='max-w-md'>
+              <form className='max-w-md' action="https://getform.io/f/98f84034-4b16-426a-bdb7-62019b3d456b" method="POST">
               <div className='mb-4'>
               <input
                 type='text'

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'; 
 import Footer from '../Footer/Footer'
 import kitchen from '../assets/kitchen.jfif'
 import bathroom from '../assets/toilet.jpg'
@@ -36,7 +37,9 @@ function HouseCleaning() {
       <li className='flex items-center'><span className='text-customBlue mr-2'> <FontAwesomeIcon icon={faCheckCircle} /> </span>Remove trash and replace the bag</li>
       <li className='flex items-center'><span className='text-customBlue mr-2'> <FontAwesomeIcon icon={faCheckCircle} /> </span>Vacuum and mop kitchen floor</li>
       </ul>
-      <button  className='bg-customBlue text-white text-base px-6 py-2 rounded-md m-4  hover:bg-sky hover:text-customBlue cursor-pointer'type="button">Book Now</button>
+      <Link to="/booking" className='bg-customBlue text-white text-base px-6 py-2 rounded-md m-4  hover:bg-sky hover:text-customBlue cursor-pointer' type="button">
+       Book Now
+     </Link>
       </div>
       </div>
 
@@ -53,7 +56,9 @@ function HouseCleaning() {
       <li className='flex items-center'><span className='text-customBlue mr-2'> <FontAwesomeIcon icon={faCheckCircle} /> </span>Vacuum bathroom rugs or shake</li>
       <li className='flex items-center'><span className='text-customBlue mr-2'> <FontAwesomeIcon icon={faCheckCircle} /> </span>Clean and disinfect bathroom floors</li>
     </ul>
-    <button  className='bg-customBlue text-white text-base px-6 py-2 rounded-md m-4  hover:bg-sky hover:text-customBlue cursor-pointer'type="button">Book Now</button>
+    <Link to="/booking" className='bg-customBlue text-white text-base px-6 py-2 rounded-md m-4  hover:bg-sky hover:text-customBlue cursor-pointer' type="button">
+       Book Now
+     </Link>
     
 
     </div>
@@ -76,8 +81,9 @@ function HouseCleaning() {
       <li className='flex items-center'><span className='text-customBlue mr-2'> <FontAwesomeIcon icon={faCheckCircle} /> </span>Wash light switches and doorknobs</li>
       <li className='flex items-center'><span className='text-customBlue mr-2'> <FontAwesomeIcon icon={faCheckCircle} /> </span>Dust and spot clean doors and door frames</li>
       </ul>
-      <button  className='bg-customBlue text-white text-base px-6 py-2 rounded-md m-4  hover:bg-sky hover:text-customBlue cursor-pointer'type="button">Book Now</button>
-    
+      <Link to="/booking" className='bg-customBlue text-white text-base px-6 py-2 rounded-md m-4  hover:bg-sky hover:text-customBlue cursor-pointer' type="button">
+      Book Now
+    </Link>
          </div>
       </div>
      

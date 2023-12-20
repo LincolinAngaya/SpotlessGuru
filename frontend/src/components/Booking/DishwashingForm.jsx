@@ -10,11 +10,12 @@ const DishwashingForm = ({ updateShoppingCart }) => {
 
   useEffect(() => {
     const calculateTotalPrice = () => {
+      const quantityPrice = quantity * 5.0;
       const utensilsPrice = utensils * 5.0;
-      const appliancesPrice = appliances * 10;
-      const cookwarePrice = cookware * 5;
+      const appliancesPrice = appliances * 20;
+      const cookwarePrice = cookware * 10;
       const containersPrice = containers * 10;
-      const total = (quantity + utensilsPrice + appliancesPrice + cookwarePrice + containersPrice) * 1;
+      const total = (quantityPrice + utensilsPrice + appliancesPrice + cookwarePrice + containersPrice) * 1;
       return total;
     };
 
@@ -34,7 +35,7 @@ const DishwashingForm = ({ updateShoppingCart }) => {
       <div className="flex flex-wrap -mx-2 mb-4">
         {/* First row of inputs */}
         <div className="w-full md:w-1/2 px-2 mb-4">
-          <label className="mr-2 font-bold text-customBlue">(Mugs, Plates, Glasses):</label>
+          <label className="mr-2 font-bold text-customBlue">(Mugs+ Plates+ Glasses):</label>
           <input
             type="number"
             className="p-2 text-lg border rounded-md w-full"

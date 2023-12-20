@@ -27,7 +27,7 @@ const ShoppingCart = ({ cartItems }) => {
                         <p>
                          {item.roomType}
                           {item.price !== undefined && (
-                            <> : Ksh {item.price.toFixed(2)}</>
+                            <> - Ksh {item.price.toFixed(2)}</>
                           )}
                         </p>
                       )}
@@ -38,11 +38,11 @@ const ShoppingCart = ({ cartItems }) => {
 
                   {item.service === 'Dishwashing' && (
                     <>
-                      {item.quantity > 0 && <p>Utensils: {item.quantity}</p>}
-                      {item.utensils > 0 && <p>Utensils: {item.utensils}</p>}
-                      {item.appliances > 0 && <p>Appliances: {item.appliances}</p>}
-                      {item.cookware > 0 && <p>Cookware: {item.cookware}</p>}
-                      {item.containers > 0 && <p>Food Storage Containers: {item.containers}</p>}
+                      {item.quantity > 0 && <p>Utensils - {item.quantity}</p>}
+                      {item.utensils > 0 && <p>Utensils - {item.utensils}</p>}
+                      {item.appliances > 0 && <p>Appliances - {item.appliances}</p>}
+                      {item.cookware > 0 && <p>Cookware - {item.cookware}</p>}
+                      {item.containers > 0 && <p>Food Storage Containers - {item.containers}</p>}
                     </>
                   )}
 

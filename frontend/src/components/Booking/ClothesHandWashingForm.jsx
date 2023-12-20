@@ -16,7 +16,7 @@ const ClothesHandWashingForm = ({ updateShoppingCart }) => {
     twin: 650,
     full: 750,
     queen: 850,
-    king: 35,
+  
   };
 
   const shoePricePerPair = 25;

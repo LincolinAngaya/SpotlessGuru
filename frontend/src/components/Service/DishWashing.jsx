@@ -8,9 +8,12 @@ function DishWashing() {
   return (
     <div>
     <div>
-    <div className='bg-gradient-to-r from-customBlue to-sky text-white p-6 text-center font-signature text-3xl mb-4'>
+    <div className='bg-gradient-to-r from-customBlue to-sky text-white p-6 text-center font-signature text-xl sm:text-xl md:text-2xl lg:text-3xl xl:text-3xl mb-4'>
     Dish Washing
   </div>
+  
+  
+
   <div className='mx-10 mt-5'>
   <h1 className=' text-2xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-4xl text-customBlue mt-[-0.5rem]'>
     Are your dishes piling up?

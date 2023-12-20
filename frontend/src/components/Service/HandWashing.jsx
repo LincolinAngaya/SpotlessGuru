@@ -22,7 +22,7 @@ function HandWashing() {
 
       <div className='flex flex-col lg:flex-row mx-10 space-x-5 lg:space-x-8 py-8'>
       <div>
-      <h1 className='p-3 font-bold font-signature text-4xl text-customBlue'>Our hand washing Includes</h1>
+      <h1 className='p-3 font-bold font-signature text-3xl text-customBlue'>Our hand washing Includes</h1>
     
       <ul className='p-3  text-gray-500 font-poppins lg:font-sans text-lg'>
       <li className='flex items-center'><span className='text-customBlue mr-2'> <FontAwesomeIcon icon={faCheckCircle} /> </span>

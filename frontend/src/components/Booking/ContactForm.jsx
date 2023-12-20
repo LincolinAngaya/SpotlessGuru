@@ -125,14 +125,14 @@ return;
  
   return (
     <>
-   
+  
     <h2 className='bg-gradient-to-r from-customBlue to-sky text-white p-6 text-center font-signature text-3xl mb-4'>Book Online</h2>
-    <div className='lg:flex'>
     {successMessage && (
       <div className="bg-green-500 text-white p-2 text-center mb-4">
         {successMessage}
       </div>
     )}
+    <div className='lg:flex'>
       <div className='mx-auto items-left '>
           <BookingForm updateShoppingCart={updateShoppingCart} />
           <div className="flex flex-col items-left  mx-auto p-4">

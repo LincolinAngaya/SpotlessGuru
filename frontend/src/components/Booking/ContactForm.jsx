@@ -24,6 +24,27 @@ const ContactForm = ({ value, onChange }) => {
   const [successMessage, setSuccessMessage] = useState(null);
 
  const handleSubmit = () => {
+
+// Validate form fields
+const isFormValid =
+formData.name &&
+formData.lastName &&
+formData.email &&
+formData.phoneNumber &&
+formData.address &&
+formData.city &&
+startDate;
+
+if (!isFormValid) {
+// If the form is not valid, display an error message and return early
+alert('Please fill in all the required details');
+return;
+}
+
+
+
+
+
     // Check for undefined values and set defaults
     const dataToPush = {
       name: formData.name || '',

@@ -21,20 +21,28 @@ const ShoppingCart = ({ cartItems }) => {
                       {item.shoeQuantity > 0 && <p>Number of Shoes - {item.shoeQuantity}</p>}
                     </>
                   )}
-
                   {item.service === 'House Cleaning' && (
                     <>
-                      {item.roomType && <p>Room Type: {item.roomType} </p>}
+                      {item.roomType && (
+                        <p>
+                         {item.roomType}
+                          {item.price !== undefined && (
+                            <> - Ksh {item.price.toFixed(2)}</>
+                          )}
+                        </p>
+                      )}
                     </>
                   )}
+          
+
 
                   {item.service === 'Dishwashing' && (
                     <>
-                      {item.quantity > 0 && <p>Utensils: {item.quantity}</p>}
-                      {item.utensils > 0 && <p>Utensils: {item.utensils}</p>}
-                      {item.appliances > 0 && <p>Appliances: {item.appliances}</p>}
-                      {item.cookware > 0 && <p>Cookware: {item.cookware}</p>}
-                      {item.containers > 0 && <p>Food Storage Containers: {item.containers}</p>}
+                      {item.quantity > 0 && <p>Utensils - {item.quantity}</p>}
+                      {item.utensils > 0 && <p>Utensils - {item.utensils}</p>}
+                      {item.appliances > 0 && <p>Appliances - {item.appliances}</p>}
+                      {item.cookware > 0 && <p>Cookware - {item.cookware}</p>}
+                      {item.containers > 0 && <p>Food Storage Containers - {item.containers}</p>}
                     </>
                   )}
 

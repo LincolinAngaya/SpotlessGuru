@@ -3,7 +3,7 @@ const people = [
     id: 1,
     image: "/images/person1.jpg",
     name: "Dan Baraka",
-    title: "Qejani Residence-Karen",
+    title: "Multimedia University",
     quote:
       "Spotless Guru, you're my savior! I was broke, but with just a coin in my pocket, I could afford your amazing dish washing services. Quality that fits any budget—thank you for making cleanliness accessible!",
   },

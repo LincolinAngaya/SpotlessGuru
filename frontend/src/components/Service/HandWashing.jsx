@@ -1,5 +1,6 @@
 import React from 'react'
 import Footer from '../Footer/Footer'
+import { Link } from 'react-router-dom'; 
 import wash from '../assets/wash.jpg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';
@@ -38,7 +39,9 @@ function HandWashing() {
         </li>
      </ul>
 
-     <button  className='bg-customBlue text-white text-base px-6 py-2 rounded-md m-4  hover:bg-sky hover:text-customBlue cursor-pointer'type="button">Book Now</button>
+     <Link to="/booking" className='bg-customBlue text-white text-base px-6 py-2 rounded-md m-4  hover:bg-sky hover:text-customBlue cursor-pointer' type="button">
+       Book Now
+     </Link>
     
 
       </div>

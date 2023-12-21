@@ -1,4 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { ref, push } from 'firebase/database';
+import { db } from './firebase';
+
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -11,12 +14,82 @@ const ContactForm = ({ value, onChange }) => {
   const [cartItems, setCartItems] = useState([]);
   const [formData, setFormData] = useState({
     name: '',
+    lastName: '',
     email: '',
     phoneNumber: '',
     address: '',
     city: '',
   });
   const [startDate, setStartDate] = useState(null);
+  const [successMessage, setSuccessMessage] = useState(null);
+
+ const handleSubmit = () => {
+
+// Validate form fields
+const isFormValid =
+formData.name &&
+formData.lastName &&
+formData.email &&
+formData.phoneNumber &&
+formData.address &&
+formData.city &&
+startDate;
+
+if (!isFormValid) {
+// If the form is not valid, display an error message and return early
+alert('Please fill in all the required details');
+return;
+}
+
+
+
+
+
+    // Check for undefined values and set defaults
+    const dataToPush = {
+      name: formData.name || '',
+      lastName: formData.lastName || '',
+      email: formData.email || '',
+      phoneNumber: formData.phoneNumber || '',
+      address: formData.address || '',
+      city: formData.city || '',
+      date: startDate ? startDate.toISOString() : null,
+      cartItems: cartItems || [],
+    };
+
+    // Create a reference to the 'bookings' node in your database
+    const bookingsRef = ref(db, 'bookings');
+
+    // Use the push function to add a new record with the form data
+    push(bookingsRef, dataToPush);
+
+    // Optionally, you can clear the form and shopping cart after submission
+    setFormData({
+      name: '',
+      lastName: '',
+      email: '',
+      phoneNumber: '',
+      address: '',
+      city: '',
+    });
+    setStartDate(null);
+    setCartItems([]);
+
+    setSuccessMessage('Form data submitted successfully!');
+
+    setTimeout(() => {
+      setSuccessMessage(null);
+
+      // Redirect to the home page (you may need to replace '/home' with your actual home page route)
+      // Uncomment the line below when you are ready to implement redirection
+       window.location.href = '/';
+    }, 5000);
+  };
+
+  useEffect(() => {
+    // This useEffect hook will run only once after the initial render
+    // You can perform any additional actions here if needed
+  }, []);
 
   // Define the allowed time range
   const allowedStartTime = new Date();
@@ -49,17 +122,17 @@ const ContactForm = ({ value, onChange }) => {
     }));
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log('Form data submitted:', formData);
-    // You can perform further actions, such as sending data to a server
-  };
-
+ 
   return (
     <>
    
     <h2 className='bg-gradient-to-r from-customBlue to-sky text-white p-6 text-center font-signature text-3xl mb-4'>Book Online</h2>
     <div className='lg:flex'>
+    {successMessage && (
+      <div className="bg-green-500 text-white p-2 text-center mb-4">
+        {successMessage}
+      </div>
+    )}
       <div className='mx-auto items-left '>
           <BookingForm updateShoppingCart={updateShoppingCart} />
           <div className="flex flex-col items-left  mx-auto p-4">
@@ -186,7 +259,7 @@ const ContactForm = ({ value, onChange }) => {
         
       </div>
       <div className=" items-left mx-auto p-4"> {/* Added lg:w-2/3 */}
-        <button className='bg-customBlue text-white text-base px-6 py-2 rounded-md hover:bg-sky hover:text-customBlue cursor-pointer' type="button">
+        <button className='bg-customBlue text-white text-base px-6 py-2 rounded-md hover:bg-sky hover:text-customBlue cursor-pointer' type="button" onClick={handleSubmit}>
           Book Now
         </button>
       </div>

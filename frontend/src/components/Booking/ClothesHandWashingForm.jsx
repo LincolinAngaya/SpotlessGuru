@@ -7,16 +7,16 @@ const ClothesHandWashingForm = ({ updateShoppingCart }) => {
   const [shoeQuantity, setShoeQuantity] = useState(0);
 
   const clothesServices = {
-    small: 5,
-    medium: 10,
-    large: 15,
+    small: 500,
+    medium: 700,
+    large: 900,
   };
 
   const beddingServices = {
-    twin: 20,
-    full: 25,
-    queen: 30,
-    king: 35,
+    twin: 650,
+    full: 750,
+    queen: 850,
+  
   };
 
   const shoePricePerPair = 25;
@@ -64,9 +64,9 @@ const ClothesHandWashingForm = ({ updateShoppingCart }) => {
           onChange={(e) => setSelectedClothesService(e.target.value)}
         >
           <option value="">Select a service</option>
-          <option value="small">Small Bucket ksh 500 per cloth</option>
-          <option value="medium">Medium Bucket Ksh 700 per cloth</option>
-          <option value="large">Large Bucket Ksh 900  per cloth</option>
+          <option value="small">Small Bucket  Clothes ksh 500 </option>
+          <option value="medium">Medium Bucket  Clothes Ksh 700 </option>
+          <option value="large">Large  Bucket  Clothes Ksh 900  </option>
         </select>
       </div>
       <div className="w-full md:w-1/2 px-2 mb-4">
@@ -77,10 +77,10 @@ const ClothesHandWashingForm = ({ updateShoppingCart }) => {
           onChange={(e) => setSelectedBeddingService(e.target.value)}
         >
           <option value="">Select a duvet size</option>
-          <option value="twin">Twin ksh 400 per duvet</option>
-          <option value="full">Full ksh 400  duvet</option>
-          <option value="queen">Queen ksh 400  per duvet</option>
-          <option value="king">King ksh 400  per duvet</option>
+          <option value="twin">Size 4 X 6 duvet Ksh 650</option>
+          <option value="full">Size 5 X 6 duvet Ksh 750</option>
+          <option value="queen">Size 6 X 6 duvet Ksh 850</option>
+       
         </select>
       </div>
 

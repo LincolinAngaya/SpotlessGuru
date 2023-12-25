@@ -32,7 +32,9 @@ function DishWashing() {
     
       <img src={dishwashing}  className='rounded-r-lg' height="400" width="500" alt='dish washing' />
       <div>
-      <h1 className='p-3 font-bold font-signature text-4xl text-customBlue'>Dish Washing Checklist</h1>
+      <h1 className='p-3 font-bold font-signature text-2xl sm:text-2xl md:text-2xl lg:text-4xl text-customBlue'>
+      Dish Washing Checklist
+    </h1>
       <ul className='p-3  text-gray-500 font-poppins lg:font-sans text-lg'>
      <li className='flex items-center'><span className='text-customBlue mr-2'> <FontAwesomeIcon icon={faCheckCircle} /> </span>
       Personal Plates and Bowls</li> 

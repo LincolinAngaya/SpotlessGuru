@@ -22,7 +22,7 @@ function BookingSteps() {
         <h1 className="font-bold font-sans text-customBlue text-2xl md:text-3xl lg:text-2xl xl:text-3xl ">
         You Order</h1>
         <p className="mb-4 font-light text-center sm:text-lg md:text-xl lg:text-lg xl:text-xl">
-        Create your account or log in and place order
+        Go to our website and book a service of your choice
       </p>
     </div>
 

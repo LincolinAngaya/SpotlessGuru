@@ -9,21 +9,26 @@ function Footer() {
   return (
     <>
    
-      <footer className="bg-navy text-white text-center ">
+      <footer className="bg-navy text-white ">
      
         <div className="container mx-auto">
           {/* Add padding to the container for better responsiveness */}
           
-            <ItemsContainer />
+          <div className="lg:flex lg:items-center">
+          <ItemsContainer />
+        </div>
          
-          <div className="w-3/4 mx-auto border-t border-white opacity-50 mt-[-1.5rem]"></div>
-          <div className="py-8">
+          <div className="w-4/4 mx-auto border-t border-white opacity-50 mt-[-1.5rem]"></div>
+          <div className=" text-center">
+          <div className="py-2">
             <SocialIcons Icons={Icons} />
           </div>
-        </div>
+        
         <span className="block text-lg">Spotless Guru Cleaners</span>
-        <div className="mt-4 bg-navy text-white text-center p-4">
+        <div className="mt-4 bg-navy text-white text-center ">
           Copyright &copy; {new Date().getFullYear()} Spotless Guru Cleaners
+        </div>
+        </div>
         </div>
       </footer>
      </>

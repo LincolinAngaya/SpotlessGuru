@@ -1,20 +1,20 @@
 
   export const RESOURCES = [
-    { name: "Home", link: "#" },
-    { name: "About Us", link: "#" },
-    { name: "Services", link: "#" },
+    { name: "Home", link: "/" },
+    { name: "About Us", link: "about" },
+    { name: "Testimonials", link: "testimonials" },
 
   ];
   export const COMPANY = [
-    { name: "Testimonial", link: "#" },
-    { name: "Contact us", link: "#" },
-    { name: "Our Team", link: "#" },
+    { name: "House Cleaning", link: "services/housecleaning" },
+    { name: "Dish Washing", link: "services/dishwashing" },
+    { name: "Clothes HandWashing", link: "services/handwashing" },
     
   ];
   export const CONTACT = [
    
     { namee: "call-outline",  contacts: "+254796286466", link: "tel:+254796286466" },
-    { namee: "mail-outline", contacts: "spotlessguru@gmail.com ", link: "mailto:spotlessguru@gmail.com "},
+    { namee: "mail-outline", contacts: "spotlessgurucleaners@gmail.com ", link: "mailto:spotlessgurucleaners@gmail.com "},
     { namee: "location-outline", contacts:"Nairobi, Kenya",link: "#" },
     { namee: "time", contacts:"7:00 am - 6:00 pm" , link: "#" }
   ];

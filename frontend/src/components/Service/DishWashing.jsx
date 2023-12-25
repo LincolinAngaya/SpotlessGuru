@@ -8,9 +8,12 @@ function DishWashing() {
   return (
     <div>
     <div>
-    <div className='bg-gradient-to-r from-customBlue to-sky text-white p-6 text-center font-signature text-3xl mb-4'>
+    <div className='bg-gradient-to-r from-customBlue to-sky text-white p-6 text-center font-signature text-xl sm:text-xl md:text-2xl lg:text-3xl xl:text-3xl mb-4'>
     Dish Washing
   </div>
+  
+  
+
   <div className='mx-10 mt-5'>
   <h1 className=' text-2xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-4xl text-customBlue mt-[-0.5rem]'>
     Are your dishes piling up?
@@ -29,7 +32,9 @@ function DishWashing() {
     
       <img src={dishwashing}  className='rounded-r-lg' height="400" width="500" alt='dish washing' />
       <div>
-      <h1 className='p-3 font-bold font-signature text-4xl text-customBlue'>Dish Washing Checklist</h1>
+      <h1 className='p-3 font-bold font-signature text-2xl sm:text-2xl md:text-2xl lg:text-4xl text-customBlue'>
+      Dish Washing Checklist
+    </h1>
       <ul className='p-3  text-gray-500 font-poppins lg:font-sans text-lg'>
      <li className='flex items-center'><span className='text-customBlue mr-2'> <FontAwesomeIcon icon={faCheckCircle} /> </span>
       Personal Plates and Bowls</li> 

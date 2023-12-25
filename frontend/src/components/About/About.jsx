@@ -20,7 +20,7 @@ function About() {
     />
   </div>
   <div className="flex-1">
-    <p className="block text-customBlue text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl">
+    <p className="block text-customBlue text-base sm:text-lg text-center p-2 md:text-xl lg:text-2xl xl:text-3xl">
       Welcome to Spotless Guru Cleaners, your trusted partner for professional cleaning services. We are a dedicated team of cleaning experts with a passion for providing clean and healthy environments for homes and rooms. With years of experience and a commitment to excellence, we take pride in making your spaces shine.
     </p>
   </div>

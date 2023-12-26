@@ -1,6 +1,6 @@
 import React from 'react'
 import Footer from './components/Footer/Footer'
-  import Slider2 from './components/Hero/Slider2'
+  import HeroSection from './components/Hero/HeroSection'
  import BookingSteps from './components/Footer/BookingSteps'
 
 import {
@@ -12,7 +12,7 @@ import {
 function Home() {
     return (
         <>
-        <Slider2 /> 
+        <HeroSection /> 
        <BookingSteps />
        <Footer />
 

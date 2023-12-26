@@ -65,7 +65,7 @@ const Contact = () => {
   </a>
 
   <a href='https://maps.google.com/?q=Karen,Nairobi' target='_blank' rel='noopener noreferrer' className='flex items-center justify-center text-xl mb-2'>
-    <AiOutlineEnvironment className='mr-2'/> Karen, Nairobi
+    <AiOutlineEnvironment className='mr-2'/> Nairobi, Kenya
   </a>
 
   <p className='flex items-center justify-center text-xl'>

@@ -12,7 +12,7 @@ const HeroSection = () => {
         alt="Background"
         className="absolute inset-0 w-full h-full object-cover opacity-75"
       />
-      <div className="absolute inset-0 bg-black opacity-50"></div>
+      <div className="absolute inset-0 bg-black opacity-30"></div>
       <div className="z-10 text-white absolute top-1/2 ml-8 transform -translate-y-1/2">
         <div>
         <h1 className="font-signature font-bold text-2xl sm:text-2xl md:text-2xl lg:text-3xl xl:text-3xl">

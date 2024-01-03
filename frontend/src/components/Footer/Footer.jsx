@@ -23,9 +23,7 @@ function Footer() {
           <div className="py-2">
             <SocialIcons Icons={Icons} />
           </div>
-        
-        <span className="block text-lg">Spotless Guru Cleaners</span>
-        <div className="mt-4 bg-navy text-white text-center ">
+        <div className=" bg-navy text-white text-center ">
           Copyright &copy; {new Date().getFullYear()} Spotless Guru Cleaners
         </div>
         </div>

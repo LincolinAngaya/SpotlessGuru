@@ -7,15 +7,17 @@ const ClothesHandWashingForm = ({ updateShoppingCart }) => {
   const [shoeQuantity, setShoeQuantity] = useState(0);
 
   const clothesServices = {
-    small: 500,
-    medium: 700,
-    large: 900,
+    SoloBucket: 500,
+    Beyond_SoloBucket: 650,
+    TwinBucket: 850,
+    Beyond_TwinBucket: 1000,
+    XLWash_Express: 1500,
   };
 
   const beddingServices = {
-    twin: 650,
-    full: 750,
-    queen: 850,
+    "4 X 6 duvet": 650,
+    "5 X 6 duvet": 750,
+    "6 X 6 duvet": 850,
   
   };
 
@@ -64,9 +66,11 @@ const ClothesHandWashingForm = ({ updateShoppingCart }) => {
           onChange={(e) => setSelectedClothesService(e.target.value)}
         >
           <option value="">Select a service</option>
-          <option value="small">Small Bucket  Clothes ksh 500 </option>
-          <option value="medium">Medium Bucket  Clothes Ksh 700 </option>
-          <option value="large">Large  Bucket  Clothes Ksh 900  </option>
+          <option value="SoloBucket">SoloBucket/Laundry basket Clothes ksh 500 </option>
+          <option value="Beyond_SoloBucket">Beyond SoloBucket/Laundry basket Clothes ksh 650 </option>
+          <option value="TwinBucket">TwinBucket/Laundry basket Clothes ksh 850 </option>
+          <option value="Beyond_TwinBucket">Beyond TwinBucket/Laundry basket Clothes ksh 1000 </option>
+          <option value="XLWash_Express">XLWash Express  Bucket/Laundry basket Clothes ksh 1500  </option>
         </select>
       </div>
       <div className="w-full md:w-1/2 px-2 mb-4">
@@ -77,9 +81,9 @@ const ClothesHandWashingForm = ({ updateShoppingCart }) => {
           onChange={(e) => setSelectedBeddingService(e.target.value)}
         >
           <option value="">Select a duvet size</option>
-          <option value="twin">Size 4 X 6 duvet Ksh 650</option>
-          <option value="full">Size 5 X 6 duvet Ksh 750</option>
-          <option value="queen">Size 6 X 6 duvet Ksh 850</option>
+          <option value="4 X 6 duvet">Size 4 X 6 duvet Ksh 650</option>
+          <option value="5 X 6 duvet">Size 5 X 6 duvet Ksh 750</option>
+          <option value="6 X 6 duvet">Size 6 X 6 duvet Ksh 850</option>
        
         </select>
       </div>

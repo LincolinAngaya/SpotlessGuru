@@ -45,9 +45,6 @@ const Testimonial = () => {
 </div>
 </div>
 
-
-
-
     <section className="section">
       <div className="title">
         <h2 className="text-customBlue txt-4x1">What Our Clients Say</h2>

@@ -45,7 +45,7 @@ const DishwashingForm = ({ updateShoppingCart }) => {
         </div>
 
         <div className="w-full md:w-1/2 px-2 mb-4">
-          <label className="mr-2 font-bold text-customBlue">(Seive, Spoons, Knives, Chopping Board, Cooking Sticks):</label>
+          <label className="mr-2 font-bold text-customBlue">(Seive+ Spoons+ Knives+ Chopping Board+ Cooking Sticks):</label>
           <input
             type="number"
             className="p-2 text-lg border rounded-md w-full"
@@ -58,7 +58,7 @@ const DishwashingForm = ({ updateShoppingCart }) => {
       <div className="flex flex-wrap -mx-2 mb-4">
         {/* Second row of inputs */}
         <div className="w-full md:w-1/2 px-2 mb-4">
-          <label className="mr-2 font-bold text-customBlue">(Blender, Toaster, Microwave, Cooker, Fridge, Kettle):</label>
+          <label className="mr-2 font-bold text-customBlue">(Blender+ Toaster+ Microwave+ Cooker+ Fridge+ Kettle):</label>
           <input
             type="number"
             className="p-2 text-lg border rounded-md w-full"
@@ -68,7 +68,7 @@ const DishwashingForm = ({ updateShoppingCart }) => {
         </div>
 
         <div className="w-full md:w-1/2 px-2 mb-4">
-          <label className="mr-2 font-bold text-customBlue">(Pans, Sufurias, Cooking Pots):</label>
+          <label className="mr-2 font-bold text-customBlue">(Pans+ Sufurias+ Cooking Pots):</label>
           <input
             type="number"
             className="p-2 text-lg border rounded-md w-full"

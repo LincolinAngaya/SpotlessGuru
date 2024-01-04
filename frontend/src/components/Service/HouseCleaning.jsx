@@ -72,13 +72,14 @@ function HouseCleaning() {
       <div>
       <h1 className='font-bold font-signature text-2xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-4xl mt-3 text-customBlue'>All Rooms</h1>
       <ul className='p-3  text-gray-500 font-poppins lg:font-sans text-lg'>
-      <li className='flex items-center'><span className='text-customBlue mr-2'> <FontAwesomeIcon icon={faCheckCircle} /> </span>Dust all wall art, TVs, electronics etc.</li>
+      <li className='flex items-center'><span className='text-customBlue mr-2'> <FontAwesomeIcon icon={faCheckCircle} /> </span>Electronics Dusting and Cleaning etc.</li>
       <li className='flex items-center'><span className='text-customBlue mr-2'> <FontAwesomeIcon icon={faCheckCircle} /> </span>Dust all furniture</li>
       <li className='flex items-center'><span className='text-customBlue mr-2'> <FontAwesomeIcon icon={faCheckCircle} /> </span>Vacuum all floors & mop hard surface floors</li>
-      <li className='flex items-center'><span className='text-customBlue mr-2'> <FontAwesomeIcon icon={faCheckCircle} /> </span>Remove cobwebs</li>
-      <li className='flex items-center'><span className='text-customBlue mr-2'> <FontAwesomeIcon icon={faCheckCircle} /> </span>Dust ceiling fans</li>
+      <li className='flex items-center'><span className='text-customBlue mr-2'> <FontAwesomeIcon icon={faCheckCircle} /> </span>Surface Wiping and Disinfecting</li>
+      <li className='flex items-center'><span className='text-customBlue mr-2'> <FontAwesomeIcon icon={faCheckCircle} /> </span>Window Cleaning</li>
       <li className='flex items-center'><span className='text-customBlue mr-2'> <FontAwesomeIcon icon={faCheckCircle} /> </span>Dust light fixtures and wall art</li>
       <li className='flex items-center'><span className='text-customBlue mr-2'> <FontAwesomeIcon icon={faCheckCircle} /> </span>Wash light switches and doorknobs</li>
+      <li className='flex items-center'><span className='text-customBlue mr-2'> <FontAwesomeIcon icon={faCheckCircle} /> </span>Odor Elimination</li>
       <li className='flex items-center'><span className='text-customBlue mr-2'> <FontAwesomeIcon icon={faCheckCircle} /> </span>Dust and spot clean doors and door frames</li>
       </ul>
       <Link to="/booking" className='bg-customBlue text-white text-base px-6 py-2 rounded-md m-4  hover:bg-sky hover:text-customBlue cursor-pointer' type="button">

@@ -16,9 +16,9 @@ const ShoppingCart = ({ cartItems }) => {
                 <div>
                   {item.service === 'Clothes Handwashing' && (
                     <>
-                      {item.clothesService && <p>Clothes Size - {item.clothesService}</p>}
-                      {item.beddingService && <p>Duvet Size - {item.beddingService}</p>}
-                      {item.shoeQuantity > 0 && <p>Number of Shoes - {item.shoeQuantity}</p>}
+                      {item.clothesService && <p>Clothes - {item.clothesService}</p>}
+                      {item.beddingService && <p>Bedding - {item.beddingService}</p>}
+                      {item.shoeQuantity > 0 && <p>Total Shoes - {item.shoeQuantity}</p>}
                     </>
                   )}
                   {item.service === 'House Cleaning' && (
@@ -38,11 +38,11 @@ const ShoppingCart = ({ cartItems }) => {
 
                   {item.service === 'Dishwashing' && (
                     <>
-                      {item.quantity > 0 && <p>Utensils - {item.quantity}</p>}
-                      {item.utensils > 0 && <p>Utensils - {item.utensils}</p>}
+                      {item.quantity > 0 && <p>Kitchenware - {item.quantity}</p>}
+                      {item.utensils > 0 && <p>Kitchen Implements - {item.utensils}</p>}
                       {item.appliances > 0 && <p>Appliances - {item.appliances}</p>}
                       {item.cookware > 0 && <p>Cookware - {item.cookware}</p>}
-                      {item.containers > 0 && <p>Food Storage Containers - {item.containers}</p>}
+                      {item.containers > 0 && <p>Food Containers - {item.containers}</p>}
                     </>
                   )}
 

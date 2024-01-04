@@ -3,17 +3,19 @@ import React, { useState, useEffect } from 'react';
 const HouseCleaningForm = ({ updateShoppingCart }) => {
   const [selectedRoomType, setSelectedRoomType] = useState('');
 
-  const roomTypes = ['Premium', 'Studio', 'Cluster', 'Twin', 'Bed_Sitter', 'Single_Room', 'One_Bedroom', 'Two_Bedroom' ];
+  const roomTypes = ['Two_Bedroom', 'Studio','Single_Room', 'Twin', 'Bed_Sitter','Cluster',  'One_Bedroom','Premium'  ];
   
   const prices = {
-    Premium: 900,
-    Studio: 800,
-    Cluster: 600,
-    Twin: 800,
-    Bed_sitter: 800,
-    Single_Room: 400,
-    One_Bedroom: 1200,
-    Two_Bedroom: 1400,
+   
+    
+    Two_Bedroom: 1000,
+    One_Bedroom: 900,
+    Premium: 800,
+    Bed_Sitter: 700,
+    Studio: 700,
+    Twin: 750,
+    Single_Room: 450,
+    Cluster: 500,
   };
 
   useEffect(() => {

@@ -56,12 +56,12 @@ const Contact = () => {
             </div>
             <div className='bg-navy text-white flex-1 p-4 mt-4 rounded-md'>
   <p className='text-center text-2xl font-bold mb-2'>Info</p>
-  <a href='mailto:spotlessGuru@gmail.com' className='flex items-center justify-center text-xl mb-2'>
-    <AiOutlineMail className='mr-2' /> spotlessGuru@gmail.com
+  <a href='mailto:spotlessgurucleaners@gmail.com' className='flex items-center justify-center text-xl mb-2'>
+    <AiOutlineMail className='mr-2' /> spotlessgurucleaners
   </a>
 
-  <a href='tel:+25496286466' className='flex items-center justify-center text-xl mb-2'>
-    <AiOutlinePhone className='mr-2' /> +25496286466
+  <a href='tel:+254713248802' className='flex items-center justify-center text-xl mb-2'>
+    <AiOutlinePhone className='mr-2' /> +254713248802
   </a>
 
   <a href='https://maps.google.com/?q=Karen,Nairobi' target='_blank' rel='noopener noreferrer' className='flex items-center justify-center text-xl mb-2'>

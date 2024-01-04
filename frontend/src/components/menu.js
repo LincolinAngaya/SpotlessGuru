@@ -13,7 +13,7 @@
   ];
   export const CONTACT = [
    
-    { namee: "call-outline",  contacts: "+254796286466", link: "tel:+254796286466" },
+    { namee: "call-outline",  contacts: "+254713248802", link: "tel:+254713248802" },
     { namee: "mail-outline", contacts: "spotlessgurucleaners ", link: "mailto:spotlessgurucleaners@gmail.com "},
     { namee: "location-outline", contacts:"Nairobi, Kenya",link: "#" },
     { namee: "time", contacts:"7:00 am - 6:00 pm" , link: "#" }

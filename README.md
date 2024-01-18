@@ -8,7 +8,7 @@ With user-friendly booking, customizable packages, and a commitment to top-notch
 
 - [Introduction](#introduction)
 - [Installation](#installation)
--  [Live Link](#live link)
+- [Live-Link](#live-link)
 - [Usage](#usage)
 - [Technologies Used](#technologies-used)
 - [Contributing](#contributing)
